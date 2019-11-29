@@ -2,14 +2,14 @@
 
 import os,sys
 
-from .pyOpt_history import History
-from .pyOpt_parameter import Parameter
-from .pyOpt_variable import Variable
-from .pyOpt_gradient import Gradient
-from .pyOpt_constraint import Constraint
-from .pyOpt_objective import Objective
-from .pyOpt_optimization import Optimization
-from .pyOpt_optimizer import Optimizer
+from .Oasis_history import History
+from .Oasis_parameter import Parameter
+from .Oasis_variable import Variable
+from .Oasis_gradient import Gradient
+from .Oasis_constraint import Constraint
+from .Oasis_objective import Objective
+from .Oasis_optimization import Optimization
+from .Oasis_optimizer import Optimizer
 
 __all__ = ['History','Parameter','Variable','Gradient','Constraint','Objective','Optimization','Optimizer']
 
@@ -18,6 +18,6 @@ for f in os.listdir(dir):
     if f.startswith('py') and os.path.isdir(os.path.join(dir,f)):
         try:
             exec('from .%s import %s' %(f,f.strip('py')))
-            __all__.extend(sys.modules['pyOpt.'+f].__all__)
+            __all__.extend(sys.modules['Oasis.'+f].__all__)
         except Exception as e:
             continue

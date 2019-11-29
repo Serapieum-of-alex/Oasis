@@ -1,52 +1,28 @@
-#!/usr/bin/env python
-'''
+"""
 pyOpt_optimization
 
 Holds the Python Design Optimization Classes (base and inherited).
 
-'''
+"""
 
 __version__ = '$Revision: $'
 
-'''
-To Do:
-    - add variable group error when groups have the same name
-    - add method for addVar2Group
-    - pickle wrapping ?!
-    - save class __str__ info to file (text/TeX) ?
-    - warm start from other opts?
-    - class for core sensitivity?
-    - class for history?
-'''
+import os#, sys
+#import pdb
 
-# =============================================================================
-# Standard Python modules
-# =============================================================================
-import os, sys
-import pdb
 
-# =============================================================================
-# External Python modules
-# =============================================================================
 import numpy
 
-# =============================================================================
-# Extension modules
-# =============================================================================
-from pyOpt_variable import Variable
-from pyOpt_objective import Objective
-from pyOpt_constraint import Constraint
-from pyOpt_parameter import Parameter
 
-# =============================================================================
-# Misc Definitions
-# =============================================================================
+from Oasis_variable import Variable
+from Oasis_objective import Objective
+from Oasis_constraint import Constraint
+#from Oasis_parameter import Parameter
+
 inf = 10.E+20  # define a value for infinity
 
 
-# =============================================================================
-# Optimization Class
-# =============================================================================
+
 class Optimization(object):
 
     '''
@@ -927,9 +903,6 @@ class Optimization(object):
 
 
 
-# =============================================================================
-# Solution Class
-# =============================================================================
 class Solution(Optimization):
 
     '''
@@ -1034,9 +1007,6 @@ class Solution(Optimization):
 
 
 
-#==============================================================================
-#
-#==============================================================================
 def ListAttributes(self):
 
     '''
@@ -1056,12 +1026,9 @@ def ListAttributes(self):
 
 
 
-#==============================================================================
 # Optimization Test
-#==============================================================================
 if __name__ == '__main__':
 
     print('Testing Optimization...')
     optprob = Optimization('Optimization Problem',{})
     optprob.ListAttributes()
-

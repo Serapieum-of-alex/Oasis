@@ -13,8 +13,8 @@ __version__ = '$Revision: $'
 #import os, sys
 #import pdb
 
-from pyOpt_optimization import Optimization
-from pyOpt_history import History
+from Oasis_optimization import Optimization
+from Oasis_history import History
 
 inf = 10.E+20  # define a value for infinity
 
