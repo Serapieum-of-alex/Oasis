@@ -1,21 +1,24 @@
 import os,sys
 
-from .Oasis_history import History
-from .Oasis_parameter import Parameter
-from .Oasis_variable import Variable
-from .Oasis_gradient import Gradient
-from .Oasis_constraint import Constraint
-from .Oasis_objective import Objective
-from .Oasis_optimization import Optimization
-from .Oasis_optimizer import Optimizer
+import Oasis.Constraint as Constraint
+import Oasis.Objective as Objective
+import Oasis.Variable as Variable
+import Oasis.Parameter as Parameter
+import Oasis.History as History
+import Oasis.Gradient as Gradient
 
-__all__ = ['History','Parameter','Variable','Gradient','Constraint','Objective','Optimization','Optimizer']
+import Oasis.Optimization as Optimization
+import Oasis.Optimizer as Optimizer
 
-dir = os.path.dirname(os.path.realpath(__file__))
-for f in os.listdir(dir):
-    if f.startswith('py') and os.path.isdir(os.path.join(dir,f)):
-        try:
-            exec('from .%s import %s' %(f,f.strip('py')))
-            __all__.extend(sys.modules['Oasis.'+f].__all__)
-        except Exception as e:
-            continue
+
+import Oasis.pyALHSO as pyALHSO
+#__all__ = ['History','Parameter','Variable','Gradient','Constraint','Objective','Optimization','Optimizer']
+
+#dir = os.path.dirname(os.path.realpath(__file__))
+#for f in os.listdir(dir):
+#    if f.startswith('py') and os.path.isdir(os.path.join(dir,f)):
+#        try:
+#            exec('from .%s import %s' %(f,f.strip('py')))
+#            __all__.extend(sys.modules['Oasis.'+f].__all__)
+#        except Exception as e:
+#            continue

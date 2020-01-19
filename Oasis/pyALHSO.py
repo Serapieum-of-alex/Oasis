@@ -13,7 +13,7 @@ except:
 import os #, sys
 import copy, time
 import numpy
-from Oasis_optimizer import Optimizer
+from Oasis.Optimizer import Optimizer
 
 
 inf = 10.E+20  # define a value for infinity
