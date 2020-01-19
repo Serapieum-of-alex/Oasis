@@ -1,5 +1,5 @@
 """
-pyOpt_variable
+variable
 
 Holds the Python Design Optimization Classes (base and inherited).
 """
@@ -18,14 +18,14 @@ inf = 10.E+20  # define a value for infinity
 class Variable(object):
 
     """
-    # ============================================
-    #     Optimization Variable Class
-    # ============================================
+    ============================================
+        Optimization Variable Class
+    ============================================
     """
 
     def __init__(self, name, type='c', value=0.0, *args, **kwargs):
-
-        '''
+        
+        """
         Variable Class Initialization
 
         **Arguments:**
@@ -39,11 +39,8 @@ class Variable(object):
         - lower -> INT/FLOAT: Variable Lower Value
         - upper -> INT/FLOAT: Variable Upper Value
         - choices -> LIST: Variable Choices
+        """
 
-        Documentation last updated:  Feb. 07, 2011 - Peter W. Jansen
-        '''
-
-        #
         self.name = name
         self.type = type[0].lower()
         if (type[0].lower() == 'c'):
@@ -99,22 +96,18 @@ class Variable(object):
 
     def ListAttributes(self):
 
-        '''
+        """
         Print Structured Attributes List
-
-        Documentation last updated:  March. 10, 2008 - Ruben E. Perez
-        '''
+        """
 
         ListAttributes(self)
 
 
     def __str__(self):
 
-        '''
+        """
         Print Structured List of Variable
-
-        Documentation last updated:  April. 30, 2008 - Peter W. Jansen
-        '''
+        """
 
         if (self.type == 'd'):
             return ('Name    Type       Value       Lower Bound  Upper Bound\n'+'	 '+str(self.name).center(9) +'%5s	%14f %14.2e %12.2e \n' %(self.type, self.choices[int(self.value)], min(self.choices), max(self.choices)))
@@ -127,11 +120,9 @@ class Variable(object):
 
 def ListAttributes(self):
 
-        '''
+        """
         Print Structured Attributes List
-
-        Documentation last updated:  March. 24, 2008 - Ruben E. Perez
-        '''
+        """
 
         print('\n')
         print('Attributes List of: ' + repr(self.__dict__['name']) + ' - ' + self.__class__.__name__ + ' Instance\n')

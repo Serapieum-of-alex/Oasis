@@ -1,5 +1,5 @@
 """
-pyOpt_optimizer
+Optimizer
 
 Holds the Python Design Optimization Classes (base and inherited).
 
@@ -20,12 +20,12 @@ inf = 10.E+20  # define a value for infinity
 
 
 class Optimizer(object):
-    '''
+    """
     Abstract Class for Optimizer Object
-    '''
+    """
 
     def __init__(self, name={}, category={}, def_options={}, informs={}, *args, **kwargs):
-        '''
+        """
         Optimizer Class Initialization
 
         **Keyword arguments:**
@@ -34,9 +34,7 @@ class Optimizer(object):
         - category -> STR: Optimizer category, *Default* = {}
         - def_options -> DICT: Deafult options, *Default* = {}
         - informs -> DICT: Calling routine informations texts, *Default* = {}
-
-        Documentation last updated:  Feb. 03, 2011 - Peter W. Jansen
-        '''
+        """
 
         self.name = name
         self.category = category
@@ -55,20 +53,18 @@ class Optimizer(object):
             self.setOption(key,koptions[key])
 
     def __solve__(self, opt_problem={}, *args, **kwargs):
-        '''
+        """
         Run Optimizer (Optimizer Specific Routine)
 
         **Keyword arguments:**
 
         - opt_problem -> INST: Optimization problem instance, *Default* = {}
-
-        Documentation last updated:  Feb. 03, 2011 - Peter W. Jansen
-        '''
+        """
         pass
 
 
     def __call__(self, opt_problem={}, *args, **kwargs):
-        '''
+        """
         Run Optimizer (Calling Routine)
 
         **Keyword arguments:**
@@ -76,9 +72,7 @@ class Optimizer(object):
         - opt_problem -> INST: Optimization problem instance, *Default* = {}
 
         Additional arguments and keyword arguments are passed to the objective function call
-
-        Documentation last updated:  Feb. 03, 2011 - Peter W. Jansen
-        '''
+        """
 
         # Check Optimization Problem
         if not isinstance(opt_problem,Optimization):
@@ -105,22 +99,20 @@ class Optimizer(object):
         return self.__solve__(opt_problem, *args, **kwargs)
 
     def _on_setOption(self, name, value):
-        '''
+        """
         Set Optimizer Option Value (Optimizer Specific Routine)
 
         **Arguments:**
 
         - name -> STR: Option name
         - value ->   : Option value
-
-        Documentation last updated:  Feb. 07, 2011 - Peter W. Jansen
-        '''
+        """
 
         raise NotImplementedError()
 
 
     def setOption(self, name, value=None):
-        '''
+        """
         Set Optimizer Option Value (Calling Routine)
 
         **Arguments:**
@@ -130,9 +122,7 @@ class Optimizer(object):
         **Keyword arguments:**
 
         - value -> FLOAT/INT/BOOL: Option Value, *Default* = None
-
-        Documentation last updated:  Feb. 07, 2011 - Peter W. Jansen
-        '''
+        """
 
         def_options = self.options['defaults']
         if name in def_options:
@@ -146,27 +136,23 @@ class Optimizer(object):
         self._on_setOption(name, value)
 
     def _on_getOption(self, name):
-        '''
+        """
         Get Optimizer Option Value (Optimizer Specific Routine)
 
         **Arguments:**
 
         - name -> STR: Option name
-
-        Documentation last updated:  Feb. 07, 2011 - Peter W. Jansen
-        '''
+        """
         raise NotImplementedError()
 
     def getOption(self, name):
-        '''
+        """
         Get Optimizer Option Value (Calling Routine)
 
         **Arguments:**
 
         - name -> STR: Option name
-
-        Documentation last updated:  Feb. 07, 2011 - Peter W. Jansen
-        '''
+        """
 
         def_options = self.options['defaults']
         if name in def_options:
@@ -178,27 +164,23 @@ class Optimizer(object):
 
 
     def _on_getInform(self, info):
-        '''
+        """
         Get Optimizer Result Information (Optimizer Specific Routine)
 
         **Arguments:**
 
         - info -> STR: Information key
-
-        Documentation last updated:  Feb. 07, 2011 - Peter W. Jansen
-        '''
+        """
         raise NotImplementedError()
 
     def getInform(self, infocode=None):
-        '''
+        """
         Get Optimizer Result Information (Calling Routine)
 
         **Keyword arguments:**
 
         - infocode -> INT: information code key
-
-        Documentation last updated:  Feb. 07, 2011 - Peter W. Jansen
-        '''
+        """
 
         if (infocode == None):
             return self.informs
@@ -206,25 +188,21 @@ class Optimizer(object):
             return self._on_getInform(infocode)
 
     def _on_flushFiles(self):
-        '''
+        """
         Flush Output Files (Optimizer Specific Routine)
-
-        Documentation last updated:  August. 09, 2009 - Ruben E. Perez
-        '''
+        """
 
         raise NotImplementedError()
 
     def flushFiles(self):
-        '''
+        """
         Flush Output Files (Calling Routine)
-
-        Documentation last updated:  August. 09, 2009 - Ruben E. Perez
-        '''
+        """
 
         self._on_flushFiles()
 
     def _setHistory(self, probname, store_hst, hot_start, def_fname):
-        '''
+        """
         Setup Optimizer History and/or Hot-start instances
 
         **Arguments:**
@@ -233,9 +211,7 @@ class Optimizer(object):
         - store_hst -> BOOL/STR: Flag/filename to store optimization history
         - hot_start -> BOOL/STR: Flag/filename to read optimization history
         - def_fname -> STR: Default file name
-
-        Documentation last updated:  Oct. 12, 2011 - Peter W. Jansen
-        '''
+        """
 
         myrank = self.myrank
 
@@ -306,22 +282,18 @@ class Optimizer(object):
         return hos_file, log_file, tmp_file
 
     def ListAttributes(self):
-        '''
+        """
         Print Structured Attributes List
-
-        Documentation last updated:  March. 24, 2008 - Ruben E. Perez
-        '''
+        """
 
         ListAttributes(self)
 
 
 
 def ListAttributes(self):
-        '''
+        """
         Print Structured Attributes List
-
-        Documentation last updated:  March. 24, 2008 - Ruben E. Perez
-        '''
+        """
 
         print('\n')
         print('Attributes List of: ' + repr(self.__dict__['name']) + ' - ' + self.__class__.__name__ + ' Instance\n')

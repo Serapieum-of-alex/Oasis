@@ -1,7 +1,5 @@
-
 """
-pyALHSO - A Python interface to ALHSO.
-
+ALHSO - A Python interface to ALHSO.
 """
 
 __version__ = '$Revision: $'
@@ -15,7 +13,7 @@ except:
 import os #, sys
 import copy, time
 import numpy
-from pyOpt_optimizer import Optimizer
+from Oasis_optimizer import Optimizer
 
 
 inf = 10.E+20  # define a value for infinity
@@ -26,25 +24,20 @@ eps = 2.0*eps
 
 
 
-class ALHSO(Optimizer):
-	
-	'''
+class ALHSO(Optimizer):	
+	"""
 	ALHSO Optimizer Class - Inherited from Optimizer Abstract Class
-	'''
+	"""
 	
 	def __init__(self, pll_type=None, *args, **kwargs):
-		
-		'''
+		"""
 		ALHSO Optimizer Class Initialization
 		
 		**Keyword arguments:**
 		
 		- pll_type -> STR: Parallel Implementation (None, 'POA'-Parallel Objective Analysis), *Default* = None
+		"""
 		
-		Documentation last updated:  Feb. 16, 2010 - Peter W. Jansen
-		'''
-		
-		#
 		if (pll_type == None):
 			self.poa = False
 		elif (pll_type.upper() == 'POA'):
@@ -52,7 +45,6 @@ class ALHSO(Optimizer):
 		else:
 			raise ValueError("pll_type must be either None or 'POA'")
 		
-		# 
 		name = 'ALHSO'
 		category = 'Global Optimizer'
 		def_opts = {
@@ -82,9 +74,9 @@ class ALHSO(Optimizer):
 		
 
 		
-	def __solve__(self, opt_problem={}, store_sol=True, disp_opts=False, store_hst=False, hot_start=False, *args, **kwargs):
-		
-		'''
+	def __solve__(self, opt_problem={}, store_sol=True, disp_opts=False, 
+                   store_hst=False, hot_start=False, *args, **kwargs):
+		"""
 		Run Optimizer (Optimize Routine)
 		
 		**Keyword arguments:**
@@ -96,18 +88,14 @@ class ALHSO(Optimizer):
 		- hot_start -> BOOL/STR: Flag/filename to read optimization history, *Default* = False
 		
 		Additional arguments and keyword arguments are passed to the objective function call.
-		
-		Documentation last updated:  February. 17, 2011 - Peter W. Jansen
-		'''
-		
-		#
+		"""
 		if 'display_opts' in kwargs:
 			sol_dispOpt = kwargs['display_opts']
 			del kwargs['display_opts']
 		else:
 			sol_dispOpt = False
 		
-		#
+        
 		if self.poa:
 			try:
 				import mpi4py
@@ -365,49 +353,34 @@ class ALHSO(Optimizer):
 		
 		
 	def _on_setOption(self, name, value):
-		
-		'''
+		"""
 		Set Optimizer Option Value (Optimizer Specific Routine)
-		
-		Documentation last updated:  May. 16, 2008 - Ruben E. Perez
-		'''
-		
+		"""
 		pass
 		
 		
 	def _on_getOption(self, name):
-		
-		'''
+		"""
 		Get Optimizer Option Value (Optimizer Specific Routine)
-		
-		Documentation last updated:  May. 16, 2008 - Ruben E. Perez
-		'''
-		
+		"""
 		pass
 		
 		
 	def _on_getInform(self, infocode):
-		
-		'''
+		"""
 		Get Optimizer Result Information (Optimizer Specific Routine)
 		
 		Keyword arguments:
 		-----------------
 		id -> STRING: Option Name
-		
-		Documentation last updated:  May. 16, 2008 - Ruben E. Perez
-		'''
-		
+		"""
 		pass
 		
 		
 	def _on_flushFiles(self):
-		
-		'''
+		"""
 		Flush the Output Files (Optimizer Specific Routine)
-		
-		Documentation last updated:  August. 09, 2009 - Ruben E. Perez
-		'''
+		"""
 		
 		pass	
 	
@@ -415,20 +388,14 @@ class ALHSO(Optimizer):
 
 # HSO Optimizer Class
 class HSO(Optimizer):
-	
-	'''
+	"""
 	HSO Optimizer Class - Inherited from Optimizer Abstract Class
-	'''
+	"""
 	
 	def __init__(self, *args, **kwargs):
-		
-		'''
+		"""
 		HSO Optimizer Class Initialization
-		
-		Documentation last updated:  October. 22, 2008 - Ruben E. Perez
-		'''
-		
-		# 
+		"""
 		name = 'HSO'
 		category = 'Global Optimizer'
 		def_opts = {
@@ -446,14 +413,10 @@ class HSO(Optimizer):
 		
 		
 	def __solve__(self, opt_problem={}, store_sol=True, disp_opts=False, *args, **kwargs):
-		
-		'''
+		"""
 		Run Optimizer (Optimize Routine)
+		"""
 		
-		Documentation last updated:  May. 16, 2008 - Ruben E. Perez
-		'''
-		
-		#
 		if 'display_opts' in kwargs:
 			sol_dispOpt = kwargs['display_opts']
 			del kwargs['display_opts']
@@ -617,51 +580,35 @@ class HSO(Optimizer):
 		return opt_f, opt_x, {}
 		
 		
-	def _on_setOption(self, name, value):
-		
-		'''
+	def _on_setOption(self, name, value):		
+		"""
 		Set Optimizer Option Value (Optimizer Specific Routine)
-		
-		Documentation last updated:  May. 16, 2008 - Ruben E. Perez
-		'''
-		
+		"""
 		pass
 		
 		
-	def _on_getOption(self, name):
-		
-		'''
+	def _on_getOption(self, name):		
+		"""
 		Get Optimizer Option Value (Optimizer Specific Routine)
-		
-		Documentation last updated:  May. 16, 2008 - Ruben E. Perez
-		'''
-		
+		"""
 		pass
 		
 		
-	def _on_getInform(self, infocode):
-		
-		'''
+	def _on_getInform(self, infocode):		
+		"""
 		Get Optimizer Result Information (Optimizer Specific Routine)
 		
 		Keyword arguments:
 		-----------------
 		id -> STRING: Option Name
-		
-		Documentation last updated:  May. 16, 2008 - Ruben E. Perez
-		'''
-		
+		"""
 		pass
 		
 		
 	def _on_flushFiles(self):
-		
-		'''
+		"""
 		Flush the Output Files (Optimizer Specific Routine)
-		
-		Documentation last updated:  August. 09, 2009 - Ruben E. Perez
-		'''
-		
+		"""
 		pass
 	
 

@@ -1,5 +1,5 @@
 """
-pyOpt_history
+history
 
 Holds the Python Design Optimization History Class.
 
@@ -20,16 +20,16 @@ import numpy
 
 class History(object):
 	
-	'''
+	"""
 	Abstract Class for Optimizer History Object
-	'''
+	"""
 	
 	def __init__(self, filename, mode, optimizer=None, opt_prob=None, *args, **kwargs):
 		
-		'''
+		"""
 		Optimizer History Class Initialization
 		
-		**Arguments:**
+		Arguments:
 		
 		- filename  -> STR: Name for .bin and .cue file
 		- mode      -> STR: Either read ('r') or write ('w') mode
@@ -38,9 +38,7 @@ class History(object):
 		
 		- optimizer -> INST: Opimizer class instance,  *Default* = None
 		- opt_prob  -> STR: Optimization Problem Name, *Default* = None
-		
-		Documentation last updated:  April. 14, 2010 - Peter W. Jansen
-		'''
+		"""
 		
 		self.filename = filename
 		self.mode = mode
@@ -106,11 +104,9 @@ class History(object):
 		
 	def close(self):
 		
-		'''
+		"""
 		Close Optimizer History Files
-		
-		Documentation last updated:  December. 11, 2009 - Ruben E. Perez
-		'''
+		"""
 		
 		self.bin_file.close()
 		if self.mode == 'w':
@@ -119,16 +115,14 @@ class History(object):
 		
 	def read(self, index=[], ident=['obj']):
 		
-		'''
+		"""
 		Read Data from Optimizer History Files
 		
-		**Keyword arguments:**
+		Keyword arguments:
 		
 		- index -> LIST,SCALAR: Index (list), [0,-1] for all, [] internal count, -1 for last, *Default* = []
 		- ident -> STR: Indentifier, *Default* = 'obj'
-		
-		Documentation last updated:  April. 14, 2010 - Peter W. Jansen
-		'''
+		"""
 		
 		bdata = {}
 		hist_end = False
@@ -168,16 +162,14 @@ class History(object):
 		
 	def write(self,bin_data,cue_data):
 		
-		'''
+		"""
 		Write Data to Optimizer History Files
 		
 		**Arguments:**
 		
 		- bin_data -> LIST/ARRAY: Data to be written to binary file
 		- cue_data -> STR: Variable identifier for cue file
-		
-		Documentation last updated:  Feb. 07, 2011 - Peter W. Jansen
-		'''        
+		"""        
 		
 		#
 		bin_data = numpy.array(bin_data)
@@ -197,16 +189,14 @@ class History(object):
 		
 	def overwrite(self,bin_data,index):
 		
-		'''
+		"""
 		Overwrite Data on Optimizer History Files
 		
 		**Arguments:**
 		
 		- bin_data -> ARRAY: Data to overwrite old data
 		- index -> INT: Starting index of old data
-		
-		Documentation last updated:  Feb. 03, 2011 - Peter W. Jansen
-		'''        
+		"""
 		
 		#
 		bin_data = numpy.array(bin_data)

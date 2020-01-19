@@ -34,11 +34,9 @@ def alhso(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 	itol,atol,rtol,prtoutiter,prtinniter,r0,hmcr,par,bw,
 	fileout,filename,rseed,scale,objfunc):
 	
-	'''
+	"""
 	Python Version of the Augmented Lagrangian Harmony Search Optimizer
-	
-	Documentation last updated:  February. 19, 2009 - Ruben E. Perez
-	'''
+	"""
 	
 	# Set random number seed
 	rand = random.Random()
@@ -120,12 +118,9 @@ def alhso(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 				else:
 					tau_val[l] = g_val[l]
 			
-			#
 			for l in range(constraints):
 				L_val += lambda_val[l]*tau_val[l] + rp_val[l]*tau_val[l]**2
 			
-		
-		# 
 		HM[i,dimensions] = L_val
 		
 	
@@ -602,16 +597,10 @@ def alhso(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 	
 
 
-# =============================================================================
-# chso Function
-# =============================================================================
 def chso(ND,nc,nec,xtype,x0,lb,ub,bw,HMS,HMCR,PAR,maxIter,printout,rseed,objfunc):
-	
-	'''
+	"""
 	CHSO function - Python Version of the Constrained Harmony Search Optimizer
-	
-	Documentation last updated:  October. 16, 2008 - Ruben Perez
-	'''
+	"""
 	
 	# Set random number seed
 	rand = random.Random()

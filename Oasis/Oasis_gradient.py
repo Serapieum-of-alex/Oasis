@@ -1,5 +1,5 @@
 """
-pyOpt_gradient
+gradient
 
 Holds the Python Design Optimization Gradient Calculation Class.
 
@@ -26,29 +26,26 @@ eps = 2.0 * eps
 
 
 class Gradient(object):
-    '''
+    """
     Abstract Class for Optimizer Gradient Calculation Object
-    '''
+    """
 
     def __init__(self, opt_problem, sens_type, sens_mode='', sens_step={}, *args, **kwargs):
 
-        '''
+        """
         Optimizer Gradient Calculation Class Initialization
 
-        **Arguments:**
+        Arguments:
 
         - opt_problem -> INST: Optimization instance
         - sens_type -> STR/FUNC: Sensitivity type ('FD', 'CS', or function)
 
-        **Keyword arguments:**
+        Keyword arguments:
 
         - sens_mode -> STR: Parallel flag [''-serial,'pgc'-parallel], *Default* = ''
         - sens_step -> INT: Step size, *Default* = {} [=1e-6(FD), 1e-20(CS)]
+        """
 
-        Documentation last updated:  Feb. 03, 2011 - Peter W. Jansen
-        '''
-
-        #
         self.opt_problem = opt_problem
         if isinstance(sens_type, str):
             self.sens_type = sens_type.lower()
@@ -100,18 +97,16 @@ class Gradient(object):
             self.mydvs = range(len(opt_problem._variables.keys()))
 
     def getGrad(self, x, group_ids, f, g, *args, **kwargs):
-        '''
+        """
         Get Gradient
 
-        **Arguments:**
+        Arguments:
 
         - x -> ARRAY: Design variables
         - group_ids -> DICT: Group identifications
         - f -> ARRAY: Objective values
         - g -> ARRAY: Constraint values
-
-        Documentation last updated:  Feb. 07, 2011 - Peter W. Jansen
-        '''
+        """
 
         opt_problem = self.opt_problem
         sens_type = self.sens_type
@@ -264,11 +259,9 @@ class Gradient(object):
         return df, dg
 
     def getHess(self, *args, **kwargs):
-        '''
+        """
         Get Hessian
-
-        Documentation last updated:  June. 20, 2010 - Ruben E. Perez
-        '''
+        """
 
         return
 
