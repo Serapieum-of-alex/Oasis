@@ -26,18 +26,20 @@ class Constraint(object):
         """
         Constraint Class Initialization
         
-        Arguments:
-        
-        - name -> STR: Variable Name
-        
-        **Keyword arguments:**
-        
-        - type -> STR: Variable Type ('i'-inequality, 'e'-equality), *Default* = 'i'
-        - lower -> INT: Variable Lower Value
-        - upper -> INT: Variable Upper Value
-        - choices -> DICT: Variable Choices
-        
-        Documentation last updated:  Feb. 03, 2011 - Peter W. Jansen
+        arguments:
+            
+        - name :
+            [String]: Variable Name
+        - type :
+            [String] Variable Type ('i'-inequality, 'e'-equality), Default = 'i'
+            inequality constrain like x1+x3 = 10, equality constrain like x1*x3 > 0
+            Equality Constraints should be defined BEFORE Inequality Constraints
+        - lower :
+            [Integer] Variable Lower Value
+        - upper :
+            [Integer] Variable Upper Value
+        - choices :
+            [Dictionary] Variable Choices
         """
         self.name = name
         self.type = type[0].lower()
@@ -69,8 +71,6 @@ class Constraint(object):
         
         """
         Print Structured Attributes List
-        
-        Documentation last updated:  March. 10, 2008 - Ruben E. Perez
         """
         
         ListAttributes(self)
@@ -80,8 +80,6 @@ class Constraint(object):
         
         """
         Print Constraint
-        
-        Documentation last updated:  April. 30, 2008 - Peter W. Jansen
         """
         
         if (self.type == 'e'):
@@ -95,8 +93,6 @@ def ListAttributes(self):
         
         """
         Print Structured Attributes List
-        
-        Documentation last updated:  March. 24, 2008 - Ruben E. Perez
         """
         
         print('\n')

@@ -27,21 +27,24 @@ class Optimization(object):
     Optimization Problem Class
     """
 
-    def __init__(self, name, obj_fun, var_set=None, obj_set=None, con_set=None, use_groups=False, *args, **kwargs):
+    def __init__(self, name, obj_fun, var_set=None, obj_set=None, con_set=None, 
+                 use_groups=False, *args, **kwargs):
         """
         Optimization Problem Class Initialization
 
-        **Arguments:**
-
-        - name -> STR: Solution name
-        - opt_func -> FUNC: Objective function
-
-        **Keyword arguments:**
-
-        - var_set -> INST: Variable set, *Default* = None
-        - obj_set -> INST: Objective set, *Default* = None
-        - con_set -> INST: Constraints set, *Default* = None
-        - use_groups -> BOOL: Use of group identifiers flag, *Default* = False
+        arguments:
+            - name:
+                [String] Solution name
+            - obj_fun:
+                [Function] Objective function
+            - use_groups:
+                [Boolen] Use of group identifiers flag, default None
+            - var_set:
+                [Instance] Variable set, default None
+            - obj_set:
+                [Instance] Objective set, default None
+            - con_set:
+                [Instance] Constraints set, default None
         """
 
         self.name = name
@@ -50,22 +53,28 @@ class Optimization(object):
 
         # Initialize Variable Set
         if var_set is None:
-            self._variables = {}
+            self.variables = {}
         else:
-            self._variables = var_set
-        self._vargroups = {}
+            self.variables = var_set
+        self.vargroups = {}
 
         # Initialize Objective Set
         if obj_set is None:
-            self._objectives = {}
+            self.objectives = {}
         else:
-            self._objectives = obj_set
+            self.objectives = obj_set
 
         # Initialize Constraint Set
         if con_set is None:
-            self._constraints = {}
+            self.constraints = {}
         else:
-            self._constraints = con_set
+            self.constraints = con_set
+
+        # Initialize Solution Set
+        self.solutions = {}
+
+        # Flags for objective function calls about internal state of optimization
+        self.is_gradient = False
 
         ## Initialize Parameter Set
         #if par_set is None:
@@ -73,13 +82,6 @@ class Optimization(object):
         #else:
         #    self._parameters = par_set
         #self._pargroups = {}
-
-        # Initialize Solution Set
-        self._solutions = {}
-
-        # Flags for objective function calls about internal state of optimization
-        self.is_gradient = False
-
 
     def getVar(self, i):
         """
@@ -94,7 +96,7 @@ class Optimization(object):
         if not (isinstance(i,int) and i >= 0):
             raise ValueError("Variable index must be an integer >= 0.")
 
-        return self._variables[i]
+        return self.variables[i]
 
 
     def addVar(self, *args, **kwargs):
@@ -102,13 +104,17 @@ class Optimization(object):
         Add Variable into Variables Set
         """
 
-        id = self.firstavailableindex(self._variables)
+        id = self.firstavailableindex(self.variables)
+        # setVar is going to use class Variable to create the variable i
+        # args and kwargs has to follow the arguments of the Variable class
         self.setVar(id,*args,**kwargs)
 
         
         tmp_group = {}
-        tmp_group[self._variables[id].name] = id
-        self._vargroups[self.firstavailableindex(self._vargroups)] = {'name':self._variables[id].name,'ids':tmp_group}
+        tmp_group[self.variables[id].name] = id
+        # vargroups is a dictionary with the order of the group as a key
+        # for each group a dict of the variable name as a key, 
+        self.vargroups[self.firstavailableindex(self.vargroups)] = {'name':self.variables[id].name,'ids':tmp_group}
 
 
     def addVarGroup(self, name, nvars, type='c', value=0.0, **kwargs):
@@ -181,26 +187,28 @@ class Optimization(object):
         tmp_group = {}
         for var in range(nvars):
             tmp_name = name +'_%s' %(var)
-            id = self.firstavailableindex(self._variables)
+            id = self.firstavailableindex(self.variables)
             self.setVar(id, tmp_name, type[var], value[var], lower=lower[var], upper=upper[var], choices=choices[var])
             tmp_group[tmp_name] = id
-        self._vargroups[self.firstavailableindex(self._vargroups)] = {'name':name,'ids':tmp_group}
+        self.vargroups[self.firstavailableindex(self.vargroups)] = {'name':name,'ids':tmp_group}
 
 
     def setVar(self, i, *args, **kwargs):
         """
         Set Variable *i* into Variables Set
 
-        **Arguments:**
+        Arguments:
 
         - i -> INT: Variable index
         """
 
         if (len(args) > 0) and isinstance(args[0], Variable):
-            self._variables[i] = args[0]
+            self.variables[i] = args[0]
         else:
             try:
-                self._variables[i] = Variable(*args,**kwargs)
+                # use the class Variable to create the variable i
+                # args and kwargs has to follow the arguments of the Variable class
+                self.variables[i] = Variable(*args,**kwargs)
             except IOError:
                 raise
             except:
@@ -220,18 +228,18 @@ class Optimization(object):
         if not (isinstance(i,int) and i >= 0):
             raise ValueError("Variable index must be an integer >= 0.")
         
-        del self._variables[i]
+        del self.variables[i]
 
         
         #ngroups = len(self._vargroups)
-        for j in self._vargroups.keys():
-            keys = self._vargroups[j]['ids']
+        for j in self.vargroups.keys():
+            keys = self.vargroups[j]['ids']
             nkeys = len(keys)
             for key in keys:
-                if (self._vargroups[j]['ids'][key] == i):
-                    del self._vargroups[j]['ids'][key]
+                if (self.vargroups[j]['ids'][key] == i):
+                    del self.vargroups[j]['ids'][key]
                     if (nkeys == 1):
-                        del self._vargroups[j]
+                        del self.vargroups[j]
                     return
 
 
@@ -245,14 +253,14 @@ class Optimization(object):
         """
 
         #
-        ngroups = len(self._vargroups)
+        ngroups = len(self.vargroups)
         for j in range(ngroups):
-            if (self._vargroups[j]['name'] == name):
-                keys = self._vargroups[j]['ids']
+            if (self.vargroups[j]['name'] == name):
+                keys = self.vargroups[j]['ids']
                 for key in keys:
-                    id = self._vargroups[j]['ids'][key]
-                    del self._variables[id]
-                del self._vargroups[j]
+                    id = self.vargroups[j]['ids'][key]
+                    del self.variables[id]
+                del self.vargroups[j]
 
 
     def getVarSet(self):
@@ -260,7 +268,7 @@ class Optimization(object):
         Get Variables Set
         """
 
-        return self._variables
+        return self.variables
 
 
     def getVarGroups(self):
@@ -268,7 +276,7 @@ class Optimization(object):
         Get Variables Groups Set
         """
 
-        return self._vargroups
+        return self.vargroups
 
 
     def getObj(self, i):
@@ -285,7 +293,7 @@ class Optimization(object):
         if not (isinstance(i,int) and i >= 0):
             raise ValueError("Objective index must be an integer >= 0.")
             
-        return self._objectives[i]
+        return self.objectives[i]
 
 
     def addObj(self, *args, **kwargs):
@@ -295,7 +303,7 @@ class Optimization(object):
         """
 
         #
-        self.setObj(self.firstavailableindex(self._objectives),*args,**kwargs)
+        self.setObj(self.firstavailableindex(self.objectives),*args,**kwargs)
 
 
     def setObj(self, i, *args, **kwargs):
@@ -308,10 +316,10 @@ class Optimization(object):
         """
         
         if (len(args) > 0) and isinstance(args[0], Objective):
-            self._objectives[i] = args[0]
+            self.objectives[i] = args[0]
         else:
             try:
-                self._objectives[i] = Objective(*args,**kwargs)
+                self.objectives[i] = Objective(*args,**kwargs)
             except:
                 raise ValueError("Input is not a Valid for a Objective Object instance\n")
 
@@ -329,7 +337,7 @@ class Optimization(object):
         if not (isinstance(i,int) and i >= 0):
             raise ValueError("Objective index must be an integer >= 0.")
         
-        del self._objectives[i]
+        del self.objectives[i]
 
 
     def getObjSet(self):
@@ -337,7 +345,7 @@ class Optimization(object):
         Get Objectives Set
         """
 
-        return self._objectives
+        return self.objectives
 
 
     def getCon(self, i):
@@ -353,7 +361,7 @@ class Optimization(object):
         if not (isinstance(i,int) and i >= 0):
             raise ValueError("Constraint index must be an integer >= 0.")
         
-        return self._constraints[i]
+        return self.constraints[i]
 
 
     def addCon(self, *args, **kwargs):
@@ -361,7 +369,7 @@ class Optimization(object):
         Add Constraint into Constraints Set
         """
         
-        self.setCon(self.firstavailableindex(self._constraints),*args,**kwargs)
+        self.setCon(self.firstavailableindex(self.constraints),*args,**kwargs)
 
 
     def addConGroup(self, name, ncons, type='i', **kwargs):
@@ -412,7 +420,7 @@ class Optimization(object):
                         raise IOError('Variable type for upper bound not understood - use float, int or list\n')
             for con in range(ncons):
                 tmp_name = name +'_%s' %(con)
-                self.setCon(self.firstavailableindex(self._constraints),tmp_name, type_list[con], lower=lower[con], upper=upper[con])
+                self.setCon(self.firstavailableindex(self.constraints),tmp_name, type_list[con], lower=lower[con], upper=upper[con])
         elif (type[0].lower() == 'e'):
             equal = [0.0]*ncons
             for key in kwargs.keys():
@@ -431,7 +439,7 @@ class Optimization(object):
                         raise IOError('Variable type for lower bound not understood - use float, int or list\n')
             for con in range(ncons):
                 tmp_name = name +'_%s' %(con)
-                self.setCon(self.firstavailableindex(self._constraints),tmp_name, type_list[con], equal=equal[con])
+                self.setCon(self.firstavailableindex(self.constraints),tmp_name, type_list[con], equal=equal[con])
 
 
     def setCon(self, i, *args, **kwargs):
@@ -444,10 +452,10 @@ class Optimization(object):
         """
         
         if (len(args) > 0) and isinstance(args[0], Constraint):
-            self._constraints[i] = args[0]
+            self.constraints[i] = args[0]
         else:
             try:
-                self._constraints[i] = Constraint(*args,**kwargs)
+                self.constraints[i] = Constraint(*args,**kwargs)
             except IOError:
                 raise
             except:
@@ -467,7 +475,7 @@ class Optimization(object):
         if not (isinstance(i,int) and i >= 0):
             raise ValueError("Constraint index must be an integer >= 0.")
             
-        del self._constraints[i]
+        del self.constraints[i]
 
 
     def getConSet(self):
@@ -475,7 +483,7 @@ class Optimization(object):
         Get Constraints Set
         """
 
-        return self._constraints
+        return self.constraints
 
 
     def getSol(self, i):
@@ -676,12 +684,12 @@ class Optimization(object):
         """
         List First Unused Index from Variable Objects List
 
-        **Arguments:**
+        Arguments:
 
-        - set -> LIST: Set to find frist available index of
+            - set:
+                [List] List of the existed indeces, Set to find frist available 
+                index of
         """
-
-        #
         i = 0
         while i in set:
             i += 1
@@ -705,19 +713,19 @@ class Optimization(object):
         text = '''\nOptimization Problem -- %s\n%s\n
         Objective Function: %s\n\n    Objectives:
         Name        Value        Optimum\n''' %(self.name,'='*80,self.obj_fun.__name__)
-        for obj in self._objectives.keys():
-            lines = str(self._objectives[obj]).split('\n')
+        for obj in self.objectives.keys():
+            lines = str(self.objectives[obj]).split('\n')
             text += lines[1] + '\n'
         text += '''\n	Variables (c - continuous, i - integer, d - discrete):
         Name    Type       Value       Lower Bound  Upper Bound\n'''
-        for var in self._variables.keys():
-            lines = str(self._variables[var]).split('\n')
+        for var in self.variables.keys():
+            lines = str(self.variables[var]).split('\n')
             text+= lines[1] + '\n'
-        if len(self._constraints.keys()) > 0:
+        if len(self.constraints.keys()) > 0:
             text += '''\n	Constraints (i - inequality, e - equality):
         Name    Type                    Bounds\n'''
-            for con in self._constraints.keys():
-                lines = str(self._constraints[con]).split('\n')
+            for con in self.constraints.keys():
+                lines = str(self.constraints[con]).split('\n')
                 text+= lines[1] + '\n'
 
         return (text)
@@ -787,25 +795,33 @@ class Solution(Optimization):
     Optimization Solution Class
     """
 
-    def __init__(self, optimizer, name, obj_fun, opt_time, opt_evals, opt_inform, var_set=None, obj_set=None, con_set=None, options_set=None, myrank=0,*args, **kwargs):
+    def __init__(self, optimizer, name, obj_fun, opt_time, opt_evals, 
+                 opt_inform, var_set=None, obj_set=None, con_set=None, 
+                 options_set=None, myrank=0,*args, **kwargs):
 
         """
         Solution Class Initialization
 
-        **Arguments:**
-
-        - optimizer -> STR: Optimizer name
-        - name -> STR: Optimization problem name
-        - opt_time -> FLOAT: Solution total time
-        - opt_evals -> INT: Number of function evaluations
-
-        **Keyword arguments:**
-
-        - var_set -> INST: Variable set, *Default* = {}
-        - obj_set -> INST: Objective set, *Default* = {}
-        - con_set -> INST: Constraints set, *Default* = {}
-        - options_set -> Options used for solution, *Default* = {}
-        - myrank -> INT: Process identification for MPI evaluations, *Default* = 0
+        Arguments:
+            - optimizer :
+                [String]: Optimizer name
+            - name : 
+                [String] Optimization problem name
+            - opt_time :
+                    [Float]: Solution total time
+            - opt_evals :
+                [NTEGER] Number of function evaluations
+            - var_set :
+                [Instance] Variable set, Default = {}
+            - obj_set : 
+                [Instance] Objective set, Default = {}
+            - con_set :
+                [Instance] Constraints set, Default = {}
+            - options_set :
+                Options used for solution, Default = {}
+            - myrank :
+                [Instance] Process identification for MPI evaluations, 
+                    Default = 0
         """
         
         Optimization.__init__(self, name, obj_fun, var_set, obj_set, con_set, *args, **kwargs)

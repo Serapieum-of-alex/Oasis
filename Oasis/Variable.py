@@ -28,25 +28,33 @@ class Variable(object):
         """
         Variable Class Initialization
 
-        **Arguments:**
-
-        - name -> STR: Variable Name
-
-        **Keyword arguments:**
-
-        - type -> STR: Variable Type ('c'-continuous, 'i'-integer, 'd'-discrete), *Default* = 'c'
-        - value -> INT/FLOAT: Variable Value, *Default* = 0.0
-        - lower -> INT/FLOAT: Variable Lower Value
-        - upper -> INT/FLOAT: Variable Upper Value
-        - choices -> LIST: Variable Choices
+        Arguments:
+            - name:
+                [String]: Variable Name
+            - type:
+                [String]: Variable Type ('c'-continuous, 'i'-integer,
+                        'd'-discrete), *Default* = 'c'
+            - value:
+                [numeric]: Variable Value, Default = 0.0
+            - lower:
+                [numeric]: Variable Lower Value
+            - upper:
+                [numeric]: Variable Upper Value
+            - choices:
+                [List]: Variable Choices
         """
-
+        # name of the variable
         self.name = name
+        # type of the variable c,i or d
         self.type = type[0].lower()
+        
+        
+        ### C - Continuous variable 
         if (type[0].lower() == 'c'):
             self.value = float(value)
             self.lower = -inf
             self.upper = inf
+            
             for key in kwargs.keys():
                 if (key == 'lower'):
                     self.lower = float(kwargs['lower'])
@@ -56,6 +64,8 @@ class Variable(object):
                     self.upper = float(kwargs['upper'])
                     if self.upper > inf:
                         self.upper = inf
+        
+        ### i - Integer variable
         elif (type[0].lower() == 'i'):
             self.value = int(value)
             self.lower = []
@@ -73,7 +83,8 @@ class Variable(object):
 
             if self.upper == []:
                 raise IOError('An integer variable requires to input an upper bound value')
-
+                
+        ### d - Discrete variable
         elif (type[0].lower() == 'd'):
             for key in kwargs.keys():
                 if (key == 'choices'):

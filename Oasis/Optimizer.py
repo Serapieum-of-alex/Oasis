@@ -24,16 +24,21 @@ class Optimizer(object):
     Abstract Class for Optimizer Object
     """
 
-    def __init__(self, name={}, category={}, def_options={}, informs={}, *args, **kwargs):
+    def __init__(self, name={}, category={}, def_options={}, informs={}, 
+                 *args, **kwargs):
         """
         Optimizer Class Initialization
 
-        **Keyword arguments:**
+        Keyword arguments:
 
-        - name -> STR: Optimizer name, *Default* = {}
-        - category -> STR: Optimizer category, *Default* = {}
-        - def_options -> DICT: Deafult options, *Default* = {}
-        - informs -> DICT: Calling routine informations texts, *Default* = {}
+        - name :
+            [String]: Optimizer name, Default = {}
+        - category :
+            [String]: Optimizer category, Default = {}
+        - def_options :
+            [Dictionary]: Deafult options, Default = {}
+        - informs :
+            [Dictionary]: Calling routine informations texts, Default = {}
         """
 
         self.name = name
@@ -67,32 +72,37 @@ class Optimizer(object):
         """
         Run Optimizer (Calling Routine)
 
-        **Keyword arguments:**
+        Arguments:
 
-        - opt_problem -> INST: Optimization problem instance, *Default* = {}
+        - opt_problem :
+            [Instance]: Optimization problem instance, Default = {}
 
-        Additional arguments and keyword arguments are passed to the objective function call
+            Additional arguments and keyword arguments are passed to the 
+            objective function call
         """
 
         # Check Optimization Problem
         if not isinstance(opt_problem,Optimization):
             try:
-                hasattr(opt_problem,'_constraints')
+                hasattr(opt_problem,'constraints')
             except:
                 raise ValueError("Input is not a Valid Optimization Problem Instance\n")
 
         # Check order of Constraints
         last_eq = 0
         first_ieq = -1
-        if (len(opt_problem._constraints.keys()) > 0):
-            for key in opt_problem._constraints.keys():
-                if opt_problem._constraints[key].type == 'e':
+        
+        if len(opt_problem.constraints.keys()) > 0 :
+            for key in opt_problem.constraints.keys():
+                # equality constraint
+                if opt_problem.constraints[key].type == 'e':
                     last_eq = int(key)
-                elif opt_problem._constraints[key].type == 'i':
-                    if (first_ieq == -1):
+                # inequality constraint
+                elif opt_problem.constraints[key].type == 'i':
+                    if first_ieq == -1:
                         first_ieq = int(key)
 
-            if (last_eq > first_ieq) and (first_ieq != -1):
+            if last_eq > first_ieq and first_ieq != -1:
                 print('WARNING - Equality Constraints should be defined BEFORE Inequality Constraints')
 
         # Solve Optimization Problem

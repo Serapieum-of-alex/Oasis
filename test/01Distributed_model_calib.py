@@ -117,142 +117,65 @@ UB=np.loadtxt('01txt\\constrained_muskingum\\UB-4km.txt',usecols=0).tolist()#[:9
 # 
 klb=0.5
 kub=1.5
-
-#%% Genatic Algorithm
-#run_GA=False
-#
-## Find negative element
-#def eval_func(genome):
-##    print(genome)
-#    _,_, RMSEE ,_, _, _=calib_tot_distributed_new_model_structure2(calibration_array,
-#                             p2,curve,lakecell,DEM,flow_acc_table,flow_acc,sp_prec_c,sp_et_c,
-#                             sp_temp_c, genome,kub,klb,jiboa_initial=jiboa_initial,
-#                             lake_initial=lake_initial,ll_temp=None, q_0=None)
-##    _,_, RMSEE ,_, _, _=calib_tot_distributed_new_model(calibration_array,
-##                             p2,curve,lakecell,DEM,flow_acc_table,flow_acc,sp_prec_c,sp_et_c,
-##                             sp_temp_c, genome,jiboa_initial=jiboa_initial,
-##                             lake_initial=lake_initial,ll_temp=None, q_0=None)
-#    print(RMSEE)
-#    return RMSEE
-#
-#def Grid_constructor(LB=LB,UB=UB):
-#    alleles = GAllele.GAlleles()
-#    for i in range(len(UB)):
-#        alleles.add(GAllele.GAlleleRange(LB[i],UB[i],real=True))
-##        alleles.add(round(uniform(LB[i],UB[i]),int(decimals[i])))
-##        GAllele.GAlleleRange.getRandomAllele.
-##    a=GAllele.GAlleleList([round(uniform(LB[i],UB[i]),int(decimals[i])) for i in range(len(decimals))])
-##    a=[round(uniform(LB[i],UB[i]),int(decimals[i])) for i in range(len(decimals))]
-##    print(a)
-##    alleles.add(a)
-#    return alleles
-#
-#def run_main():
-#    # Genome instance
-#    genome = G1DList.G1DList(len(LB))
-#    genome.setParams(allele=Grid_constructor() ,bestrawscore=0.0000, rounddecimal=4) #rangemin=-6.0, rangemax=6.0
-##    Consts.CDefRangeMax
-##    genome.setParams.
-#    # Change the initializator to Real values
-#    genome.initializator.set(Initializators.G1DListInitializatorAllele)
-##    genome.initializator.set(Initializators.G1DBinaryStringInitializator)
-#
-#    # Change the mutator to Gaussian Mutator
-#    genome.mutator.set(Mutators.G1DListMutatorAllele)
-##    genome.mutator.set(Mutators.G1DBinaryStringMutatorSwap)
-#    
-##    genome.crossover.set(Crossovers.G1DListCrossoverSinglePoint)
-##    genome.crossover.set(Crossovers.G1DBinaryStringXTwoPoint)
-##    genome.crossover.set(Crossovers.G1DListCrossoverCutCrossfill)
-#    genome.crossover.set(Crossovers.G1DListCrossoverSinglePoint)
-#
-#    # The evaluator function (objective function)
-#    genome.evaluator.set(eval_func)
-#
-#    # Genetic Algorithm Instance
-#    ga = GSimpleGA.GSimpleGA(genome)
-#    ga.setMinimax(Consts.minimaxType["minimize"])
-#    ga.selector.set(Selectors.GRouletteWheel)
-#    
-#    ga.setGenerations(200)
-#    ga.setPopulationSize(200)
-#    ga.setMutationRate(0.6)
-#    ga.setCrossoverRate(0.85)
-##    ga.setMultiProcessing(True)
-#    # stopping criteria
-#    ga.terminationCriteria.set(GSimpleGA.ConvergenceCriteria)
-#    ga.terminationCriteria.set(GSimpleGA.FitnessStatsCriteria)
-#    
-#    sqlite_adapter = DBAdapters.DBSQLite(identify="ex1", resetDB=True)
-#    ga.setDBAdapter(sqlite_adapter)
-#    
-#    # Do the evolution
-#    ga.evolve(freq_stats=1)
-#
-#    # Best individual
-#    print ga.bestIndividual()
-#    print ga.currentGeneration
-##if __name__ == "__main__":
-#if run_GA== True:
-#    run_main()
 #%% harmony_search
 harmony_search=1
 
-if harmony_search==1:
-    par=np.random.uniform(LB, UB)
-    print('Calibration starts')
-    def opt_fun(par):
-        try:
+#if harmony_search==1:
+par=np.random.uniform(LB, UB)
+print('Calibration starts')
+def opt_fun(par):
+    try:
 #            print("start")
-            _,_, RMSEE ,_, _, _=calib_tot_distributed_new_model_structure2(calibration_array,
-                             p2,curve,lakecell,DEM,flow_acc_table,flow_acc,sp_prec_c,sp_et_c,
-                             sp_temp_c, par,kub,klb,jiboa_initial=jiboa_initial,
-                             lake_initial=lake_initial,ll_temp=None, q_0=None)
+        _,_, RMSEE ,_, _, _=calib_tot_distributed_new_model_structure2(calibration_array,
+                         p2,curve,lakecell,DEM,flow_acc_table,flow_acc,sp_prec_c,sp_et_c,
+                         sp_temp_c, par,kub,klb,jiboa_initial=jiboa_initial,
+                         lake_initial=lake_initial,ll_temp=None, q_0=None)
 #            f1=open("allparameters.txt","a+")
 #            f1.write(str(par)+'\n')
 #            f1.close()
 #            RMSEE=1
 #            print("end")
-            print(RMSEE)
-            print(par)
-            fail = 0
-        except:
-            RMSEE = np.nan
-            fail = 1
-        return RMSEE, [], fail
-    
-    opt_prob = Optimization('HBV Calibration', opt_fun)
-    for i in range(len(LB)):# [:10]
-        opt_prob.addVar('x{0}'.format(i), type='c', lower=LB[i], upper=UB[i])
-    
-    print(opt_prob)
-    
-    opt_engine = ALHSO(etol=0.0001,atol=0.0001,rtol=0.0001, stopiters=10, hmcr=0.5,par=0.5,filename='mostafa.out')
+        print(RMSEE)
+        print(par)
+        fail = 0
+    except:
+        RMSEE = np.nan
+        fail = 1
+    return RMSEE, [], fail
+
+opt_prob = Optimization('HBV Calibration', opt_fun)
+for i in range(len(LB)):# [:10]
+    opt_prob.addVar('x{0}'.format(i), type='c', lower=LB[i], upper=UB[i])
+
+# write the optimization problem with the __str__ method
+print(opt_prob)
+
+opt_engine = ALHSO(etol=0.0001,atol=0.0001,rtol=0.0001, stopiters=10, hmcr=0.5,par=0.5,filename='mostafa.out')
 #    opt_engine.__solve__(opt_engine,store_sol=True,disp_opts=False,store_hst=True,hot_start=True,filename="parameters.txt") #'hotstart.txt'
-    
-    Optimizer.__init__(opt_engine,def_options={
-                    'hms':[int,9],					# Memory Size [1,50]
-                		'hmcr':[float,0.95],			# Probability rate of choosing from memory [0.7,0.99]
-                		'par':[float,0.99],				# Pitch adjustment rate [0.1,0.99]
-                		'dbw':[int,2000],				# Variable Bandwidth Quantization
-                		'maxoutiter':[int,2e3],			# Maximum Number of Outer Loop Iterations (Major Iterations)
-                		'maxinniter':[int,2e2],			# Maximum Number of Inner Loop Iterations (Minor Iterations)
-                		'stopcriteria':[int,1],			# Stopping Criteria Flag
-                		'stopiters':[int,20],			# Consecutively Number of Outer Iterations for which the Stopping Criteria must be Satisfied
-                		'etol':[float,0.0001],			# Absolute Tolerance for Equality constraints
-                		'itol':[float,0.0001],			# Absolute Tolerance for Inequality constraints 
-                		'atol':[float,0.0001],			# Absolute Tolerance for Objective Function 1e-6
-                		'rtol':[float,0.0001],			# Relative Tolerance for Objective Function
-                		'prtoutiter':[int,0],			# Number of Iterations Before Print Outer Loop Information
-                		'prtinniter':[int,0],			# Number of Iterations Before Print Inner Loop Information
-                		'xinit':[int,0],				# Initial Position Flag (0 - no position, 1 - position given)
-                		'rinit':[float,1.0],			# Initial Penalty Factor
-                		'fileout':[int,1],				# Flag to Turn On Output to filename
-                		'filename':[str,'parameters.txt'],	# We could probably remove fileout flag if filename or fileinstance is given
-                		'seed':[float,0.5],				# Random Number Seed (0 - Auto-Seed based on time clock)
-                		'scaling':[int,1],				# Design Variables Scaling Flag (0 - no scaling, 1 - scaling between [-1,1]) 
-                		})
-    
+
+Optimizer.__init__(opt_engine,def_options={
+                'hms':[int,9],					# Memory Size [1,50]
+            		'hmcr':[float,0.95],			# Probability rate of choosing from memory [0.7,0.99]
+            		'par':[float,0.99],				# Pitch adjustment rate [0.1,0.99]
+            		'dbw':[int,2000],				# Variable Bandwidth Quantization
+            		'maxoutiter':[int,2e3],			# Maximum Number of Outer Loop Iterations (Major Iterations)
+            		'maxinniter':[int,2e2],			# Maximum Number of Inner Loop Iterations (Minor Iterations)
+            		'stopcriteria':[int,1],			# Stopping Criteria Flag
+            		'stopiters':[int,20],			# Consecutively Number of Outer Iterations for which the Stopping Criteria must be Satisfied
+            		'etol':[float,0.0001],			# Absolute Tolerance for Equality constraints
+            		'itol':[float,0.0001],			# Absolute Tolerance for Inequality constraints 
+            		'atol':[float,0.0001],			# Absolute Tolerance for Objective Function 1e-6
+            		'rtol':[float,0.0001],			# Relative Tolerance for Objective Function
+            		'prtoutiter':[int,0],			# Number of Iterations Before Print Outer Loop Information
+            		'prtinniter':[int,0],			# Number of Iterations Before Print Inner Loop Information
+            		'xinit':[int,0],				# Initial Position Flag (0 - no position, 1 - position given)
+            		'rinit':[float,1.0],			# Initial Penalty Factor
+            		'fileout':[int,1],				# Flag to Turn On Output to filename
+            		'filename':[str,'parameters.txt'],	# We could probably remove fileout flag if filename or fileinstance is given
+            		'seed':[float,0.5],				# Random Number Seed (0 - Auto-Seed based on time clock)
+            		'scaling':[int,1],				# Design Variables Scaling Flag (0 - no scaling, 1 - scaling between [-1,1]) 
+            		})
+
 #    opt_engine.__solve__(opt_prob,store_sol=True,display_opts=True ,store_hst=True,hot_start=True,filename="parameters.txt") #'hotstart.txt'
-    res = opt_engine(opt_prob)
+res = opt_engine(opt_prob)
 #    opt_engine.__init__(etol=0.001,atol=0.001,rtol=0.001)    
