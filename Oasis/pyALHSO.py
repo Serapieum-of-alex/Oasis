@@ -5,9 +5,9 @@ ALHSO - A Python interface to ALHSO.
 __version__ = '$Revision: $'
 
 try:
-	from . import hs
+	from . import HS
 except:
-	raise ImportError('ALHSO shared library failed to import')
+	raise ImportError('HS shared library failed to import')
 
 
 import os #, sys
@@ -113,7 +113,6 @@ class ALHSO(Optimizer):
         # from the ALHSO sub class
 		Optimizer.__init__(self, name, category, def_opts, informs, *args, **kwargs)
 		
-
 		
 	def __solve__(self, opt_problem={}, store_sol=True, disp_opts=False, 
                    store_hst=False, hot_start=False, *args, **kwargs):
@@ -132,6 +131,9 @@ class ALHSO(Optimizer):
             [Boolen/String] Flag/filename to store optimization history, Default = False
 		- hot_start :
             [Boolen/String] Flag/filename to read optimization history, Default = False
+        - display_opts:
+            [Boolen] keyword argument to decide to plot the result of the 
+                optimization
 		
     	- Additional arguments and keyword arguments are passed to the 
             objective function call.
@@ -144,6 +146,7 @@ class ALHSO(Optimizer):
 		
         
 		if self.poa:
+            # parallel processing 
 			try:
 				import mpi4py
 				from mpi4py import MPI
@@ -333,7 +336,7 @@ class ALHSO(Optimizer):
 		# Run ALHSO
 		t0 = time.time()
         
-		opt_x,opt_f,opt_g,opt_lambda,nfevals,rseed = hs.hs(n,m,me,
+		opt_x,opt_f,opt_g,opt_lambda,nfevals,rseed = HS.HS(n,m,me,
 			type,xs,xl,xu,hms,imax,cmax,stop,nstop,etol,itol,atol,rtol,oout,
 			iout,rinit,hmcr,par,bw,fileout,filename,seed,scale,objconfunc)
         

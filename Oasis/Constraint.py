@@ -27,19 +27,18 @@ class Constraint(object):
         Constraint Class Initialization
         
         arguments:
-            
-        - name :
-            [String]: Variable Name
-        - type :
-            [String] Variable Type ('i'-inequality, 'e'-equality), Default = 'i'
-            inequality constrain like x1+x3 = 10, equality constrain like x1*x3 > 0
-            Equality Constraints should be defined BEFORE Inequality Constraints
-        - lower :
-            [Integer] Variable Lower Value
-        - upper :
-            [Integer] Variable Upper Value
-        - choices :
-            [Dictionary] Variable Choices
+            - name :
+                [String]: Variable Name
+            - type :
+                [String] Variable Type ('i'-inequality, 'e'-equality), Default = 'i'
+                inequality constrain like x1+x3 = 10, equality constrain like x1*x3 > 0
+                Equality Constraints should be defined BEFORE Inequality Constraints
+            - lower :
+                [Integer] Variable Lower Value
+            - upper :
+                [Integer] Variable Upper Value
+            - choices :
+                [Dictionary] Variable Choices
         """
         self.name = name
         self.type = type[0].lower()
@@ -48,15 +47,12 @@ class Constraint(object):
         if (type[0].lower() == 'i'):
             self.upper = 0.0
             self.lower = -float(inf)
+            
             for key in kwargs.keys():
-                if (key == 'lower'):
+                if key == 'lower':
                     self.lower = float(kwargs['lower'])
-                #else:
-                    #self.lower = -float(inf)
-                if (key == 'upper'):
+                if key == 'upper':
                     self.upper = float(kwargs['upper'])
-                #else:
-                    #self.upper = float(inf) 
         elif (type[0].lower() == 'e'):
             if 'equal' in kwargs:
                 self.equal = float(kwargs['equal'])

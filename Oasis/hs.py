@@ -29,7 +29,7 @@ eps = 2.0*eps
 
 
 # alhso function
-def hs(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
+def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 	memsize,maxoutiter,maxinniter,stopcriteria,stopiters,etol,
 	itol,atol,rtol,prtoutiter,prtinniter,r0,hmcr,par,bw,
 	fileout,filename,rseed,scale,objfunc):

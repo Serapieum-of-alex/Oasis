@@ -71,7 +71,7 @@ class Optimizer(object):
     def __call__(self, opt_problem={}, *args, **kwargs):
         """
         Run Optimizer (Calling Routine)
-
+        
         Arguments:
 
         - opt_problem :
@@ -88,7 +88,8 @@ class Optimizer(object):
             except:
                 raise ValueError("Input is not a Valid Optimization Problem Instance\n")
 
-        # Check order of Constraints
+        # Check order of Constraints - equality constraint has to come 
+        # before inequality constraint
         last_eq = 0
         first_ieq = -1
         
@@ -107,6 +108,7 @@ class Optimizer(object):
 
         # Solve Optimization Problem
         return self.__solve__(opt_problem, *args, **kwargs)
+    
 
     def _on_setOption(self, name, value):
         """
@@ -215,12 +217,16 @@ class Optimizer(object):
         """
         Setup Optimizer History and/or Hot-start instances
 
-        **Arguments:**
+        Arguments:
 
-        - probname  -> STR: Optimization problem name
-        - store_hst -> BOOL/STR: Flag/filename to store optimization history
-        - hot_start -> BOOL/STR: Flag/filename to read optimization history
-        - def_fname -> STR: Default file name
+        - probname :
+            [String] Optimization problem name
+        - store_hst :
+            [Boolen/String] Flag/filename to store optimization history
+        - hot_start :
+            [Boolen/String] Flag/filename to read optimization history
+        - def_fname :
+            [String]: Default file name
         """
 
         myrank = self.myrank

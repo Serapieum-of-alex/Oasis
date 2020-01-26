@@ -56,6 +56,7 @@ class Optimization(object):
             self.variables = {}
         else:
             self.variables = var_set
+        
         self.vargroups = {}
 
         # Initialize Objective Set

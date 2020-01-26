@@ -13,11 +13,8 @@ import sys
 sys.path.append("F:/02Private/02Research/thesis/My Thesis/Data_and_Models/Model/Code/python_functions/")
 # precipitation data
 datapath="F:/02Private/02Research/thesis/My Thesis/Data_and_Models/Data/05new_model/outputs/4km/"
-#datapath="F:/02Private/02Research/thesis/My Thesis\\Data_and_Models\\Data\\05new_model\\3km\\"
 # DEM
-#dempath="F:/02Private/02Research/thesis/My Thesis\\Data_and_Models\\Data\\05new_model\\inputs\\DEM\\dem_500.tif"
 dempath="F:/02Private/02Research/thesis/My Thesis/Data_and_Models/Data/05new_model/new/dem_4km.tif"
-#dempath="F:/02Private/02Research/thesis/My Thesis\\Data_and_Models\\Data\\05new_model\\3km\\dem3km.tif"
 # calibration data
 calibopath="F:/02Private/02Research/thesis/My Thesis/Data_and_Models/Data/03semi_distributed(2)/matlab/calibration/"
 #%%library
@@ -26,19 +23,14 @@ import numpy as np
 import scipy.io as spio
 import gdal
 
-#from pyOpt import Optimization, ALHSO,Optimizer
 from Oasis.Optimization import Optimization
 from Oasis.Optimizer import Optimizer
 from Oasis.pyALHSO import ALHSO
-#from pyevolve import GSimpleGA, Consts, GAllele,Crossovers #,Interaction
-#from pyevolve import G1DList
-#from pyevolve import Selectors
-#from pyevolve import DBAdapters
-#from pyevolve import Initializators, Mutators
+from Oasis import Constraint
 
 #import pandas as pd
 import datetime as dt
-#from time import ctime
+
 
 # functions
 from alldataold import alldata
@@ -56,25 +48,12 @@ data=spio.loadmat(calibopath+'vlake.mat')
 totaldata['plake']=data['vlake'][:,0]
 del totaldata['p'], data
 
-#s='2012-06-14 19:00:00'
-#e='2013-12-23 00:00:00'
-#e2='2014-11-17 00:00:00'
-
 s=dt.datetime(2012,6,14,19,0,0)
 e=dt.datetime(2013,12,23,0,0,0)
 e2=dt.datetime(2014,11,17,0,0,0)
 
 calib=totaldata.loc[s:e]
-#valid=totaldata.loc[e:e2]
-
-#curve=np.loadtxt('01txt\\curve.txt',dtype=np.float64)
-# read initial conditions
 calibration_array=calib.as_matrix()
-#calibration_array=calibration_array.astype(np.float32)
-#validation_array=valid.as_matrix()
-#validation_array=validation_array.astype(np.float32)
-# distributed data
-# calibration
 sp_prec_c=np.load(datapath+'sp_prec_c.npy')
 #sp_prec_c=sp_prec_c.astype(np.float32)
 sp_et_c=np.load(datapath+'sp_et_c.npy')
@@ -86,18 +65,9 @@ sp_temp_c=np.load(datapath+'sp_temp_c.npy')
 flow_acc_table=load_obj(datapath+"flow_acc_table")
 flow_acc=np.load(datapath+'flow_acc.npy')
 #flow_acc=flow_acc.astype(np.float16)
-#lakecell=[3,1]
-
-#lakecell=[10,4] # 1km
-#lakecell=[19,10] # 500m
 lakecell=[2,1] # 4km
 
 #no_cells=np.size(flow_direct[:,:,0])-np.count_nonzero(np.isnan(flow_direct[:,:,0]))
-
-# validation
-#sp_prec_v=np.load(datapath+'sp_prec_v.npy')
-#sp_et_v=np.load(datapath+'sp_et_v.npy')
-#sp_temp_v=np.load(datapath+'sp_temp_v.npy')
 
 DEM = gdal.Open(dempath)
 shape_base_dem = DEM.ReadAsArray().shape
@@ -120,21 +90,17 @@ kub=1.5
 #%% harmony_search
 harmony_search=1
 
-#if harmony_search==1:
+
 par=np.random.uniform(LB, UB)
 print('Calibration starts')
+
+# 1- Objective Function
 def opt_fun(par):
     try:
-#            print("start")
         _,_, RMSEE ,_, _, _=calib_tot_distributed_new_model_structure2(calibration_array,
                          p2,curve,lakecell,DEM,flow_acc_table,flow_acc,sp_prec_c,sp_et_c,
                          sp_temp_c, par,kub,klb,jiboa_initial=jiboa_initial,
                          lake_initial=lake_initial,ll_temp=None, q_0=None)
-#            f1=open("allparameters.txt","a+")
-#            f1.write(str(par)+'\n')
-#            f1.close()
-#            RMSEE=1
-#            print("end")
         print(RMSEE)
         print(par)
         fail = 0
@@ -143,39 +109,35 @@ def opt_fun(par):
         fail = 1
     return RMSEE, [], fail
 
+# 2- first create the constraint, variable, parameter objects
+# and hand it to the optimization object 
+# A- Constraint object
+#c1=(2*x1*x2)-1
+#c2=1-(2*x1*(1-x2))
+
+#Contraint1 = Constraint("constraint1", type='i', *args, **kwargs)
+
+# 3-Optimization object
 opt_prob = Optimization('HBV Calibration', opt_fun)
+
+# 4- add variable to the Optimization object
 for i in range(len(LB)):# [:10]
     opt_prob.addVar('x{0}'.format(i), type='c', lower=LB[i], upper=UB[i])
 
 # write the optimization problem with the __str__ method
 print(opt_prob)
 
-opt_engine = ALHSO(etol=0.0001,atol=0.0001,rtol=0.0001, stopiters=10, hmcr=0.5,par=0.5,filename='mostafa.out')
-#    opt_engine.__solve__(opt_engine,store_sol=True,disp_opts=False,store_hst=True,hot_start=True,filename="parameters.txt") #'hotstart.txt'
+# 5- create the Optimizer and the ALHSO object (Optimizer is a super class and 
+# ALHSO is a sub class)
+# any options you want to pass to the optimizer object you have to put it in 
+# a dict and call it options and use the options name as a key in the dict
+options = dict(etol=0.0001,atol=0.0001,rtol=0.0001, stopiters=10, hmcr=0.5,
+               par=0.5, hms = 20, dbw = 3000,
+               fileout = 1, filename ='parameters.txt',
+            	seed = 0.5)
 
-Optimizer.__init__(opt_engine,def_options={
-                'hms':[int,9],					# Memory Size [1,50]
-            		'hmcr':[float,0.95],			# Probability rate of choosing from memory [0.7,0.99]
-            		'par':[float,0.99],				# Pitch adjustment rate [0.1,0.99]
-            		'dbw':[int,2000],				# Variable Bandwidth Quantization
-            		'maxoutiter':[int,2e3],			# Maximum Number of Outer Loop Iterations (Major Iterations)
-            		'maxinniter':[int,2e2],			# Maximum Number of Inner Loop Iterations (Minor Iterations)
-            		'stopcriteria':[int,1],			# Stopping Criteria Flag
-            		'stopiters':[int,20],			# Consecutively Number of Outer Iterations for which the Stopping Criteria must be Satisfied
-            		'etol':[float,0.0001],			# Absolute Tolerance for Equality constraints
-            		'itol':[float,0.0001],			# Absolute Tolerance for Inequality constraints 
-            		'atol':[float,0.0001],			# Absolute Tolerance for Objective Function 1e-6
-            		'rtol':[float,0.0001],			# Relative Tolerance for Objective Function
-            		'prtoutiter':[int,0],			# Number of Iterations Before Print Outer Loop Information
-            		'prtinniter':[int,0],			# Number of Iterations Before Print Inner Loop Information
-            		'xinit':[int,0],				# Initial Position Flag (0 - no position, 1 - position given)
-            		'rinit':[float,1.0],			# Initial Penalty Factor
-            		'fileout':[int,1],				# Flag to Turn On Output to filename
-            		'filename':[str,'parameters.txt'],	# We could probably remove fileout flag if filename or fileinstance is given
-            		'seed':[float,0.5],				# Random Number Seed (0 - Auto-Seed based on time clock)
-            		'scaling':[int,1],				# Design Variables Scaling Flag (0 - no scaling, 1 - scaling between [-1,1]) 
-            		})
+opt_engine = ALHSO(pll_type = 'POA',options = options)
 
-#    opt_engine.__solve__(opt_prob,store_sol=True,display_opts=True ,store_hst=True,hot_start=True,filename="parameters.txt") #'hotstart.txt'
-res = opt_engine(opt_prob)
-#    opt_engine.__init__(etol=0.001,atol=0.001,rtol=0.001)    
+# 6- call the optimizer to solve the optimization problem
+res = opt_engine(opt_prob, store_sol=True, display_opts=True, store_hst=True, 
+                 hot_start=True,filename="mostafa.txt")
