@@ -234,7 +234,9 @@ class Optimizer(object):
         hos_file = None
         log_file = None
         tmp_file = False
-        if (myrank == 0):
+        if myrank == 0:
+            # store_hst is a string
+            # hot_start is a string
             if isinstance(store_hst,str):
                 if isinstance(hot_start,str):
                     if (store_hst == hot_start):
@@ -248,16 +250,21 @@ class Optimizer(object):
                     self.sto_hst = True
                     self.hot_start = True
                 elif hot_start:
+                # store_hst is a string
+                # hot_start is a Boolen(True)
                     hos_file = History(store_hst, 'r', self)
                     log_file = History(store_hst+'_tmp', 'w', self, probname)
                     self.sto_hst = True
                     self.hot_start = True
                     tmp_file = True
                 else:
+                # store_hst is a string
+                # hot_start is a Boolen(False)
                     log_file = History(store_hst, 'w', self, probname)
                     self.sto_hst = True
                     self.hot_start = False
-
+            # store_hst is a boolen(True)
+            # hot_start is string
             elif store_hst:
                 if isinstance(hot_start,str):
                     if (hot_start == def_fname):
@@ -267,9 +274,10 @@ class Optimizer(object):
                     else:
                         hos_file = History(hot_start, 'r', self)
                         log_file = History(def_fname, 'w', self, probname)
-
                     self.sto_hst = True
                     self.hot_start = True
+                # store_hst is a boolen(True)
+                # hot_start is boolen(True)
                 elif hot_start:
                     hos_file = History(def_fname, 'r', self)
                     log_file = History(def_fname+'_tmp', 'w', self, probname)
@@ -277,10 +285,14 @@ class Optimizer(object):
                     self.hot_start = True
                     tmp_file = True
                 else:
+                # store_hst is a boolen(True)
+                # hot_start is boolen(False)
                     log_file = History(def_fname, 'w', self, probname)
                     self.sto_hst = True
                     self.hot_start = False
             else:
+            # store_hst is a boolen(False)
+            # hot_start is string
                 if isinstance(hot_start,str):
                     hos_file = History(hot_start, 'r', self)
                     self.hot_start = True
@@ -291,10 +303,11 @@ class Optimizer(object):
                     self.hot_start = False
 
                 self.sto_hst = False
+        
         else:
             self.sto_hst = False
             self.hot_start = False
-
+        
         return hos_file, log_file, tmp_file
 
     def ListAttributes(self):

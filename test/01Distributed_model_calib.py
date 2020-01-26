@@ -4,7 +4,7 @@ Created on Sat Jan 27 17:18:46 2018
 
 @author: Mostafa
 """
-#%% paths & links 
+#%% paths & links
 from IPython import get_ipython   # to reset the variable explorer each time
 get_ipython().magic('reset -f')
 import os
@@ -77,14 +77,14 @@ no_cells=np.size(elev[:,:])-np.count_nonzero(np.isnan(elev[:,:]))
 #elev=np.array(elev,dtype='float32')
 #no_val=np.float32(no_val)
 
-#%%
-#path="02optimization_results\\GA\\2km\\"
+#%% parameters
+# 168 parameters
 
 jiboa_initial=np.loadtxt('01txt\\Initia-jiboa.txt',usecols=0).tolist()
 lake_initial=np.loadtxt('01txt\\Initia-lake.txt',usecols=0).tolist()
 LB=np.loadtxt('01txt\\constrained_muskingum\\LB-4km.txt',usecols=0).tolist()#[:9]
 UB=np.loadtxt('01txt\\constrained_muskingum\\UB-4km.txt',usecols=0).tolist()#[:9]
-# 
+#
 klb=0.5
 kub=1.5
 #%% harmony_search
@@ -110,7 +110,7 @@ def opt_fun(par):
     return RMSEE, [], fail
 
 # 2- first create the constraint, variable, parameter objects
-# and hand it to the optimization object 
+# and hand it to the optimization object
 # A- Constraint object
 #c1=(2*x1*x2)-1
 #c2=1-(2*x1*(1-x2))
@@ -121,23 +121,25 @@ def opt_fun(par):
 opt_prob = Optimization('HBV Calibration', opt_fun)
 
 # 4- add variable to the Optimization object
+# if you want to give the algorithm any initial values give it to the addVar method
+# with a keyword argument value
 for i in range(len(LB)):# [:10]
-    opt_prob.addVar('x{0}'.format(i), type='c', lower=LB[i], upper=UB[i])
+    opt_prob.addVar('x{0}'.format(i), value=LB[i], type='c', lower=LB[i], upper=UB[i])
 
 # write the optimization problem with the __str__ method
 print(opt_prob)
 
-# 5- create the Optimizer and the ALHSO object (Optimizer is a super class and 
+# 5- create the Optimizer and the ALHSO object (Optimizer is a super class and
 # ALHSO is a sub class)
-# any options you want to pass to the optimizer object you have to put it in 
+# any options you want to pass to the optimizer object you have to put it in
 # a dict and call it options and use the options name as a key in the dict
 options = dict(etol=0.0001,atol=0.0001,rtol=0.0001, stopiters=10, hmcr=0.5,
                par=0.5, hms = 20, dbw = 3000,
                fileout = 1, filename ='parameters.txt',
-            	seed = 0.5)
+            	seed = 0.5, xinit = 0)
 
 opt_engine = ALHSO(pll_type = 'POA',options = options)
 
 # 6- call the optimizer to solve the optimization problem
-res = opt_engine(opt_prob, store_sol=True, display_opts=True, store_hst=True, 
-                 hot_start=True,filename="mostafa.txt")
+res = opt_engine(opt_prob, store_sol=True, display_opts=True, store_hst=True,
+                 hot_start=False,filename="mostafa.txt")

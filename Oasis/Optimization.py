@@ -27,7 +27,7 @@ class Optimization(object):
     Optimization Problem Class
     """
 
-    def __init__(self, name, obj_fun, var_set=None, obj_set=None, con_set=None, 
+    def __init__(self, name, obj_fun, var_set=None, obj_set=None, con_set=None,
                  use_groups=False, *args, **kwargs):
         """
         Optimization Problem Class Initialization
@@ -56,7 +56,7 @@ class Optimization(object):
             self.variables = {}
         else:
             self.variables = var_set
-        
+
         self.vargroups = {}
 
         # Initialize Objective Set
@@ -110,11 +110,11 @@ class Optimization(object):
         # args and kwargs has to follow the arguments of the Variable class
         self.setVar(id,*args,**kwargs)
 
-        
+
         tmp_group = {}
         tmp_group[self.variables[id].name] = id
         # vargroups is a dictionary with the order of the group as a key
-        # for each group a dict of the variable name as a key, 
+        # for each group a dict of the variable name as a key,
         self.vargroups[self.firstavailableindex(self.vargroups)] = {'name':self.variables[id].name,'ids':tmp_group}
 
 
@@ -200,10 +200,11 @@ class Optimization(object):
 
         Arguments:
 
-        - i -> INT: Variable index
+			- i :
+				[Integer]: Variable index
         """
 
-        if (len(args) > 0) and isinstance(args[0], Variable):
+        if len(args) > 0 and isinstance(args[0], Variable):
             self.variables[i] = args[0]
         else:
             try:
@@ -228,10 +229,10 @@ class Optimization(object):
         # Check Index
         if not (isinstance(i,int) and i >= 0):
             raise ValueError("Variable index must be an integer >= 0.")
-        
+
         del self.variables[i]
 
-        
+
         #ngroups = len(self._vargroups)
         for j in self.vargroups.keys():
             keys = self.vargroups[j]['ids']
@@ -293,7 +294,7 @@ class Optimization(object):
         # Check Index
         if not (isinstance(i,int) and i >= 0):
             raise ValueError("Objective index must be an integer >= 0.")
-            
+
         return self.objectives[i]
 
 
@@ -315,7 +316,7 @@ class Optimization(object):
 
         - i -> INT: Objective index
         """
-        
+
         if (len(args) > 0) and isinstance(args[0], Objective):
             self.objectives[i] = args[0]
         else:
@@ -337,7 +338,7 @@ class Optimization(object):
         # Check Index
         if not (isinstance(i,int) and i >= 0):
             raise ValueError("Objective index must be an integer >= 0.")
-        
+
         del self.objectives[i]
 
 
@@ -361,7 +362,7 @@ class Optimization(object):
         # Check Index
         if not (isinstance(i,int) and i >= 0):
             raise ValueError("Constraint index must be an integer >= 0.")
-        
+
         return self.constraints[i]
 
 
@@ -369,7 +370,7 @@ class Optimization(object):
         """
         Add Constraint into Constraints Set
         """
-        
+
         self.setCon(self.firstavailableindex(self.constraints),*args,**kwargs)
 
 
@@ -386,7 +387,7 @@ class Optimization(object):
 
         - type -> STR: Constraint type ('i'-inequality, 'e'-equality), *Default* = 'i'
         """
-        
+
         type_list = [type[0].lower()]*ncons
 
         if (type[0].lower() == 'i'):
@@ -451,7 +452,7 @@ class Optimization(object):
 
         - i -> INT: Constraint index
         """
-        
+
         if (len(args) > 0) and isinstance(args[0], Constraint):
             self.constraints[i] = args[0]
         else:
@@ -475,7 +476,7 @@ class Optimization(object):
         # Check Index
         if not (isinstance(i,int) and i >= 0):
             raise ValueError("Constraint index must be an integer >= 0.")
-            
+
         del self.constraints[i]
 
 
@@ -499,7 +500,7 @@ class Optimization(object):
         # Check Index
         if not (isinstance(i,int) and i >= 0):
             raise ValueError("Solution index must be an integer >= 0.")
-            
+
         return self._solutions[i]
 
 
@@ -507,7 +508,7 @@ class Optimization(object):
         """
         Add Solution into Solution Set
         """
-        
+
         self.setSol(self.firstavailableindex(self._solutions),*args,**kwargs)
 
 
@@ -519,7 +520,7 @@ class Optimization(object):
 
         - i -> INT: Solution index
         """
-        
+
         if (len(args) > 0) and isinstance(args[0], Solution):
             self._solutions[i] = args[0]
         else:
@@ -688,7 +689,7 @@ class Optimization(object):
         Arguments:
 
             - set:
-                [List] List of the existed indeces, Set to find frist available 
+                [List] List of the existed indeces, Set to find frist available
                 index of
         """
         i = 0
@@ -742,7 +743,7 @@ class Optimization(object):
         - disp_sols ->  BOOL: Display solutions flag, *Default* = False.
         - solutions ->  LIST: List of solution indexes.
         """
-        
+
         if isinstance(outfile,str):
             if (outfile == ''):
                 findir = os.listdir(os.curdir)
@@ -786,7 +787,7 @@ class Optimization(object):
         # Check Index
         if not (isinstance(i,int) and i >= 0):
             raise ValueError("Solution index must be an integer >= 0.")
-        
+
         return self._solutions[i]
 
 
@@ -796,8 +797,8 @@ class Solution(Optimization):
     Optimization Solution Class
     """
 
-    def __init__(self, optimizer, name, obj_fun, opt_time, opt_evals, 
-                 opt_inform, var_set=None, obj_set=None, con_set=None, 
+    def __init__(self, optimizer, name, obj_fun, opt_time, opt_evals,
+                 opt_inform, var_set=None, obj_set=None, con_set=None,
                  options_set=None, myrank=0,*args, **kwargs):
 
         """
@@ -806,7 +807,7 @@ class Solution(Optimization):
         Arguments:
             - optimizer :
                 [String]: Optimizer name
-            - name : 
+            - name :
                 [String] Optimization problem name
             - opt_time :
                     [Float]: Solution total time
@@ -814,17 +815,17 @@ class Solution(Optimization):
                 [NTEGER] Number of function evaluations
             - var_set :
                 [Instance] Variable set, Default = {}
-            - obj_set : 
+            - obj_set :
                 [Instance] Objective set, Default = {}
             - con_set :
                 [Instance] Constraints set, Default = {}
             - options_set :
                 Options used for solution, Default = {}
             - myrank :
-                [Instance] Process identification for MPI evaluations, 
+                [Instance] Process identification for MPI evaluations,
                     Default = 0
         """
-        
+
         Optimization.__init__(self, name, obj_fun, var_set, obj_set, con_set, *args, **kwargs)
         self.optimizer = optimizer
         self.opt_time = opt_time

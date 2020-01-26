@@ -10,10 +10,10 @@ __version__ = '$Revision: $'
 
 
 import os #, sys
-#import pdb
 import array as ARRAY
-#import shelve
 import numpy
+#import pdb
+#import shelve
 
 
 class History(object):
@@ -29,13 +29,16 @@ class History(object):
 		
 		Arguments:
 		
-		- filename  -> STR: Name for .bin and .cue file
-		- mode      -> STR: Either read ('r') or write ('w') mode
-		
-		**Keyword arguments:**
-		
-		- optimizer -> INST: Opimizer class instance,  *Default* = None
-		- opt_prob  -> STR: Optimization Problem Name, *Default* = None
+    		- filename :
+                [String] Name for .bin and .cue file
+    		- mode :
+                [String] Either read ('r') or write ('w') mode
+                
+    		Keyword arguments:
+    		- optimizer :
+                [Instance] Opimizer class instance,  *Default* = None
+    		- opt_prob :
+                [String] Optimization Problem Name, *Default* = None
 		"""
 		
 		self.filename = filename
@@ -67,7 +70,7 @@ class History(object):
 		
 		if self.mode == 'w':
 			
-			if (optimizer == None):
+			if optimizer == None:
 				optname = 'None'
 			else:
 				optname = optimizer.name
@@ -96,7 +99,6 @@ class History(object):
 						self.icount[tline[2]] = 0						
 			self.cue_file.close()
 		
-		# 
 		self.s_count = 0
 		
 		
