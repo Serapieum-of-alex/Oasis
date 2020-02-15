@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Sat Jan 27 17:18:46 2018
 
@@ -24,9 +23,9 @@ import scipy.io as spio
 import gdal
 
 from Oasis.Optimization import Optimization
-from Oasis.Optimizer import Optimizer
+# from Oasis.Optimizer import Optimizer
 from Oasis.pyALHSO import ALHSO
-from Oasis import Constraint
+# from Oasis import Constraint
 
 #import pandas as pd
 import datetime as dt
@@ -53,7 +52,7 @@ e=dt.datetime(2013,12,23,0,0,0)
 e2=dt.datetime(2014,11,17,0,0,0)
 
 calib=totaldata.loc[s:e]
-calibration_array=calib.as_matrix()
+calibration_array=calib.values
 sp_prec_c=np.load(datapath+'sp_prec_c.npy')
 #sp_prec_c=sp_prec_c.astype(np.float32)
 sp_et_c=np.load(datapath+'sp_et_c.npy')
@@ -101,19 +100,17 @@ def opt_fun(par):
                          p2,curve,lakecell,DEM,flow_acc_table,flow_acc,sp_prec_c,sp_et_c,
                          sp_temp_c, par,kub,klb,jiboa_initial=jiboa_initial,
                          lake_initial=lake_initial,ll_temp=None, q_0=None)
-        print(RMSEE)
-        print(par)
+        print("RMSE = " + str(RMSEE))
+        # print(par)
         fail = 0
     except:
         RMSEE = np.nan
         fail = 1
     return RMSEE, [], fail
 
-# 2- first create the constraint, variable, parameter objects
+# 2- first create the variable, parameter objects
 # and hand it to the optimization object
-# A- Constraint object
-#c1=(2*x1*x2)-1
-#c2=1-(2*x1*(1-x2))
+
 
 #Contraint1 = Constraint("constraint1", type='i', *args, **kwargs)
 
@@ -126,6 +123,11 @@ opt_prob = Optimization('HBV Calibration', opt_fun)
 for i in range(len(LB)):# [:10]
     opt_prob.addVar('x{0}'.format(i), value=LB[i], type='c', lower=LB[i], upper=UB[i])
 
+# 2- first create the constraint,
+# A- Constraint object
+#c1=(2*x1*x2)-1
+#c2=1-(2*x1*(1-x2))
+# opt_prob.addCon()
 # write the optimization problem with the __str__ method
 print(opt_prob)
 
@@ -134,9 +136,11 @@ print(opt_prob)
 # any options you want to pass to the optimizer object you have to put it in
 # a dict and call it options and use the options name as a key in the dict
 options = dict(etol=0.0001,atol=0.0001,rtol=0.0001, stopiters=10, hmcr=0.5,
-               par=0.5, hms = 20, dbw = 3000,
+               par=0.5, hms = 3, dbw = 3000,
                fileout = 1, filename ='parameters.txt',
-            	seed = 0.5, xinit = 0)
+            	seed = 0.5, xinit = 1, scaling = 0,
+				prtinniter = 1, prtoutiter = 1, stopcriteria = 1,
+				maxoutiter = 2)
 
 opt_engine = ALHSO(pll_type = 'POA',options = options)
 

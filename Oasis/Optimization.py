@@ -501,7 +501,7 @@ class Optimization(object):
         if not (isinstance(i,int) and i >= 0):
             raise ValueError("Solution index must be an integer >= 0.")
 
-        return self._solutions[i]
+        return self.solutions[i]
 
 
     def addSol(self, *args, **kwargs):
@@ -509,7 +509,7 @@ class Optimization(object):
         Add Solution into Solution Set
         """
 
-        self.setSol(self.firstavailableindex(self._solutions),*args,**kwargs)
+        self.setSol(self.firstavailableindex(self.solutions),*args,**kwargs)
 
 
     def setSol(self,i, *args, **kwargs):
@@ -522,10 +522,10 @@ class Optimization(object):
         """
 
         if (len(args) > 0) and isinstance(args[0], Solution):
-            self._solutions[i] = args[0]
+            self.solutions[i] = args[0]
         else:
             #try:
-            self._solutions[i] = Solution(*args,**kwargs)
+            self.solutions[i] = Solution(*args,**kwargs)
             #except:
             #	print args
             #	print kwargs
@@ -547,7 +547,7 @@ class Optimization(object):
             raise ValueError("Solution index must be an integer >= 0.")
 
         #
-        del self._solutions[i]
+        del self.solutions[i]
 
 
     def getSolSet(self):
@@ -555,7 +555,7 @@ class Optimization(object):
         Get Solutions Set
         """
 
-        return self._solutions
+        return self.solutions
 
 
 #    def getPar(self, i):
@@ -712,20 +712,25 @@ class Optimization(object):
         Print Structured Optimization Problem
         """
 
-        text = '''\nOptimization Problem -- %s\n%s\n
+        text = """\nOptimization Problem -- %s\n%s\n
         Objective Function: %s\n\n    Objectives:
-        Name        Value        Optimum\n''' %(self.name,'='*80,self.obj_fun.__name__)
+        Name        Value        Optimum\n"""  %(self.name,'='*80,self.obj_fun.__name__)
+
         for obj in self.objectives.keys():
             lines = str(self.objectives[obj]).split('\n')
             text += lines[1] + '\n'
-        text += '''\n	Variables (c - continuous, i - integer, d - discrete):
-        Name    Type       Value       Lower Bound  Upper Bound\n'''
+
+        text += """\n	Variables (c - continuous, i - integer, d - discrete):
+        Name    Type       Value       Lower Bound  Upper Bound\n"""
+
         for var in self.variables.keys():
             lines = str(self.variables[var]).split('\n')
             text+= lines[1] + '\n'
+
         if len(self.constraints.keys()) > 0:
-            text += '''\n	Constraints (i - inequality, e - equality):
-        Name    Type                    Bounds\n'''
+            text += """\n	Constraints (i - inequality, e - equality):
+				      Name    Type                    Bounds\n"""
+
             for con in self.constraints.keys():
                 lines = str(self.constraints[con]).split('\n')
                 text+= lines[1] + '\n'
@@ -767,9 +772,9 @@ class Optimization(object):
             if 'solutions' in kwargs:
                 sol_indices = kwargs['solutions']
             else:
-                sol_indices = self._solutions.keys()
+                sol_indices = self.solutions.keys()
             for key in sol_indices:
-                soltext = '\n' + self._solutions[key].__str__()
+                soltext = '\n' + self.solutions[key].__str__()
                 outfile.write(soltext)
         print('Data written to file ', outfile.name)
         outfile.close()
@@ -788,7 +793,7 @@ class Optimization(object):
         if not (isinstance(i,int) and i >= 0):
             raise ValueError("Solution index must be an integer >= 0.")
 
-        return self._solutions[i]
+        return self.solutions[i]
 
 
 

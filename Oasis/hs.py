@@ -68,15 +68,17 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
         14-itol:
 
         15-atol:
-
+			[] min change in the objective function to stop
         16-rtol:
-
+			[] min Relative Change in Objective to stop
         17-prtoutiter:
-
+			[Integer] every prtoutiter the variables, objective function value
+			will be printed, if prtoutiter = 0 nothing will be printed
         18-prtinniter:
-
+			[Integer] print inner iteration to decide whether to print the variables,
+			objective function value
         19-r0:
-
+			[Float] Initial Penalty Factor
         20-hmcr:
 
         21-par:
@@ -104,24 +106,27 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 
 
 	if fileout == 1:
-		if (filename == ''):
+		if filename == '' :
 			filename = 'Print.out'
 		ofile = open(filename,'w')
 
 
 	if scale == 1:
 		dbw = (xmax - xmin)/bw
+		# get the center of the space of each variable
 		space_centre = numpy.zeros(dimensions,float)
 		space_halflen = numpy.zeros(dimensions,float)
 		for j in range(dimensions):
 			space_centre[j] = (xmin[j] + xmax[j])/2.0
 			space_halflen[j] = ((xmax[j] - xmin[j])/2.0)
+		# make xmin -1 and xmax 2
 		xmin = -numpy.ones(dimensions,float)
 		xmax =  numpy.ones(dimensions,float)
 		bw = (xmax - xmin)/dbw
 
 	# Initialize Augmented Lagrange
 	rp_val = numpy.ones(constraints, float)*r0
+
 	lambda_val = numpy.zeros(constraints, float)
 	lambda_old = numpy.zeros(constraints, float)
 
@@ -133,6 +138,7 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 			HM[i,j] = xmin[j] + rand.random()*(xmax[j]-xmin[j])
 			if xtype[j] == 1:
 				discrete_i.append(j)
+	# assign the initial variable values to all the Harmony memory columns
 	if x0 != []:
 		if scale == 1:
 			HM[:,:-1] = (x0[:] - space_centre)/space_halflen
@@ -147,28 +153,34 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 	#best_L_val = 0
 	for i in range(memsize):
 
-		# Evaluate Ojective Function
-		if (scale == 1):
+		# apply each set of variable values in the harmony memory on the
+		# objective function
+		if scale == 1:
 			x_tmp = (HM[i,:-1] * space_halflen) + space_centre
 		else:
 			x_tmp = HM[i,:-1]
+
+		# if the variable is discrete round it
 		for m in discrete_i:
 			x_tmp[m] = floor(x_tmp[m] + 0.5)
+
+		# Evaluate Ojective Function
 		[f_val,g_val] = objfunc(x_tmp)
+
 		nfevals += 1
 
 		# Augmented Lagrangian Value
 		L_val = f_val
-		if (constraints > 0):
 
+		if constraints > 0:
 			# Equality Constraints
 			for l in range(neqcons):
 				tau_val[l] = g_val[l]
 
 			# Inequality Constraints
 			for l in range(neqcons,constraints):
-				if (rp_val[l] != 0):
-					if (g_val[l] > -lambda_val[l]/(2*rp_val[l])):
+				if rp_val[l] != 0:
+					if g_val[l] > -lambda_val[l]/(2*rp_val[l]):
 						tau_val[l] = g_val[l]
 					else:
 						tau_val[l] = -lambda_val[l]/(2*rp_val[l])
@@ -186,7 +198,7 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 	best_f_val = []
 	best_g_val = numpy.zeros(constraints, float)
 
-	best_x_old = numpy.zeros(dimensions, float)
+# 	best_x_old = numpy.zeros(dimensions, float)
 	best_f_old = []
 	best_g_old = numpy.zeros(constraints, float)
 
@@ -202,21 +214,22 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 
 		# Inner Optimization Loop
 		k_inn = 0
-		while (k_inn < maxinniter):
+		while k_inn < maxinniter:
 
 			k_inn += 1
 
-			# New Harmony Improvisation
+			# New Harmony Improvisation (randomly selected and pitched variable values)
 			for j in range(dimensions):
 
 				if ((rand.random() < hmcr) or (x0 != [] and k_out == 1)):
 
-					# Harmony Memory Considering
+					# Harmony Memory Considering get a random values from the
+					# Harmony memory then pitch adjusted with tha par value
 					x_val[j] = HM[int(memsize*rand.random()),j]
 
 					# Pitch Adjusting
-					if (rand.random() <= par):
-						if (rand.random() > 0.5):
+					if rand.random() <= par:
+						if rand.random() > 0.5:
 							x_val[j] += rand.random()*bw[j]
 						else:
 							x_val[j] -= rand.random()*bw[j]
@@ -228,14 +241,14 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 
 
 				# Check for improvisations out of range
-				if (x_val[j] > xmax[j]):
+				if x_val[j] > xmax[j]:
 					x_val[j] = xmax[j]
-				elif (x_val[j] < xmin[j]):
+				elif x_val[j] < xmin[j]:
 					x_val[j] = xmin[j]
 
 
-			# Evaluate
-			if (scale == 1):
+			# Evaluate the objective function with the pitched variables values x_val
+			if scale == 1:
 				x_tmp = (x_val * space_halflen) + space_centre
 			else:
 				x_tmp = x_val
@@ -246,7 +259,7 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 
 			# Lagrangian Value
 			L_val = f_val
-			if (constraints > 0):
+			if constraints > 0:
 
 				# Equality Constraints
 				for l in range(neqcons):
@@ -267,50 +280,56 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 					L_val += lambda_val[l]*tau_val[l] + rp_val[l]*tau_val[l]**2
 
 
-			#
+
 			feasible = True
-			if (constraints > 0):
+			if constraints > 0:
 				for l in range(constraints):
 					if (l < neqcons):
-						if (abs(g_val[l]) > etol):
+						if abs(g_val[l]) > etol:
 							feasible = False
 							break
 					else:
-						if (g_val[l] > itol):
+						if g_val[l] > itol:
 							feasible = False
 							break
 
-			#
-			if (feasible or (k_out == 1 and x0 != [])):
+			# first outer loop iteration or there is initial values for the variables
+			if feasible or (k_out == 1 and x0 != []):
 
 				# Harmony Memory Update
+
+				# compare the values of the objective function
+				# and get the worst one(max value)
 				hmax_num = 0
-				hmax = HM[0,dimensions]
+				hmax = HM[0,dimensions] # value of the objective function of te first set of variable
 				for i in range(memsize):
-					if (HM[i,dimensions] > hmax):
+					if HM[i,dimensions] > hmax:
 						hmax_num = i
 						hmax = HM[i,dimensions]
-
-				if (L_val < hmax):
+				# if the obj_func value of the randomly selected pitched variables is
+				# better than the worst
+				if L_val < hmax: # replace these worst variables values with the pitched values
 					for j in range(dimensions):
 						HM[hmax_num,j] = x_val[j]
 					HM[hmax_num,dimensions] = L_val
 
+				# compare the values of the objective function
+				# and get the best one(min value)
 				hmin_num = 0
 				hmin = HM[0,dimensions]
 				for i in range(memsize):
-					if (HM[i,dimensions] < hmin):
+					if HM[i,dimensions] < hmin:
 						hmin_num = i
 						hmin = HM[i,dimensions]
-
-				if (L_val == hmin):
+				# if the obj_func value of the randomly selected pitched variables equals to the best
+				if L_val == hmin:
 
 					best_x_val = x_val
 					best_f_val = f_val
 					best_g_val = g_val
 
 					# Print Inner
-					if (prtinniter != 0):
+					if prtinniter != 0:
 						# output to screen
 						print('%d Inner Iteration of %d Outer Iteration' %(k_inn,k_out))
 						print(L_val)
@@ -326,7 +345,8 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 						print(f_val)
 						print(g_val)
 						print(nfevals)
-					if (fileout == 1):
+
+					if fileout == 1:
 						# output to filename
 						pass
 
@@ -415,15 +435,19 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 				x_tmp = (best_x_val[:] * space_halflen) + space_centre
 			else:
 				x_tmp = best_x_val[:]
+
 			for m in discrete_i:
 				x_tmp[m] = floor(x_tmp[m]+0.5)
 			text = ''
+
 			for j in range(dimensions):
 				text += ("\tP(%d) = %9.3e\t" %(j,x_tmp[j]))
 				if (numpy.mod(j+1,3) == 0):
 					text +=("\n")
 			print(text)
 			print(("="*80 + "\n"))
+
+
 		if (fileout == 1):
 			# Output to filename
 			ofile.write("\n" + "="*80 + "\n")
@@ -440,22 +464,27 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 				ofile.write("\nINEQUALITY CONSTRAINTS VALUES:\n")
 				for l in range(neqcons,constraints):
 					ofile.write("\tH(%d) = %g\n" %(l,best_g_val[l]))
+
 			ofile.write("\nLAGRANGIAN MULTIPLIERS VALUES:\n")
 			for l in range(constraints):
 				ofile.write("\tL(%d) = %g\n" %(l,lambda_val[l]))
 
 			ofile.write("\nDESIGN VARIABLES VALUES:\n")
+
 			if (scale == 1):
 				x_tmp = (best_x_val[:] * space_halflen) + space_centre
 			else:
 				x_tmp = best_x_val[:]
+
 			for m in discrete_i:
 				x_tmp[m] = floor(x_tmp[m]+0.5)
 			text = ''
+
 			for j in range(dimensions):
 				text += ("\tP(%d) = %9.3e\t" %(j,x_tmp[j]))
 				if (numpy.mod(j+1,3) == 0):
 					text +=("\n")
+
 			ofile.write(text)
 			ofile.write("\n" + "="*80 + "\n")
 			ofile.flush()
@@ -463,7 +492,7 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 
 		# Test Constraint convergence
 		stop_constraints_flag = 0
-		if (constraints == 0):
+		if constraints == 0:
 			stop_constraints_flag = 1
 		else:
 			for l in range(neqcons):
@@ -478,21 +507,22 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 				stop_constraints_flag = 0
 
 		# Test Position and Function convergence
-		if (best_f_old == []):
+		if best_f_old == []:
 			best_f_old = best_f_val
 		stop_criteria_flag = 0
-		if (stopcriteria == 1):
+
+		if stopcriteria == 1:
 
 			# Absolute Change in Objective
 			absfdiff = abs(best_f_val - best_f_old)
-			if (absfdiff <= atol):
+			if absfdiff <= atol:
 				kobj += 1
 			else:
 				kobj = 0
 
 			# Relative Change in Objective
-			if (abs(best_f_old) > 1e-10):
-				if (abs(absfdiff/abs(best_f_old)) <= rtol):
+			if abs(best_f_old) > 1e-10:
+				if abs(absfdiff/abs(best_f_old)) <= rtol:
 					iobj += 1
 				else:
 					iobj = 0
@@ -508,16 +538,16 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 
 
 		# Test Convergence
-		if (stop_constraints_flag == 1 and stop_criteria_flag == 1):
+		if stop_constraints_flag == 1 and stop_criteria_flag == 1:
 			stop_main_flag = 1
 		else:
 			stop_main_flag = 0
 
 
 		# Update Augmented Lagrangian Terms
-		if (stop_main_flag == 0):
+		if stop_main_flag == 0:
 
-			if (constraints > 0):
+			if constraints > 0:
 
 				# Tau for Best
 				for l in range(neqcons):
@@ -600,6 +630,7 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 				text +=("\n")
 		print(text)
 		print(("="*80 + "\n"))
+
 	if (fileout == 1):
 		# Output to filename
 		ofile.write("\n" + "="*80 + "\n")
