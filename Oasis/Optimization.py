@@ -712,25 +712,20 @@ class Optimization(object):
         Print Structured Optimization Problem
         """
 
-        text = """\nOptimization Problem -- %s\n%s\n
+        text = '''\nOptimization Problem -- %s\n%s\n
         Objective Function: %s\n\n    Objectives:
-        Name        Value        Optimum\n"""  %(self.name,'='*80,self.obj_fun.__name__)
-
+        Name        Value        Optimum\n''' %(self.name,'='*80,self.obj_fun.__name__)
         for obj in self.objectives.keys():
             lines = str(self.objectives[obj]).split('\n')
             text += lines[1] + '\n'
-
-        text += """\n	Variables (c - continuous, i - integer, d - discrete):
-        Name    Type       Value       Lower Bound  Upper Bound\n"""
-
+        text += '''\n	Variables (c - continuous, i - integer, d - discrete):
+        Name    Type       Value       Lower Bound  Upper Bound\n'''
         for var in self.variables.keys():
             lines = str(self.variables[var]).split('\n')
             text+= lines[1] + '\n'
-
         if len(self.constraints.keys()) > 0:
-            text += """\n	Constraints (i - inequality, e - equality):
-				      Name    Type                    Bounds\n"""
-
+            text += '''\n	Constraints (i - inequality, e - equality):
+        Name    Type                    Bounds\n'''
             for con in self.constraints.keys():
                 lines = str(self.constraints[con]).split('\n')
                 text+= lines[1] + '\n'
