@@ -1,6 +1,7 @@
 import os,sys
 
 import Oasis.Constraint as Constraint
+
 import Oasis.Objective as Objective
 import Oasis.Variable as Variable
 import Oasis.Parameter as Parameter
