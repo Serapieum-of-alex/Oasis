@@ -24,7 +24,7 @@ class Optimizer(object):
     Abstract Class for Optimizer Object
     """
 
-    def __init__(self, name={}, category={}, def_options={}, informs={}, 
+    def __init__(self, name={}, category={}, def_options={}, informs={},
                  *args, **kwargs):
         """
         Optimizer Class Initialization
@@ -71,13 +71,13 @@ class Optimizer(object):
     def __call__(self, opt_problem={}, *args, **kwargs):
         """
         Run Optimizer (Calling Routine)
-        
+
         Arguments:
 
         - opt_problem :
             [Instance]: Optimization problem instance, Default = {}
 
-            Additional arguments and keyword arguments are passed to the 
+            Additional arguments and keyword arguments are passed to the
             objective function call
         """
 
@@ -88,11 +88,11 @@ class Optimizer(object):
             except:
                 raise ValueError("Input is not a Valid Optimization Problem Instance\n")
 
-        # Check order of Constraints - equality constraint has to come 
+        # Check order of Constraints - equality constraint has to come
         # before inequality constraint
         last_eq = 0
         first_ieq = -1
-        
+
         if len(opt_problem.constraints.keys()) > 0 :
             for key in opt_problem.constraints.keys():
                 # equality constraint
@@ -108,7 +108,7 @@ class Optimizer(object):
 
         # Solve Optimization Problem
         return self.__solve__(opt_problem, *args, **kwargs)
-    
+
 
     def _on_setOption(self, name, value):
         """
@@ -303,11 +303,11 @@ class Optimizer(object):
                     self.hot_start = False
 
                 self.sto_hst = False
-        
+
         else:
             self.sto_hst = False
             self.hot_start = False
-        
+
         return hos_file, log_file, tmp_file
 
     def ListAttributes(self):
