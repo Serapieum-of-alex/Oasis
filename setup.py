@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='Oasis',
+    name='Oasis-Optimization',
     version='0.1.0',
     description='Optimization Algorithm',
 	author='Mostafa Farrag',
