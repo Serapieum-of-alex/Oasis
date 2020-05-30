@@ -18,6 +18,8 @@ from Oasis.pyALHSO import ALHSO
 def objfunc(x):
         f = x[0]**2 + x[1]**2 + x[2]**4
         g = [x[0] + x[1] + x[2] - 4]
+        print('Equality Constraint = ' + str(g))
+        print('Obj Fn value = ' + str(f))
         fail = 0
         return f, g, fail
 

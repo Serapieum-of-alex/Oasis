@@ -685,7 +685,7 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 
 
 
-def chso(ND,nc,nec,xtype,x0,lb,ub,bw,HMS,HMCR,PAR,maxIter,printout,rseed,objfunc):
+def Chso(ND,nc,nec,xtype,x0,lb,ub,bw,HMS,HMCR,PAR,maxIter,printout,rseed,objfunc):
 	"""
 	CHSO function - Python Version of the Constrained Harmony Search Optimizer
 	"""

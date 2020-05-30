@@ -17,6 +17,8 @@ def objfunc(x):
         f = power(x[0]**2 * x[1]**2, 1. / 3.) - x[0] + x[1]**2
 		# Uniquality Constraint: 9 - x**2 - y**2 >= 0
         g = [x[0]**2 + x[1]**2 - 9]
+        print('Uniquality Constraint = ' + str(g))
+        print('Obj Fn value = ' + str(f))
         fail = 0
         return f, g, fail
 
