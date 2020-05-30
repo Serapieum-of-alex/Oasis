@@ -1,3 +1,5 @@
+[![PyPI version](https://badge.fury.io/py/Oasis-Optimization.svg)](https://badge.fury.io/py/Oasis-Optimization)
+
 Oasis - Optimization Algorithm for Python 
 ===================================================================== 
 
@@ -9,7 +11,7 @@ Please install Hapi in a Virtual environment so that its requirements don't tamp
 **Oasis** works with Python 2.7 and 3.7 64Bit on Windows
 ```
 # Install the dependencies
-you can check [libraries.io](https://libraries.io/github/MAfarrag/HAPI) to check versions of the libraries
+you can check [libraries.io](https://libraries.io/pypi/Oasis-Optimization) to check versions of the libraries
 ```
 conda install Numpy
 pip install mpi4py
@@ -31,7 +33,11 @@ python setup.py install
 ```
 pathto_your_env\python setup.py install
 ```
-
+## pip
+to install the last release you can easly use pip
+```
+pip install HAPI-Nile
+```
 ## YML file
 using the environment.yml file included with hapi you can create a new environment with all the dependencies installed with the latest Hapi version
 in the master branch
