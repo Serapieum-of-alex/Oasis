@@ -3,7 +3,6 @@ channels:
 dependencies:
   - ca-certificates=2020.4.5.1=hecc5488_0
   - certifi=2020.4.5.1=py37hc8dfbb8_0
-  - openssl=1.1.1g=he774522_0
   - pip=20.1.1=py_1
   - numpy
   - python
