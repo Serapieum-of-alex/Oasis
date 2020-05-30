@@ -10,7 +10,7 @@ dependencies:
   - vc
   - vs2015_runtime
   - wheel=0.34.2=py_1
-  - wincertstore=0.2
+  - wincertstore
   - pip:
     - mpi4py==3.0.3
 
