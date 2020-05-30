@@ -1,4 +1,5 @@
 [![PyPI version](https://badge.fury.io/py/Oasis-Optimization.svg)](https://badge.fury.io/py/Oasis-Optimization)
+[![conda](https://anaconda.org/mafarrag/oasis/badges/version.svg)](https://anaconda.org/MAfarrag/oasis)
 
 Oasis - Optimization Algorithm for Python 
 ===================================================================== 
