@@ -7,9 +7,9 @@ Created on Sun Feb  2 18:39:36 2020
 from IPython import get_ipython
 get_ipython().magic("reset -f")
 import os
-os.chdir("F:/01Algorithms/Oasis/test")
+os.chdir("F:/01Algorithms/Oasis/Examples")
 from numpy import power
-from Oasis.Optimization import Optimization
+from Oasis.optimization import Optimization
 from Oasis.pyALHSO import ALHSO
 
 

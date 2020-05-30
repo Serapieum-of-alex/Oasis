@@ -1,3 +1,4 @@
+## not working
 """
 Solves Constrained Toy Problem Storing Optimization History.
 
@@ -10,13 +11,13 @@ Solves Constrained Toy Problem Storing Optimization History.
 from IPython import get_ipython
 get_ipython().magic("reset -f")
 import os
-os.chdir("F:/01Algorithms/Oasis/test")
+os.chdir("F:/01Algorithms/Oasis/Examples")
 
 
 # import os, sys, time
 # import pdb
 
-from Oasis.Optimization import Optimization
+from Oasis.optimization import Optimization
 from Oasis.pyALHSO import ALHSO
 
 

@@ -1,11 +1,11 @@
-
+## not working
 
 from IPython import get_ipython
 get_ipython().magic("reset -f")
 import os
-os.chdir("F:/01Algorithms/Oasis/test")
+os.chdir("F:/01Algorithms/Oasis/Examples")
 
-from Oasis.Optimization import Optimization
+from Oasis.optimization import Optimization
 from Oasis.pyALHSO import ALHSO
 
 def objfunc(xdict):

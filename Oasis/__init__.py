@@ -1,15 +1,15 @@
 import os,sys
 
-import Oasis.Constraint as Constraint
+import Oasis.constraint as constraint
 
-import Oasis.Objective as Objective
-import Oasis.Variable as Variable
-import Oasis.Parameter as Parameter
-import Oasis.History as History
-import Oasis.Gradient as Gradient
+import Oasis.objective as objective
+import Oasis.variable as variable
+import Oasis.parameter as parameter
+import Oasis.history as history
+import Oasis.gradient as gradient
 
-import Oasis.Optimization as Optimization
-import Oasis.Optimizer as Optimizer
+import Oasis.optimization as optimization
+import Oasis.optimizer as optimizer
 
 
 import Oasis.pyALHSO as pyALHSO

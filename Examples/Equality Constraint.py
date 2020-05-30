@@ -9,9 +9,8 @@ Created on Sun Feb  2 19:22:18 2020
 from IPython import get_ipython
 get_ipython().magic("reset -f")
 import os
-os.chdir("F:/01Algorithms/Oasis/test")
-from numpy import power
-from Oasis.Optimization import Optimization
+os.chdir("F:/01Algorithms/Oasis/Examples")
+from Oasis.optimization import Optimization
 from Oasis.pyALHSO import ALHSO
 
 
@@ -30,7 +29,7 @@ opt_prob.addObj('f')
 opt_prob.addCon('g1', 'e')
 
 
-options = dict(stopiters=10,
+options = dict(stopiters=5,
                fileout = 1, filename ='EqualityConstraint.txt',
 				prtinniter = 1, prtoutiter = 1)
 

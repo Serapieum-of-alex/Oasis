@@ -10,7 +10,7 @@ get_ipython().magic("reset -f")
 import os
 os.chdir("F:/01Algorithms/Oasis/test")
 from numpy import power
-from Oasis.Optimization import Optimization
+from Oasis.optimization import Optimization
 from Oasis.pyALHSO import ALHSO
 
 

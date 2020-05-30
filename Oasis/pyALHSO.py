@@ -5,7 +5,7 @@ ALHSO - A Python interface to ALHSO.
 __version__ = '$Revision: $'
 
 try:
-	from . import HS
+	from . import hs
 except:
 	raise ImportError('HS shared library failed to import')
 
@@ -13,7 +13,7 @@ except:
 import os #, sys
 import copy, time
 import numpy
-from Oasis.Optimizer import Optimizer
+from Oasis.optimizer import Optimizer
 
 
 inf = 10.E+20  # define a value for infinity
@@ -349,7 +349,7 @@ class ALHSO(Optimizer):
 		# Run ALHSO
 		t0 = time.time()
 
-		opt_x,opt_f,opt_g,opt_lambda,nfevals,rseed = HS.HS(n,m,me,
+		opt_x,opt_f,opt_g,opt_lambda,nfevals,rseed = hs.HS(n,m,me,
 			type,xs,xl,xu,hms,imax,cmax,stop,nstop,etol,itol,atol,rtol,oout,
 			iout,rinit,hmcr,par,bw,fileout,filename,seed,scale,objconfunc)
 

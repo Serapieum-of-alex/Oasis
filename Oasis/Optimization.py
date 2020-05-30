@@ -13,10 +13,10 @@ import os#, sys
 
 import numpy
 
-from Oasis.Variable import Variable
-from Oasis.Objective import Objective
-from Oasis.Constraint import Constraint
-from Oasis.Parameter import Parameter
+from Oasis.variable import Variable
+from Oasis.objective import Objective
+from Oasis.constraint import Constraint
+from Oasis.parameter import Parameter
 
 inf = 10.E+20  # define a value for infinity
 

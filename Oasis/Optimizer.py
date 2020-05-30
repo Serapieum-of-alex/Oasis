@@ -13,8 +13,8 @@ __version__ = '$Revision: $'
 #import os, sys
 #import pdb
 
-from Oasis.Optimization import Optimization
-from Oasis.History import History
+from Oasis.optimization import Optimization
+from Oasis.history import History
 
 inf = 10.E+20  # define a value for infinity
 
