@@ -36,7 +36,7 @@ pathto_your_env\python setup.py install
 ## pip
 to install the last release you can easly use pip
 ```
-pip install HAPI-Nile
+pip install Oasis-Optimization
 ```
 ## YML file
 using the environment.yml file included with hapi you can create a new environment with all the dependencies installed with the latest Hapi version
