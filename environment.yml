@@ -7,7 +7,6 @@ dependencies:
   - numpy
   - python
   - setuptools
-  - vc
   - vs2015_runtime
   - wheel=0.34.2=py_1
   - pip:
