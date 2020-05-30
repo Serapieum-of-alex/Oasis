@@ -6,10 +6,8 @@ dependencies:
   - openssl=1.1.1g=he774522_0
   - pip=20.1.1=py_1
   - numpy
-  - python=3.7.6=h60c2a47_5_cpython
-  - python_abi=3.7=1_cp37m
+  - python
   - setuptools
-  - sqlite=3.30.1=hfa6e2cd_0
   - vc
   - vs2015_runtime
   - wheel=0.34.2=py_1
