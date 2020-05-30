@@ -6,7 +6,6 @@ dependencies:
   - pip
   - python
   - numpy
-  - mpi4py
-  - pip
-    #- mpi4py==3.0.3
+  - pip:
+    - mpi4py==3.0.3
     - git+https://github.com/MAfarrag/Oasis.git
