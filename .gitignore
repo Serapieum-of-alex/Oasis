@@ -10,6 +10,7 @@ sdist/
 *.egg-info/
 *.egg
 
+Oasis/GA/
 # Sphinx documentation
 docs/_build/
 
