@@ -1,0 +1,21 @@
+site_name: Oasis
+#site_url: 
+site_description: The documentation of Oasis Optimization Algorithm
+site_author: Mostafa Farrag
+
+repo_url: https://github.com/MAfarrag/Oasis
+edit_url: ""
+
+theme:
+    name: readthedocs
+
+nav:
+    - Home: index.md
+    - Tutorial:
+        - Introduction: README.md
+#        - Getting Started: getting_started.md
+#        - Hydrological_model: Hydrological_model.md
+    - License: license.md
+
+
+
