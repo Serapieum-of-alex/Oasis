@@ -13,7 +13,7 @@ sdist/
 Oasis/GA/
 # Sphinx documentation
 docs/_build/
-
+OaisSpyder/
 # PyBuilder
 target/
 
@@ -35,3 +35,5 @@ build_artifacts
 .circleci/
 .github/
 .scripts/
+osis.sublime-project
+osis.sublime-workspace
