@@ -5,7 +5,6 @@ Created on Sun Feb  2 19:22:18 2020
 @author: mofarrag
 """
 
-
 from IPython import get_ipython
 get_ipython().magic("reset -f")
 import os
@@ -31,11 +30,10 @@ opt_prob.addObj('f')
 opt_prob.addCon('g1', 'e')
 
 
-options = dict(stopiters=5,
-               fileout = 1, filename ='EqualityConstraint.txt',
+options = dict(stopiters=5, fileout = 1, filename ='EqualityConstraint.txt',
 				prtinniter = 1, prtoutiter = 1)
 
 opt_engine = ALHSO(pll_type = 'POA',options = options)
 
 res = opt_engine(opt_prob, store_sol=True, display_opts=True, store_hst=False,
-                 hot_start=False,filename="mostafa.txt")
+                 hot_start=False,filename="EqualityConstraint1.txt")
