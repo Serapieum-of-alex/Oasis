@@ -14,7 +14,7 @@ from Oasis.hsapi import HSapi
 """
 Example 1. Solve and find minimizers of x**2+y**2+z**4 where x+y+z=4:
 """
-# define the objective functionand the constraints
+# define the general function that conains the objective function and the constraints
 
 # Check order of Constraints -
 # equality constraint has to come before inequality constraint
@@ -63,6 +63,7 @@ opt_prob.addVar('x2', 'c', lower=-4, upper=4, value=0.0)
 opt_prob.addVar('x3', 'c', lower=-4, upper=4, value=0.0)
 
 # define the objective function to the Optimization Object
+# f is the name of the function inside the objfunc defined above
 opt_prob.addObj('f')
 # define the Equality Constraint to the Optimization Object
 opt_prob.addCon('g1', 'e')
