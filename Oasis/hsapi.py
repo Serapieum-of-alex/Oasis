@@ -1,15 +1,3 @@
-"""
-ALHSO - A Python interface to ALHSO.
-"""
-
-__version__ = '$Revision: $'
-
-# try:
-# 	from . import hs
-# except:
-# 	raise ImportError('HS shared library failed to import')
-
-
 import os #, sys
 import copy, time
 import numpy
@@ -25,77 +13,79 @@ eps = 2.0*eps
 
 
 
-class ALHSO(Optimizer):
+class HSapi(Optimizer):
 	"""
 	ALHSO Optimizer Class - Inherited from Optimizer Abstract Class
     attributes of ALHSO class will overwrite attributes of optimizer class
-	"""
 
-	def __init__(self, pll_type=None, *args, **kwargs):
-		"""
 		ALHSO Optimizer Class Initialization
 
-		arguments:
+	arguments:
 
-		- pll_type :
-            [String]: Parallel Implementation (None, 'POA'-Parallel Objective
-            Analysis), *Default* = None
-        - def_opts:
-            [Dictionary] with the following keys
-            - hms:
-                Memory Size [1,50]
-            - hmcr:
-                Probability rate of choosing from memory [0.7,0.99]
-            - par:
-                Pitch adjustment rate [0.1,0.99]
-            - dbw:
-                Variable Bandwidth Quantization
-            - maxoutiter:
-                Maximum Number of Outer Loop Iterations (Major Iterations)
-            - maxinniter:
-                Maximum Number of Inner Loop Iterations (Minor Iterations)
-            - stopcriteria:
-                Stopping Criteria Flag
-            - stopiters:
-                Consecutively Number of Outer Iterations for which the Stopping
-                Criteria must be Satisfied
-            - etol:
-                Absolute Tolerance for Equality constraints
-            - itol:
-                Absolute Tolerance for Inequality constraints
-            - atol:
-                Absolute Tolerance for Objective Function
-            - rtol:
-                Relative Tolerance for Objective Function
-            - prtoutiter:
-                Number of Iterations Before Print Outer Loop Information
-            - prtinniter:
-                Number of Iterations Before Print Inner Loop Information
-            - xinit:
-                Initial Position Flag (0 - no position, 1 - position given)
-				Initial values for the variables
-            - rinit:
-                Initial Penalty Factor
-            - fileout:
-                Flag to Turn On Output to filename
-            - filename:
-                We could probably remove fileout flag if filename or fileinstance
-                is given
-            - seed:
-                Random Number Seed (0 - Auto-Seed based on time clock)
-            - scaling:
-                Design Variables Scaling Flag (0 - no scaling, 1 - scaling between [-1,1])
-		"""
+	- pll_type :
+        [String]: Parallel Implementation (None, 'POA'-Parallel Objective
+        Analysis), *Default* = None
+    - options:[Dictionary]
+        dictionary contains the parameters of the optimizer with the following keys
+        - hms:
+            Memory Size [1,50]
+        - hmcr:
+            Probability rate of choosing from memory [0.7,0.99]
+        - par:
+            Pitch adjustment rate [0.1,0.99]
+        - dbw:
+            Variable Bandwidth Quantization
+        - maxoutiter:
+            Maximum Number of Outer Loop Iterations (Major Iterations)
+        - maxinniter:
+            Maximum Number of Inner Loop Iterations (Minor Iterations)
+        - stopcriteria:
+            Stopping Criteria Flag
+        - stopiters:
+            Consecutively Number of Outer Iterations for which the Stopping
+            Criteria must be Satisfied
+        - etol:
+            Absolute Tolerance for Equality constraints, if the g value is less
+            than etol the convergence condition is met
+        - itol:
+            Absolute Tolerance for Inequality constraints, , if the g value is less
+            than etol the convergence condition is met
+        - atol:
+            Absolute Tolerance for Objective Function
+        - rtol:
+            Relative Tolerance for Objective Function
+        - prtoutiter:
+            Number of Iterations Before Print Outer Loop Information
+        - prtinniter:
+            Number of Iterations Before Print Inner Loop Information
+        - xinit:
+            Initial Position Flag (0 - no position, 1 - position given)
+			to consider the Initial values of the variables in the process of
+            searching for the optimal set of variables
+        - rinit:
+            Initial Penalty Factor
+        - fileout:
+            Flag to Turn On Output to filename
+        - filename:
+            We could probably remove fileout flag if filename or fileinstance
+            is given
+        - seed:
+            Random Number Seed (0 - Auto-Seed based on time clock)
+        - scaling:
+            Design Variables Scaling Flag (0 - no scaling, 1 - scaling between [-1,1])
+	"""
+	def __init__(self, pll_type=None, *args, **kwargs):
+
 		# initialize first the ALHSO object the intialize the Optimizer object
 
-		if (pll_type == None):
+		if pll_type == None:
 			self.poa = False
-		elif (pll_type.upper() == 'POA'):
+		elif pll_type.upper() == 'POA':
 			self.poa = True
 		else:
 			raise ValueError("pll_type must be either None or 'POA'")
 
-		name = 'ALHSO'
+		name = 'Oasis'
 		category = 'Global Optimizer'
 		def_opts = {'hms':[int,5], 'hmcr':[float,0.95],
 					'par':[float,0.65],'dbw':[int,2000],
@@ -105,7 +95,7 @@ class ALHSO(Optimizer):
 					'atol':[float,1e-6],'rtol':[float,1e-6],
 					'prtoutiter':[int,0],'prtinniter':[int,0],
 					'xinit':[int,0],'rinit':[float,1.0],
-					'fileout':[int,1],'filename':[str,'ALHSO.out'],
+					'fileout':[int,1],'filename':[str,'Oasis.out'],
 					'seed':[float,0],'scaling':[int,1],
 					}
 
@@ -153,7 +143,7 @@ class ALHSO(Optimizer):
 				import mpi4py
 				from mpi4py import MPI
 			except ImportError:
-				print('pyALHSO: Parallel objective Function Analysis requires mpi4py')
+				print('HSapi: Parallel objective Function Analysis requires mpi4py')
 			comm = MPI.COMM_WORLD
 			nproc = comm.Get_size()
 			if mpi4py.__version__[0] == '0':
@@ -321,7 +311,7 @@ class ALHSO(Optimizer):
 			fileout = 0
 
 		filename = self.options['filename'][1]
-
+        # check if there is a file with the name of the fileout name remove it
 		if fileout == 1:
 			if os.path.isfile(filename):
 				os.remove(filename)
