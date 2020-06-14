@@ -10,12 +10,6 @@ hso if a global optimizer which solves problems of the form:
 				xLB <= x <= xUB
 
 """
-
-__version__ = '$Revision: $'
-
-
-
-
 import random, time #os, sys
 #import pdb
 from math import floor

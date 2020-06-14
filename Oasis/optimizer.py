@@ -5,11 +5,6 @@ Holds the Python Design Optimization Classes (base and inherited).
 
 """
 
-__version__ = '$Revision: $'
-
-
-
-
 #import os, sys
 #import pdb
 
