@@ -18,7 +18,7 @@ os.chdir("F:/01Algorithms/Oasis/Examples")
 # import pdb
 
 from Oasis.optimization import Optimization
-from Oasis.pyALHSO import ALHSO
+from Oasis.hsapi import HSapi
 
 
 def objfunc(x):
@@ -43,7 +43,7 @@ opt_prob.addCon('g2','i')
 print(opt_prob)
 
 
-opt_engine = ALHSO()
+opt_engine = HSapi()
 opt_engine.setOption('IFILE','slsqp1.out')
 opt_engine(opt_prob,store_hst=True)
 res = opt_engine(opt_prob, store_sol=True, display_opts=True, store_hst=True,

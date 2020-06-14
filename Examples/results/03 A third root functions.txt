@@ -1,0 +1,4600 @@
+
+================================================================================
+
+NUMBER OF ITERATIONS: 1
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 8
+
+OBJECTIVE FUNCTION VALUE:
+	F = 0.860437
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -8.62298
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = -5.796e-01		P(1) = 2.025e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 2
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 17
+
+OBJECTIVE FUNCTION VALUE:
+	F = 0.85571
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -8.62567
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = -5.782e-01		P(1) = 2.002e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 3
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 18
+
+OBJECTIVE FUNCTION VALUE:
+	F = 0.854035
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -8.62718
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = -5.768e-01		P(1) = 2.002e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 4
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 23
+
+OBJECTIVE FUNCTION VALUE:
+	F = 0.852403
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -8.62866
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = -5.756e-01		P(1) = 2.002e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 5
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 29
+
+OBJECTIVE FUNCTION VALUE:
+	F = -1.4616
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -4.738
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.055e+00		P(1) = 2.002e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 6
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 31
+
+OBJECTIVE FUNCTION VALUE:
+	F = -1.46209
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -4.73556
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.055e+00		P(1) = 2.002e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 7
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 38
+
+OBJECTIVE FUNCTION VALUE:
+	F = -1.46615
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -4.72445
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.058e+00		P(1) = 1.994e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 8
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 49
+
+OBJECTIVE FUNCTION VALUE:
+	F = -1.47073
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -4.71715
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.060e+00		P(1) = 1.980e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 9
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 52
+
+OBJECTIVE FUNCTION VALUE:
+	F = -1.47206
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -4.71606
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.060e+00		P(1) = 1.976e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 10
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 55
+
+OBJECTIVE FUNCTION VALUE:
+	F = -1.95875
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.92243
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.653e+00		P(1) = 1.995e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 11
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 58
+
+OBJECTIVE FUNCTION VALUE:
+	F = -1.96499
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.91567
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.654e+00		P(1) = 1.976e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 12
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 60
+
+OBJECTIVE FUNCTION VALUE:
+	F = -1.96949
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.92406
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.653e+00		P(1) = 1.954e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 13
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 63
+
+OBJECTIVE FUNCTION VALUE:
+	F = -1.97558
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.93366
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.651e+00		P(1) = 1.925e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 14
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 68
+
+OBJECTIVE FUNCTION VALUE:
+	F = -1.97888
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.91278
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.655e+00		P(1) = 1.925e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 15
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 72
+
+OBJECTIVE FUNCTION VALUE:
+	F = -1.98321
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.93478
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.651e+00		P(1) = 1.896e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 16
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 78
+
+OBJECTIVE FUNCTION VALUE:
+	F = -1.9852
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.92218
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.654e+00		P(1) = 1.896e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 17
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 81
+
+OBJECTIVE FUNCTION VALUE:
+	F = -1.98639
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.92171
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.654e+00		P(1) = 1.891e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 18
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 83
+
+OBJECTIVE FUNCTION VALUE:
+	F = -1.98973
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.93711
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.651e+00		P(1) = 1.870e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 19
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 86
+
+OBJECTIVE FUNCTION VALUE:
+	F = -1.99255
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.93751
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.651e+00		P(1) = 1.859e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 20
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 91
+
+OBJECTIVE FUNCTION VALUE:
+	F = -1.99472
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.92521
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.653e+00		P(1) = 1.858e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 21
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 92
+
+OBJECTIVE FUNCTION VALUE:
+	F = -1.99833
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.92572
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.653e+00		P(1) = 1.844e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 22
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 94
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.00071
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.92278
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.654e+00		P(1) = 1.837e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 23
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 95
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.00263
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.91066
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.656e+00		P(1) = 1.837e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 24
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 98
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.00388
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.93414
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.652e+00		P(1) = 1.819e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 25
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 103
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.01437
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.88144
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.662e+00		P(1) = 1.811e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 26
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 112
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.0172
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.9038
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.658e+00		P(1) = 1.787e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 27
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 114
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.02172
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.88132
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.662e+00		P(1) = 1.783e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 28
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 128
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.02172
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.88128
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.662e+00		P(1) = 1.783e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 29
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 131
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.02752
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.88646
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.661e+00		P(1) = 1.759e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 30
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 137
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.0289
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.878
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.663e+00		P(1) = 1.759e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 31
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 140
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.02944
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.86995
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.664e+00		P(1) = 1.762e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 32
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 145
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.03828
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.86004
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.666e+00		P(1) = 1.735e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 33
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 155
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.03828
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.86004
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.666e+00		P(1) = 1.735e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 34
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 158
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.04042
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.86032
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.666e+00		P(1) = 1.726e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 35
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 162
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.0434
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.85652
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.667e+00		P(1) = 1.718e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 36
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 163
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.04454
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.85013
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.668e+00		P(1) = 1.717e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 37
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 175
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.04587
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.84184
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.670e+00		P(1) = 1.717e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 38
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 176
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.04864
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.85768
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.667e+00		P(1) = 1.698e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 39
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 180
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.0504
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.84667
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.669e+00		P(1) = 1.698e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 40
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 189
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.06477
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.8597
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.667e+00		P(1) = 1.637e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 41
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 193
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.07002
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.86034
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.667e+00		P(1) = 1.617e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 42
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 195
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.07029
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.87455
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.665e+00		P(1) = 1.608e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 43
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 196
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.07253
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.86064
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.667e+00		P(1) = 1.608e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 44
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 197
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.07495
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.86478
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.666e+00		P(1) = 1.597e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 45
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 208
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.07877
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.86007
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.667e+00		P(1) = 1.586e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 46
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 215
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.08026
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.85481
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.668e+00		P(1) = 1.583e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 47
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 224
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.08176
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.86042
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.667e+00		P(1) = 1.574e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 48
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 225
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.08545
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.86085
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.667e+00		P(1) = 1.561e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 49
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 235
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.08739
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.84881
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.670e+00		P(1) = 1.561e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 50
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 236
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.09185
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.84007
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.671e+00		P(1) = 1.550e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 51
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 238
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.09439
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.84158
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.671e+00		P(1) = 1.540e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 52
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 249
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.09501
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.84881
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.670e+00		P(1) = 1.533e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 53
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 250
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.10172
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.85283
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.669e+00		P(1) = 1.506e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 54
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 253
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.10337
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.84259
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.671e+00		P(1) = 1.506e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 55
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 258
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.10441
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.8427
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.671e+00		P(1) = 1.503e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 56
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 261
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.1056
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.83004
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.673e+00		P(1) = 1.506e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 57
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 271
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.10671
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.82195
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.675e+00		P(1) = 1.506e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 58
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 273
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.11236
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.83078
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.673e+00		P(1) = 1.481e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 59
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 275
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.11343
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.82416
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.675e+00		P(1) = 1.481e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 60
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 278
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.11394
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.84104
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.672e+00		P(1) = 1.469e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 61
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 283
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.11492
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.81496
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.676e+00		P(1) = 1.481e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 62
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 284
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.1201
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.8311
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.674e+00		P(1) = 1.453e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 63
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 292
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.12066
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.80286
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.679e+00		P(1) = 1.467e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 64
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 293
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.12849
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.81687
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.676e+00		P(1) = 1.431e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 65
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 302
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.13036
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.81707
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.676e+00		P(1) = 1.424e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 66
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 303
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.13091
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.82539
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.675e+00		P(1) = 1.417e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 67
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 304
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.13755
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.83161
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.674e+00		P(1) = 1.390e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 68
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 308
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.13804
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.83816
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.673e+00		P(1) = 1.384e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 69
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 309
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.14736
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.8195
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.676e+00		P(1) = 1.362e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 70
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 312
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.14888
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.83057
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.674e+00		P(1) = 1.350e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 71
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 314
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.15885
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.81904
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.676e+00		P(1) = 1.322e-01	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 72
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 323
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.26511
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.80626
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.680e+00		P(1) = -9.650e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 73
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 333
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.27055
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.82231
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.677e+00		P(1) = -9.382e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 74
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 341
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.27231
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.79216
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.683e+00		P(1) = -9.491e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 75
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 342
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.27521
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.80689
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.680e+00		P(1) = -9.315e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 76
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 347
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.28135
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.78738
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.684e+00		P(1) = -9.221e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 77
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 355
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.28533
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.77078
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.687e+00		P(1) = -9.182e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 78
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 360
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.2916
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.78006
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.686e+00		P(1) = -8.928e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 79
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 365
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.29309
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.77124
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.687e+00		P(1) = -8.928e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 80
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 378
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.29411
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.76445
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.688e+00		P(1) = -8.932e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 81
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 382
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.29517
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.75887
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.689e+00		P(1) = -8.928e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 82
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 383
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.30283
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.75665
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.690e+00		P(1) = -8.693e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 83
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 388
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.30289
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.75633
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.690e+00		P(1) = -8.693e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 84
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 393
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.30308
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.75584
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.690e+00		P(1) = -8.689e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 85
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 395
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.30386
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.74562
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.692e+00		P(1) = -8.720e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 86
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 398
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.31194
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.74606
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.692e+00		P(1) = -8.459e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 87
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 399
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.31931
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.75754
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.690e+00		P(1) = -8.163e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 88
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 409
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.32176
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.74307
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.693e+00		P(1) = -8.163e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 89
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 411
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.32272
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.75772
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.690e+00		P(1) = -8.055e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 90
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 419
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.35362
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.50642
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.736e+00		P(1) = -8.408e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 91
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 423
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.36279
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.49149
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.739e+00		P(1) = -8.198e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 92
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 424
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.3646
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.50824
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.736e+00		P(1) = -8.055e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 93
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 429
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.37338
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.50832
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.736e+00		P(1) = -7.782e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 94
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 451
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.37618
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.47489
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.742e+00		P(1) = -7.867e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 95
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 453
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.38899
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.46925
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.743e+00		P(1) = -7.502e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 96
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 458
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.39677
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.4679
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.744e+00		P(1) = -7.272e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 97
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 465
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.39753
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.46547
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.744e+00		P(1) = -7.262e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 98
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 469
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.40296
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.47999
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.741e+00		P(1) = -7.025e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 99
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 471
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.40759
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.45232
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.746e+00		P(1) = -7.025e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 100
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 480
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.41198
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.4841
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.741e+00		P(1) = -6.735e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 101
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 481
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.41509
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.45655
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.746e+00		P(1) = -6.779e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 102
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 486
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.41734
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.45664
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.746e+00		P(1) = -6.712e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 103
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 488
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.42068
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.45697
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.746e+00		P(1) = -6.612e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 104
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 490
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.42628
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.46615
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.744e+00		P(1) = -6.402e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 105
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 498
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.42994
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.44137
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.749e+00		P(1) = -6.417e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 106
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 499
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.43115
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.44256
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.748e+00		P(1) = -6.375e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 107
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 509
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.43356
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.44151
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.749e+00		P(1) = -6.310e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 108
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 510
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.43382
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.42665
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.751e+00		P(1) = -6.375e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 109
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 511
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.43406
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.44205
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.748e+00		P(1) = -6.293e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 110
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 514
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.44282
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.44184
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.749e+00		P(1) = -6.041e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 111
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 517
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.44744
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.41439
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.754e+00		P(1) = -6.041e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 112
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 518
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.452
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.4062
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.755e+00		P(1) = -5.949e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 113
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 525
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.4574
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.40396
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.755e+00		P(1) = -5.806e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 114
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 529
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.45775
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.42171
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.752e+00		P(1) = -5.711e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 115
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 537
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.46097
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.40407
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.755e+00		P(1) = -5.704e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 116
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 539
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.46331
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.38875
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.758e+00		P(1) = -5.711e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 117
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 540
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.47027
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.39109
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.758e+00		P(1) = -5.505e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 118
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 551
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.47782
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.38158
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.760e+00		P(1) = -5.339e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 119
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 555
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.49227
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.35352
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.765e+00		P(1) = -5.072e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 120
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 561
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.49963
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.34657
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.766e+00		P(1) = -4.904e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 121
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 564
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.5008
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.4009
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.756e+00		P(1) = -4.626e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 122
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 568
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.50766
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.39265
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.758e+00		P(1) = -4.481e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 123
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 584
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.50848
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.35505
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.765e+00		P(1) = -4.629e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 124
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 585
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.51172
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.33661
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.768e+00		P(1) = -4.626e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 125
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 590
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.51581
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.32698
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.770e+00		P(1) = -4.561e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 126
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 599
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.51963
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.32707
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.770e+00		P(1) = -4.460e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 127
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 600
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.52032
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.32709
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.770e+00		P(1) = -4.442e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 128
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 605
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.52748
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.31093
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.773e+00		P(1) = -4.327e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 129
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 610
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.5307
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.32145
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.771e+00		P(1) = -4.197e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 130
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 617
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.53382
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.30863
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.773e+00		P(1) = -4.173e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 131
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 621
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.54295
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.31126
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.773e+00		P(1) = -3.929e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 132
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 624
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.54304
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.31073
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.773e+00		P(1) = -3.929e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 133
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 625
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.54481
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.33088
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.769e+00		P(1) = -3.798e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 134
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 627
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.54571
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.32561
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.770e+00		P(1) = -3.798e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 135
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 635
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.54636
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.3218
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.771e+00		P(1) = -3.798e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 136
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 636
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.55196
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.32573
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.770e+00		P(1) = -3.642e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 137
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 644
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.55353
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.32194
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.771e+00		P(1) = -3.620e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 138
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 648
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.55493
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.32747
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.770e+00		P(1) = -3.562e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 139
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 649
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.55685
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.33076
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.769e+00		P(1) = -3.501e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 140
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 650
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.5591
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.33547
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.768e+00		P(1) = -3.427e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 141
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 651
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.56002
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.30983
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.773e+00		P(1) = -3.511e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 142
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 653
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.56013
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.33082
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.769e+00		P(1) = -3.421e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 143
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 661
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.57109
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.33083
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.769e+00		P(1) = -3.159e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 144
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 663
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.57173
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.32709
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.770e+00		P(1) = -3.159e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 145
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 668
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.5726
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.32204
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.771e+00		P(1) = -3.159e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 146
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 672
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.58208
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.31146
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.773e+00		P(1) = -2.980e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 147
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 686
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.58739
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.32708
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.770e+00		P(1) = -2.796e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 148
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 687
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.59007
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.31156
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.773e+00		P(1) = -2.796e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 149
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 694
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.59136
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.33262
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.769e+00		P(1) = -2.685e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 150
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 698
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.59164
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.30348
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.774e+00		P(1) = -2.792e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 151
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 702
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.60259
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.31448
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.772e+00		P(1) = -2.505e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 152
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 705
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.60656
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.3152
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.772e+00		P(1) = -2.416e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 153
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 706
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.60847
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.28861
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.777e+00		P(1) = -2.474e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 154
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 711
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.61143
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.30463
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.774e+00		P(1) = -2.350e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 155
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 712
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.61439
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.31404
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.772e+00		P(1) = -2.252e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 156
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 714
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.62007
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.28127
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.778e+00		P(1) = -2.252e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 157
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 723
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.62142
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.27047
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.780e+00		P(1) = -2.263e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 158
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 729
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.63749
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.25762
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.782e+00		P(1) = -1.975e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 159
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 734
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.64615
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.2508
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.784e+00		P(1) = -1.826e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 160
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 737
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.65473
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.24081
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.785e+00		P(1) = -1.692e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 161
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 744
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.66588
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.25227
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.783e+00		P(1) = -1.444e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 162
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 746
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.66588
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.25227
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.783e+00		P(1) = -1.444e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 163
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 750
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.6741
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.23573
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.786e+00		P(1) = -1.348e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 164
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 751
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.6805
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.26212
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.782e+00		P(1) = -1.155e-02	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 165
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 752
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.69614
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.25629
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.783e+00		P(1) = -9.145e-03	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 166
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 759
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.69623
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.25839
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.782e+00		P(1) = -9.072e-03	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 167
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 760
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.70362
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.24871
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.784e+00		P(1) = -8.190e-03	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 168
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 763
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.7171
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.26324
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.781e+00		P(1) = -5.870e-03	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 169
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 769
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.71926
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.25103
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.784e+00		P(1) = -5.870e-03	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 170
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 770
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.73927
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.2512
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.784e+00		P(1) = -3.359e-03	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 171
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 777
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.74509
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.26327
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.781e+00		P(1) = -2.497e-03	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 172
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 788
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.74724
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.25121
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.784e+00		P(1) = -2.497e-03	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 173
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 789
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.77592
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.25091
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.784e+00		P(1) = -2.476e-04	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 174
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 797
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.78204
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -1.2471
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.784e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 175
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 801
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.95752
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.128598
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.978e+00		P(1) = -1.020e-03	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 176
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 813
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.97509
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.134149
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.978e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 177
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 829
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.9781
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.116179
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.981e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 178
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 837
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.9806
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.101297
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.983e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 179
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 862
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.98174
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.0944422
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.984e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 180
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 866
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.982
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.092921
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.984e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 181
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 872
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.98445
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.0782659
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.987e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 182
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 896
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.98445
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.0782659
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.987e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 183
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 904
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.98445
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.0782659
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.987e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 184
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 905
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.98445
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.0782659
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.987e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 185
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 907
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.98524
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.0735399
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.988e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 186
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 917
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.98622
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.0676809
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.989e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 187
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 930
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.98801
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.0569597
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.990e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 188
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 943
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.98844
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.0543865
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.991e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 189
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 944
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.98844
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.0543865
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.991e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 190
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 951
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.98989
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.0457209
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.992e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 191
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 962
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99017
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.0440307
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.993e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 192
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 970
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99196
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.0333164
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.994e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 193
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 987
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99196
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.0333164
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.994e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 194
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 996
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99601
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.00902265
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.998e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 195
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1056
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99651
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.00603528
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.999e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 196
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1062
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99725
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.00361879
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.999e+00		P(1) = -3.326e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 197
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1067
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99725
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.00361879
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 2.999e+00		P(1) = -3.326e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 198
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1078
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99747
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = -0.000302748
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 199
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1081
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99752
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 1.69958e-09
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 0
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = -4.123e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 200
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1083
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99785
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 1.10638e-09
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 3.39916e-09
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = -3.326e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 201
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1106
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99785
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 1.10638e-09
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 5.61192e-09
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = -3.326e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 202
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1107
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99785
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 1.10638e-09
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 7.82468e-09
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = -3.326e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 203
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1125
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99785
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 1.10638e-09
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 1.00374e-08
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = -3.326e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 204
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1126
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99785
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 1.10638e-09
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 1.22502e-08
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = -3.326e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 205
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1131
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99785
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 1.10638e-09
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 1.4463e-08
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = -3.326e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 206
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1132
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99785
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 1.10638e-09
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 1.66757e-08
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = -3.326e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 207
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1136
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99878
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 2.02743e-10
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 1.88885e-08
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = 1.424e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 208
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1141
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99878
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 2.02743e-10
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 1.9294e-08
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = 1.424e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 209
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1149
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99878
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 2.02743e-10
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 1.96995e-08
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = 1.424e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 210
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1150
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99878
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 2.02743e-10
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 2.01049e-08
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = 1.424e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 211
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1151
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99878
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 2.02743e-10
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 2.05104e-08
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = 1.424e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 212
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1153
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99878
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 2.02743e-10
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 2.09159e-08
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = 1.424e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 213
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1162
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99878
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 2.02743e-10
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 2.13214e-08
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = 1.424e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 214
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1167
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99878
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 2.02743e-10
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 2.17269e-08
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = 1.424e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 215
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1169
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99878
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 2.02743e-10
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 2.21324e-08
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = 1.424e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 216
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1170
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99878
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 2.02743e-10
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 2.25379e-08
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = 1.424e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 217
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1177
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99878
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 2.02743e-10
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 2.29433e-08
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = 1.424e-05	
+================================================================================
+
+================================================================================
+
+NUMBER OF ITERATIONS: 218
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1186
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99878
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 2.02743e-10
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 2.33488e-08
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = 1.424e-05	
+================================================================================
+
+================================================================================
+RANDOM SEED VALUE: 1592097708.54119968
+
+NUMBER OF ITERATIONS: 218
+
+NUMBER OF OBJECTIVE FUNCTION EVALUATIONS: 1186
+
+OBJECTIVE FUNCTION VALUE:
+	F = -2.99878
+
+EQUALITY CONSTRAINTS VALUES:
+
+INEQUALITY CONSTRAINTS VALUES:
+	H(0) = 2.02743e-10
+
+LAGRANGIAN MULTIPLIERS VALUES:
+	L(0) = 2.33488e-08
+
+DESIGN VARIABLES VALUES:
+	P(0) = 3.000e+00		P(1) = 1.424e-05	
+================================================================================

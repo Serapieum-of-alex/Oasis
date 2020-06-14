@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Sun Feb  2 18:39:36 2020
 
@@ -10,7 +9,7 @@ import os
 os.chdir("F:/01Algorithms/Oasis/Examples")
 from numpy import power
 from Oasis.optimization import Optimization
-from Oasis.pyALHSO import ALHSO
+from Oasis.hsapi import HSapi
 
 
 def objfunc(x):
@@ -35,8 +34,18 @@ opt_prob.addCon('g1', 'i')
 #             	seed = 0.5, xinit = 1, scaling = 0,
 # 				prtinniter = 1, prtoutiter = 1, stopcriteria = 1,
 # 				maxoutiter = 2)
+options = dict(filename ='results/03 A third root functions.txt')
 
-opt_engine = ALHSO(pll_type = 'POA') #,options = options
+opt_engine = HSapi(pll_type = 'POA',options = options)
+"""
+to use the hot start you have to store the history from a previous run with the
+filename parameters in the option dictionary (HSapi) and the store_hst when
+calling the optimizer
 
+in the second run to use the history of the previous run just change hot_start
+when calling the optimizer to True
+"""
 res = opt_engine(opt_prob, store_sol=True, display_opts=True, store_hst=True,
-                 hot_start=False,filename="mostafa.txt")
+                 hot_start=True)
+
+print(opt_prob.solution(0))

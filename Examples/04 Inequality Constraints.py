@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Sun Feb  2 19:16:18 2020
 
@@ -40,4 +39,4 @@ opt_prob.addCon('g3', 'i')
 opt_engine = ALHSO(pll_type = 'POA') #,options = options
 
 res = opt_engine(opt_prob, store_sol=True, display_opts=True, store_hst=True,
-                 hot_start=False,filename="mostafa.txt")
+                 hot_start=False)
