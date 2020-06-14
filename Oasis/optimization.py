@@ -761,6 +761,7 @@ class Optimization(object):
                 outfile = open(outfile,'w')
         elif (not isinstance(outfile,str)) and (not isinstance(outfile,file)):
             raise IOError(repr(outfile) + 'is not a file or filename')
+
         ftext = self.__str__()
         outfile.write(ftext)
         if disp_sols or 'solutions' in kwargs:

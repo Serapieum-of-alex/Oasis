@@ -150,6 +150,7 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 	x_tmp = numpy.zeros(dimensions, float)
 	tau_val = numpy.zeros(constraints, float)
 	nfevals = 0
+    # evaluate the initial values in the HM and get the L_val in the last column
 	#best_L_val = 0
 	for i in range(memsize):
 
@@ -208,6 +209,7 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 	kobj = 0
 	iobj = 0
 	stop_main_flag = 0
+    # run the loop for maxoutiter or till the flag changes
 	while ((k_out < maxoutiter) and (stop_main_flag == 0)):
 
 		k_out += 1
@@ -225,20 +227,20 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 
 					# Harmony Memory Considering get a random values from the
 					# Harmony memory then pitch adjusted with tha par value
+
+                    # get a random value for each decision variable from a random row
 					x_val[j] = HM[int(memsize*rand.random()),j]
 
 					# Pitch Adjusting
 					if rand.random() <= par:
 						if rand.random() > 0.5:
-							x_val[j] += rand.random()*bw[j]
+							x_val[j] = x_val[j] + rand.random()*bw[j]
 						else:
-							x_val[j] -= rand.random()*bw[j]
+							x_val[j] = x_val[j] - rand.random()*bw[j]
 
 				else:
-
 					# Random Searching
 					x_val[j] = xmin[j] + rand.random()*(xmax[j]-xmin[j])
-
 
 				# Check for improvisations out of range
 				if x_val[j] > xmax[j]:
@@ -252,8 +254,10 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 				x_tmp = (x_val * space_halflen) + space_centre
 			else:
 				x_tmp = x_val
+
 			for m in discrete_i:
 				x_tmp[m] = floor(x_tmp[m] + 0.5)
+
 			[f_val,g_val] = objfunc(x_tmp)
 			nfevals += 1
 
@@ -321,6 +325,7 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 					if HM[i,dimensions] < hmin:
 						hmin_num = i
 						hmin = HM[i,dimensions]
+
 				# if the obj_func value of the randomly selected pitched variables equals to the best
 				if L_val == hmin:
 
@@ -342,8 +347,8 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 							x_tmp[m] = floor(x_tmp[m] + 0.5)
 						print(x_tmp)
 
-						print(f_val)
-						print(g_val)
+						print("f_val = " + str(f_val))
+						print("g_val = " + str(g_val))
 						print(nfevals)
 
 					if fileout == 1:
@@ -377,7 +382,7 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 
 				# Augmented Lagrangian Value
 				L_val = f_val
-				if (constraints > 0):
+				if constraints > 0:
 
 					# Equality Constraints
 					for l in range(neqcons):
@@ -393,17 +398,16 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 						else:
 							tau_val[l] = g_val[l]
 
-					#
+
 					for l in range(constraints):
 						L_val += lambda_val[l]*tau_val[l] + rp_val[l]*tau_val[l]**2
 
 
-				#
+
 				HM[i,dimensions] = L_val
 
 
-			#
-			k_out -= 1
+			k_out = k_out - 1 #k_out -= 1
 			continue
 
 

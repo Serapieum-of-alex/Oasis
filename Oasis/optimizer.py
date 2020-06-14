@@ -22,14 +22,8 @@ inf = 10.E+20  # define a value for infinity
 class Optimizer(object):
     """
     Abstract Class for Optimizer Object
-    """
 
-    def __init__(self, name={}, category={}, def_options={}, informs={},
-                 *args, **kwargs):
-        """
-        Optimizer Class Initialization
-
-        Keyword arguments:
+    Keyword arguments:
 
         - name :
             [String]: Optimizer name, Default = {}
@@ -39,7 +33,10 @@ class Optimizer(object):
             [Dictionary]: Deafult options, Default = {}
         - informs :
             [Dictionary]: Calling routine informations texts, Default = {}
-        """
+    """
+
+    def __init__(self, name={}, category={}, def_options={}, informs={},
+                 *args, **kwargs):
 
         self.name = name
         self.category = category
@@ -47,12 +44,13 @@ class Optimizer(object):
         self.options['defaults'] = def_options
         self.informs = informs
 
-        # Initialize Options
+        # Initialize Options from the default option dictionary
         def_keys = def_options.keys()
         for key in def_keys:
             self.options[key] = def_options[key]
 
         koptions = kwargs.pop('options',{})
+        # update the option dictionary with the inputed parameters
         kopt_keys = koptions.keys()
         for key in kopt_keys:
             self.setOption(key,koptions[key])
@@ -127,18 +125,19 @@ class Optimizer(object):
         """
         Set Optimizer Option Value (Calling Routine)
 
-        **Arguments:**
+        Parameters:
 
-        - name -> STR: Option Name
+        - name: [string]
+            Option Name used as a key in the option dictionary
 
-        **Keyword arguments:**
+        - value: [FLOAT/INT/BOOL]
+            Option Value, *Default* = None
 
-        - value -> FLOAT/INT/BOOL: Option Value, *Default* = None
         """
 
         def_options = self.options['defaults']
         if name in def_options:
-            if (type(value) == def_options[name][0]):
+            if type(value) == def_options[name][0]:
                 self.options[name] = [type(value),value]
             else:
                 raise IOError('Incorrect ' + repr(name) + ' value type')
