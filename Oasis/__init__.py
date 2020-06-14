@@ -12,5 +12,5 @@ import Oasis.optimization as optimization
 import Oasis.optimizer as optimizer
 
 
-import Oasis.pyALHSO as pyALHSO
+import Oasis.hsapi as hsapi
 # from GA.pyNSGA2 import NSGA2
