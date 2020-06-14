@@ -11,9 +11,6 @@ theme:
 
 nav:
     - Home: index.md
-    - Tutorial:
-      - Introduction: README0.md
+    - Introduction: README0.md
+    - Tutorial: Getting Started.md
     - License: LICENSE0.md
-
-
-

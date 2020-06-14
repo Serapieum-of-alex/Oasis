@@ -7,7 +7,7 @@ Optimization Algorithm
 
 ## Purpose
 
-Discription
+Discription 
 
 ```
 some code
