@@ -20,6 +20,18 @@ conda install Numpy
 pip install mpi4py
 
 ```
+## Installation
+
+### Dependencies
+
+* [NumPy](http://www.numpy.org/ "Numpy")
+* [Scipy](http://www.scipy.org/ "Scipy")
+
+Optional packages are:
+
+* [Matplotlib](http://matplotlib.org/ "Matplotlib")
+* [Pandas](http://pandas.pydata.org/ "Pandas")
+* [mpi4py](http://mpi4py.scipy.org/ "mpi4py")
 
 ## Install from Github
 to install the last development to time you can install the library from github

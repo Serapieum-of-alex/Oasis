@@ -43,45 +43,28 @@ print(opt_prob.solution(0))
 
 
 * Available algorithms are (`HS`).
-* Nash-Sutcliff (`NSE`), log Nash-Sutcliff (`logNSE`), Root Mean Squared Error (`RMSE`), Mean Absolute Error (`MAE`).
-  Kling-Gupta Efficiency (`KGE`).
 
 
-
-## Installation
-
-### Dependencies
-
-* [NumPy](http://www.numpy.org/ "Numpy")
-* [Scipy](http://www.scipy.org/ "Scipy")
-
-Optional packages are:
-
-* [Matplotlib](http://matplotlib.org/ "Matplotlib")
-* [Pandas](http://pandas.pydata.org/ "Pandas")
-* [mpi4py](http://mpi4py.scipy.org/ "mpi4py")
-
-### Download
-
-	pip install Hapi
+## Library layout
 
 
-## Project layout
-
-
-
-*Above: Overview about functionality of the Hapi package*
-
+*Above: Overview about functionality of the Oasis package*
 
 	
 	__init__.py             # Ensures that all needed files are loaded.
-	
-    algorithms/
-        __init__.py   # Ensures the availability of all algorithms
-	
-	parallel/
-		mpi.py        #Basic Parralel Computing features 
+	constraint.py 			# create equality and inequality constraints
+	history.py  			# prepare files to store the solution and read previous result to use it as initial solutions
+	hs.py         			# Harmony search algorithm
+	hsapi.py 				# prepare the inputs of the HS algorithm
+	objective.py 			# create the objective function and define the optimum value
+	optimization.py 		# create the optimization problem
+	optimizer.py 			# prepare the inputs of the optimization problem
+	variable.py 			# create decision variables 
 
 	examples/
-		3dplot.py                   # Response surface plot of example files
+		01 Equality Constraint.py
+		02 Lasserre.py
+		03 A third root function.py
+		04 A trigonometric function.py
+		05 TOY Constrained Problem.py
 
