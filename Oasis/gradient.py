@@ -5,9 +5,6 @@ Holds the Python Design Optimization Gradient Calculation Class.
 
 """
 
-__version__ = '$Revision: $'
-
-
 
 #import os, sys
 import copy

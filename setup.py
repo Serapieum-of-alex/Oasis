@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='Oasis-Optimization',
-    version='0.1.1',
+    version='1.0.0',
     description='Optimization Algorithm',
 	author='Mostafa Farrag',
 	author_email='moah.farag@gmail.come',
