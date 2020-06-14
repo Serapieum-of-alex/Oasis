@@ -11,7 +11,7 @@ theme:
 
 nav:
     - Home: index.md
-    - heading2: README00.md 
+    #- heading2: README00.md 
     - Tutorial:
       - Introduction: README00.md
 #        - Getting Started: getting_started.md
