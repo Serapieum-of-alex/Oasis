@@ -12,10 +12,8 @@ theme:
 nav:
     - Home: index.md
     - Tutorial:
-      - Introduction: README.md
-#        - Getting Started: getting_started.md
-#        - Hydrological_model: Hydrological_model.md
-    - License: license.md
+      - Introduction: README0.md
+    - License: LICENSE0.md
 
 
 
