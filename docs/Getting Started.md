@@ -23,3 +23,37 @@ first define the general function that conains the objective function and the co
         # print('Obj Fn value = ' + str(f))
         fail = 0
         return f, g, fail
+
+create the Optimization Object:
+
+	opt_prob = Optimization('Testing solutions', objfunc)
+
+define the decision variables to the Optimization Object
+
+addVar method takes 4 parameters
+
+Parameters:
+    - name:
+        [String]: Variable Name
+    - Vartype:
+        [String]: Variable Type ('c'-continuous, 'i'-integer,
+                'd'-discrete), *Default* = 'c'
+    - value:
+        [numeric]: Variable Value, Default = 0.0
+    - lower:
+        [numeric]: Variable Lower Value, for continuous and integer variables
+    - upper:
+        [numeric]: Variable Upper Value, for continuous and integer variables
+    - choices:
+        [List]: Variable Choices, for discrete valiables
+
+addVar method of the optimization object calls the Variable Object
+
+to use the values of the variables as initial values in the search for the optimal
+set of values set the "xinit" in the Optimization options to 1
+options = dict(xinit = 1) :
+
+	opt_prob.addVar('x1', 'c', lower=-4, upper=4, value=0.0)
+	opt_prob.addVar('x2', 'c', lower=-4, upper=4, value=0.0)
+	opt_prob.addVar('x3', 'c', lower=-4, upper=4, value=0.0)
+
