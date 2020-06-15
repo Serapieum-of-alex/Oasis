@@ -1,4 +1,4 @@
-# Getting started
+# Equality Constraint Problem
 
 To start your experience with Oasis you need to have Oasis installed. Please see the [Installation chapter](Installation.md) for further details.
 
@@ -71,8 +71,7 @@ define the Equality Constraint to the Optimization Object:
 create the options dictionary all the optimization parameters should be passed
 to the optimization object inside the option dictionary:
 
-	options = dict(hms=50, stopiters=1, fileout = 1, filename ='results/EqualityConstraint.txt',
-					prtinniter = 1, prtoutiter = 1, xinit = 1)
+	options = dict(hms=50, stopiters=1, fileout = 1, filename='results/EqualityConstraint.txt',prtinniter = 1, prtoutiter = 1, xinit = 1)
 
 Create Optimization solver Object (inhereted from the Optimizer)
 check the docs of HSapi:
@@ -84,7 +83,6 @@ First the Optimizer object is going to check the order of the constraints
 call the optimizer (optimizer.__call__) then hs solver (HSapi.__solve__)
 Equality constraints have to come before inequality constraints:
 
-	res = opt_engine(opt_prob, store_sol=True, display_opts=True, store_hst=False,
-    	             hot_start=False) # filename="EqualityConstraint1.txt"
+	res = opt_engine(opt_prob, store_sol=True, display_opts=True, store_hst=False,hot_start=False) # 
 
 	print(opt_prob.solution(0))
