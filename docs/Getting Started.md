@@ -57,3 +57,32 @@ options = dict(xinit = 1) :
 	opt_prob.addVar('x2', 'c', lower=-4, upper=4, value=0.0)
 	opt_prob.addVar('x3', 'c', lower=-4, upper=4, value=0.0)
 
+define the objective function to the Optimization Object
+f is the name of the function inside the objfunc defined above:
+
+	opt_prob.addObj('f')
+
+define the Equality Constraint to the Optimization Object:
+
+	opt_prob.addCon('g1', 'e')
+
+create the options dictionary all the optimization parameters should be passed
+to the optimization object inside the option dictionary:
+
+	options = dict(hms=50, stopiters=1, fileout = 1, filename ='results/EqualityConstraint.txt',
+					prtinniter = 1, prtoutiter = 1, xinit = 1)
+
+Create Optimization solver Object (inhereted from the Optimizer)
+check the docs of HSapi:
+
+	opt_engine = HSapi(pll_type = None,options = options)
+
+call the solver to start the optimization process
+First the Optimizer object is going to check the order of the constraints
+call the optimizer (optimizer.__call__) then hs solver (HSapi.__solve__)
+Equality constraints have to come before inequality constraints:
+
+	res = opt_engine(opt_prob, store_sol=True, display_opts=True, store_hst=False,
+    	             hot_start=False) # filename="EqualityConstraint1.txt"
+    	             
+	print(opt_prob.solution(0))
