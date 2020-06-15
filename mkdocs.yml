@@ -13,6 +13,6 @@ nav:
     - Home: index.md
     - Installation: Installation.md
     - Getting Started: 
-      - Equality Constraint Problem: Equality_Constraint_Problem.md
-      - Lasserre's Example(Inequality Constraint): Lasserres_Example.md
+        - Equality Constraint Problem: Equality_Constraint_Problem.md
+        - Lasserre's Example(Inequality Constraint): Lasserres_Example.md
     - License: LICENSE0.md
