@@ -11,6 +11,6 @@ theme:
 
 nav:
     - Home: index.md
-    - Introduction: Installation.md
+    - Installation: Installation.md
     - Tutorial: Getting Started.md
     - License: LICENSE0.md

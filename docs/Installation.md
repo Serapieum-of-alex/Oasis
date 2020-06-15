@@ -10,10 +10,10 @@ Oasis - Optimization Algorithm for Python
 ===================================================================== 
 
 
-Installation
-============
+##Installation
+
 ```
-Please install Hapi in a Virtual environment so that its requirements don't tamper with your system's python
+Please install Oasis in a Virtual environment so that its requirements don't tamper with your system's python
 **Oasis** works with Python 2.7 and 3.7 64Bit on Windows
 ```
 # Install the dependencies
@@ -22,17 +22,9 @@ you can check [libraries.io](https://libraries.io/pypi/Oasis-Optimization) to ch
 conda install Numpy
 pip install mpi4py
 ```
-## Installation
-
-### Dependencies
-
 * [NumPy](http://www.numpy.org/ "Numpy")
-* [Scipy](http://www.scipy.org/ "Scipy")
 
 Optional packages are:
-
-* [Matplotlib](http://matplotlib.org/ "Matplotlib")
-* [Pandas](http://pandas.pydata.org/ "Pandas")
 * [mpi4py](http://mpi4py.scipy.org/ "mpi4py")
 
 ## Install from Github

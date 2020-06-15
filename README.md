@@ -11,7 +11,7 @@ Oasis - Optimization Algorithm for Python
 Installation
 ============
 ```
-Please install Hapi in a Virtual environment so that its requirements don't tamper with your system's python
+Please install Oasis in a Virtual environment so that its requirements don't tamper with your system's python
 **Oasis** works with Python 2.7 and 3.7 64Bit on Windows
 ```
 # Install the dependencies
