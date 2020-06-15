@@ -46,6 +46,6 @@ in the second run to use the history of the previous run just change hot_start
 when calling the optimizer to True
 """
 res = opt_engine(opt_prob, store_sol=True, display_opts=True, store_hst=True,
-                 hot_start=False)
+                 hot_start=True)
 
 print(opt_prob.solution(0))
