@@ -1,49 +1,10 @@
-[![PyPI version](https://badge.fury.io/py/Oasis-Optimization.svg)](https://badge.fury.io/py/Oasis-Optimization)
-[![conda](https://anaconda.org/mafarrag/oasis/badges/version.svg)](https://anaconda.org/MAfarrag/oasis)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MAfarrag/Oasis/master)
-[![Build Status](https://travis-ci.org/MAfarrag/Oasis.svg?branch=master)](https://travis-ci.org/MAfarrag/Oasis)
+# Getting started
 
-Oasis - Optimization Algorithm for Python 
-===================================================================== 
+To start your experience with Oasis you need to have Oasis installed. Please see the [Installation chapter](Installation.md) for further details.
 
+You will find the following example in the `01 Equality Constraint.py` file under the folder `/Examples`. There is no need for copy paste work.
 
-Installation
-============
-```
-Please install Hapi in a Virtual environment so that its requirements don't tamper with your system's python
-**Oasis** works with Python 2.7 and 3.7 64Bit on Windows
-```
-# Install the dependencies
-you can check [libraries.io](https://libraries.io/pypi/Oasis-Optimization) to check versions of the libraries
-```
-conda install Numpy
-pip install mpi4py
+To use Oasis we have to import it and use one of the pre-build examples:
 
-```
-
-## Install from Github
-to install the last development to time you can install the library from github
-```
-pip install git+https://github.com/MAfarrag/Oasis.git
-```
-## Compile 
-You can compile the repository after you clone it 
-iF python is already added to your system environment variable
-```
-python setup.py install
-```
-###### or 
-```
-pathto_your_env\python setup.py install
-```
-## pip
-to install the last release you can easly use pip
-```
-pip install Oasis-Optimization
-```
-## YML file
-using the environment.yml file included with hapi you can create a new environment with all the dependencies installed with the latest Hapi version
-in the master branch
-```
-conda env create --name Hapi_env -f environment.yml
-```
+	from Oasis.optimization import Optimization                    # Load the Optimization object
+	from Oasis.hsapi import HSapi                                  # Load the Harmony search api object
