@@ -14,9 +14,9 @@ from Oasis.hsapi import HSapi
 
 def objfunc(x):
         f = power(x[0]**2 * x[1]**2, 1. / 3.) - x[0] + x[1]**2
-		# Uniquality Constraint: 9 - x**2 - y**2 >= 0
+		# inequality Constraint: 9 - x**2 - y**2 >= 0
         g = [x[0]**2 + x[1]**2 - 9]
-        print('Uniquality Constraint = ' + str(g))
+        print('inequality Constraint = ' + str(g))
         print('Obj Fn value = ' + str(f))
         fail = 0
         return f, g, fail
@@ -46,6 +46,6 @@ in the second run to use the history of the previous run just change hot_start
 when calling the optimizer to True
 """
 res = opt_engine(opt_prob, store_sol=True, display_opts=True, store_hst=True,
-                 hot_start=True)
+                 hot_start=False)
 
 print(opt_prob.solution(0))

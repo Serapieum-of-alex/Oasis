@@ -15,4 +15,5 @@ nav:
     - Getting Started: 
         - Equality Constraint Problem: Equality_Constraint_Problem.md
         - Lasserre's Example(Inequality Constraint): Lasserres_Example.md
+        - A third root functions: A_third_root_functions.md
     - License: LICENSE0.md
