@@ -25,6 +25,7 @@ pip install mpi4py
 * [NumPy](http://www.numpy.org/ "Numpy")
 
 Optional packages are:
+
 * [mpi4py](http://mpi4py.scipy.org/ "mpi4py")
 
 ## Install from Github
