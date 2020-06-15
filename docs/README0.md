@@ -1,4 +1,5 @@
 [![PyPI version](https://badge.fury.io/py/Oasis-Optimization.svg)](https://badge.fury.io/py/Oasis-Optimization)
+[![Python Versions][pypi-pyv-image]][pypi-pyv-link]
 [![conda](https://anaconda.org/mafarrag/oasis/badges/version.svg)](https://anaconda.org/MAfarrag/oasis)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MAfarrag/Oasis/master)
 [![Build Status](https://travis-ci.org/MAfarrag/Oasis.svg?branch=master)](https://travis-ci.org/MAfarrag/Oasis)
