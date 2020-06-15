@@ -47,3 +47,6 @@ in the master branch
 ```
 conda env create --name Hapi_env -f environment.yml
 ```
+# Documentation
+for step by step Examples and documentation on how to use the algorithm [readthedocs](https://oasis-optimization.readthedocs.io/en/latest/)
+
