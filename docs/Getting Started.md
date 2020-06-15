@@ -9,20 +9,22 @@ To use Oasis we have to import it and use one of the pre-build examples:
 	from Oasis.optimization import Optimization                    # Load the Optimization object
 	from Oasis.hsapi import HSapi                                  # Load the Harmony search api object
 
+
 this example tries to find the minimum value of `x**2+y**2+z**4` where `x+y+z=4`
 
 first define the general function that conains the objective function and the constraints
-- Equality constraint has to come before inequality constraint:
+Equality constraint has to come before inequality constraint:
 
-		def objfunc(x):
-        # Objective function
-        f = x[0]**2 + x[1]**2 + x[2]**4
-        # Equality constraint
-        g = [x[0] + x[1] + x[2] - 4]
-        # print('Equality Constraint = ' + str(g))
-        # print('Obj Fn value = ' + str(f))
-        fail = 0
-        return f, g, fail
+	def objfunc(x):
+		# Objective function
+		f = x[0]**2 + x[1]**2 + x[2]**4
+		# Equality constraint
+		g = [x[0] + x[1] + x[2] - 4]
+		# print('Equality Constraint = ' + str(g))
+		# print('Obj Fn value = ' + str(f))
+		fail = 0
+		return f, g, fail
+
 
 create the Optimization Object:
 
@@ -84,5 +86,5 @@ Equality constraints have to come before inequality constraints:
 
 	res = opt_engine(opt_prob, store_sol=True, display_opts=True, store_hst=False,
     	             hot_start=False) # filename="EqualityConstraint1.txt"
-    	             
+
 	print(opt_prob.solution(0))
