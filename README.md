@@ -3,6 +3,7 @@
 [![conda](https://anaconda.org/mafarrag/oasis/badges/version.svg)](https://anaconda.org/MAfarrag/oasis)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MAfarrag/Oasis/master)
 [![Build Status](https://travis-ci.org/MAfarrag/Oasis.svg?branch=master)](https://travis-ci.org/MAfarrag/Oasis)
+[![Documentation Status](https://readthedocs.org/projects/oasis-optimization/badge/?version=latest)](https://oasis-optimization.readthedocs.io/en/latest/?badge=latest)
 
 Oasis - Optimization Algorithm for Python 
 ===================================================================== 
