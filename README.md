@@ -27,7 +27,10 @@ you can check [libraries.io](https://libraries.io/pypi/Oasis-Optimization) to ch
 conda install Numpy
 pip install mpi4py
 ```
-
+## Install from conda-forge
+```
+conda install -c conda-forge oasis
+```
 ## Install from Github
 to install the last development to time you can install the library from github
 ```
