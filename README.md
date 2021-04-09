@@ -1,10 +1,15 @@
 [![PyPI version](https://badge.fury.io/py/Oasis-Optimization.svg)](https://badge.fury.io/py/Oasis-Optimization)
 [![Python Versions](https://img.shields.io/pypi/pyversions/Oasis-Optimization.png)](https://img.shields.io/pypi/pyversions/Oasis-Optimization)
-[![conda](https://anaconda.org/conda-forge/oasis/badges/version.svg)](https://anaconda.org/MAfarrag/oasis)
-
+[![Anaconda-Server Badge](https://anaconda.org/conda-forge/oasis/badges/version.svg)](https://anaconda.org/conda-forge/oasis)
+[![Anaconda-Server Badge](https://anaconda.org/conda-forge/oasis/badges/platforms.svg)](https://anaconda.org/conda-forge/oasis)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MAfarrag/Oasis/master)
 [![Build Status](https://travis-ci.org/MAfarrag/Oasis.svg?branch=master)](https://travis-ci.org/MAfarrag/Oasis)
 [![Documentation Status](https://readthedocs.org/projects/oasis-optimization/badge/?version=latest)](https://oasis-optimization.readthedocs.io/en/latest/?badge=latest)
+
+[![Anaconda-Server Badge](https://anaconda.org/conda-forge/oasis/badges/downloads.svg)](https://anaconda.org/conda-forge/oasis)
+[![Downloads](https://pepy.tech/badge/oasis-optimization)](https://pepy.tech/project/oasis-optimization)
+[![Downloads](https://pepy.tech/badge/oasis-optimization/month)](https://pepy.tech/project/oasis-optimization)
+[![Downloads](https://pepy.tech/badge/oasis-optimization/week)](https://pepy.tech/project/oasis-optimization)
 
 Oasis - Optimization Algorithm for Python 
 ===================================================================== 
