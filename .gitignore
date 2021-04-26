@@ -10,7 +10,7 @@ sdist/
 *.egg-info/
 *.egg
 
-Oasis/GA/
+Oasis/
 # Sphinx documentation
 docs/_build/
 OaisSpyder/
@@ -30,10 +30,6 @@ target/
 
 build_artifacts
 # conda smithy ci-skeleton end
-.azure-pipelines/
-.ci_support/
-.circleci/
-.github/
-.scripts/
 osis.sublime-project
 osis.sublime-workspace
+Examples/trial.py
