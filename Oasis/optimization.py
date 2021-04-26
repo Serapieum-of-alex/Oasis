@@ -13,9 +13,9 @@ import numpy
 from Oasis.variable import Variable
 from Oasis.objective import Objective
 from Oasis.constraint import Constraint
-from Oasis.parameter import Parameter
+# from Oasis.parameter import Parameter
 
-inf = 10.E+20  # define a value for infinity
+inf = 10.E+20
 
 
 

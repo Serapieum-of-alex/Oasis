@@ -5,13 +5,10 @@ Holds the Python Design Optimization Classes (base and inherited).
 
 """
 
-#import os, sys
-#import pdb
 
 from Oasis.optimization import Optimization
 from Oasis.history import History
 
-inf = 10.E+20  # define a value for infinity
 
 
 class Optimizer(object):

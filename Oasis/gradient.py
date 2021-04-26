@@ -6,19 +6,8 @@ Holds the Python Design Optimization Gradient Calculation Class.
 """
 
 
-#import os, sys
 import copy
-#import pdb
-
-
 import numpy
-
-
-eps = 1.0  # define a value for machine precision
-while ((eps / 2.0 + 1.0) > 1.0):
-    eps = eps / 2.0
-
-eps = 2.0 * eps
 
 
 

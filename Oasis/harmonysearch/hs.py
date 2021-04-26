@@ -10,19 +10,11 @@ hso if a global optimizer which solves problems of the form:
 				xLB <= x <= xUB
 
 """
-import random, time #os, sys
-#import pdb
+import random, time
 from math import floor
 import numpy
 
-inf = 10.E+20  # define a value for infinity
-eps = 1.0	# define a value for machine precision
-while ((eps/2.0 + 1.0) > 1.0):
-	eps = eps/2.0
-eps = 2.0*eps
 
-
-# alhso function
 def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 	memsize,maxoutiter,maxinniter,stopcriteria,stopiters,etol,
 	itol,atol,rtol,prtoutiter,prtinniter,r0,hmcr,par,bw,
@@ -144,10 +136,9 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 	x_tmp = numpy.zeros(dimensions, float)
 	tau_val = numpy.zeros(constraints, float)
 	nfevals = 0
-    # evaluate the initial values in the HM and get the L_val in the last column
-	#best_L_val = 0
-	for i in range(memsize):
 
+    # evaluate the initial values in the HM and get the L_val in the last column
+	for i in range(memsize):
 		# apply each set of variable values in the harmony memory on the
 		# objective function
 		if scale == 1:

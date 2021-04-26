@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  path: F:\01Algorithms\OASIS
+  path: F:\01Algorithms\Optimization\OASIS
 
 build:
   noarch: python

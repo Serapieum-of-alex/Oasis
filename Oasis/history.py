@@ -5,15 +5,11 @@ Holds the Python Design Optimization History Class.
 
 """
 
-__version__ = '$Revision: $'
 
 
-
-import os #, sys
+import os
 import array as ARRAY
 import numpy
-#import pdb
-#import shelve
 
 
 class History(object):
@@ -74,7 +70,6 @@ class History(object):
 
 		elif self.mode == 'r':
 
-			#
 			self.cues = {}
 			self.icount = {}
 

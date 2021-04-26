@@ -1,16 +1,11 @@
-import os #, sys
+import os
 import copy, time
 import numpy
 from Oasis.optimizer import Optimizer
-from Oasis.hs import HS, Chso
+from Oasis.harmonysearch.hs import HS, Chso
 
 
-inf = 10.E+20  # define a value for infinity
-eps = 1.0	# define a value for machine precision
-while ((eps/2.0 + 1.0) > 1.0):
-	eps = eps/2.0
-eps = 2.0*eps
-
+inf = 10.E+20
 
 
 class HSapi(Optimizer):
@@ -250,7 +245,7 @@ class HSapi(Optimizer):
 				type[i] = 0
 			else:
 				type[i] = 1
-			i += 1
+			i = i + 1
 
 		# Variables Groups Handling
 		if opt_problem.use_groups:
@@ -556,7 +551,7 @@ class HSO(Optimizer):
 		if m > 0:
 			for key in opt_problem.constraints.keys():
 				if opt_problem.constraints[key].type == 'e':
-					me += 1
+					me = me + 1
 			#i += 1
 
 		# Objective Handling
