@@ -10,7 +10,6 @@ sdist/
 *.egg-info/
 *.egg
 
-Oasis/
 # Sphinx documentation
 docs/_build/
 OaisSpyder/
@@ -33,3 +32,7 @@ build_artifacts
 osis.sublime-project
 osis.sublime-workspace
 Examples/trial.py
+
+
+Oasis/ga/New folder
+Oasis/ga/source
