@@ -31,7 +31,7 @@ build_artifacts
 # conda smithy ci-skeleton end
 osis.sublime-project
 osis.sublime-workspace
-Examples/trial.py
+Examples/
 
 
 Oasis/ga/New folder

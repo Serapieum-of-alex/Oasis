@@ -42,12 +42,12 @@ class NSGA2api(Optimizer):
         
         """
         
-        if (pll_type == None):
+        if pll_type == None:
                 self.poa = False
-        elif (pll_type.upper() == 'POA'):
+        elif pll_type.upper() == 'POA':
                 self.poa = True
         else:
-                raise ValueError("pll_type must be either None or 'POA'")
+            raise ValueError("pll_type must be either None or 'POA'")
         
         name = 'NSGA-II'
         category = 'Global Optimizer'
@@ -146,7 +146,7 @@ class NSGA2api(Optimizer):
         
         myrank = self.myrank
     
-        def_fname = 'nsga2'
+        def_fname = 'NSGA2'
         hos_file, log_file, tmp_file = self._setHistory(opt_problem.name, store_hst, hot_start, def_fname)
     
     
@@ -161,7 +161,6 @@ class NSGA2api(Optimizer):
                         xg[group] = x[group_ids[group][0]]
                     else:
                         xg[group] = x[group_ids[group][0]:group_ids[group][1]]
-
                 xn = xg
             else:
                 xn = x
@@ -170,7 +169,7 @@ class NSGA2api(Optimizer):
             fail = 0
             ff = []
             gg = []
-            if (myrank == 0):
+            if myrank == 0:
                 if self.hot_start:
                     [vals,hist_end] = hos_file.read(ident=['obj', 'con', 'fail'])
                     if hist_end:
@@ -178,7 +177,6 @@ class NSGA2api(Optimizer):
                         hos_file.close()
                     else:
                         [ff,gg,fail] = [vals['obj'][0][0],vals['con'][0],int(vals['fail'][0][0])]
-
             if self.pll:
                 self.hot_start = Bcast(self.hot_start,root=0)
     
@@ -188,16 +186,15 @@ class NSGA2api(Optimizer):
                 [ff,gg,fail] = opt_problem.obj_fun(xn, *args, **kwargs)
     
             # Store History
-            if (myrank == 0):
+            if myrank == 0:
                     if self.sto_hst:
-                            log_file.write(x,'x')
-                            log_file.write(ff,'obj')
-                            log_file.write(gg,'con')
-                            log_file.write(fail,'fail')
-
-            if (fail == 1):
+                        log_file.write(x,'x')
+                        log_file.write(ff,'obj')
+                        log_file.write(gg,'con')
+                        log_file.write(fail,'fail')
+            if fail == 1:
                 # Objective Assigment
-                for i in range(len(opt_problem._objectives.keys())):
+                for i in range(len(opt_problem.objectives.keys())):
                     f[i] = inf
                 # Constraints Assigment
                 for i in range(len(opt_problem.constraints.keys())):
@@ -205,10 +202,10 @@ class NSGA2api(Optimizer):
 
             else:
                 # Objective Assigment
-                if (len(opt_problem._objectives.keys()) == 1):
-                        f[0] = ff
+                if len(opt_problem.objectives.keys()) == 1:
+                    f[0] = ff
                 else:
-                    for i in range(len(opt_problem._objectives.keys())):
+                    for i in range(len(opt_problem.objectives.keys())):
                         if isinstance(ff[i],complex):
                             f[i] = ff[i].astype(float)
                         else:
@@ -275,8 +272,8 @@ class NSGA2api(Optimizer):
         # f = nsga2.new_doubleArray(l)
         f = np.zeros(l, np.float64)
         #k = 0
-        #for key in opt_problem._objectives.keys():
-        #       nsga2.doubleArray_setitem(f,k,opt_problem._objectives[key].value)
+        #for key in opt_problem.objectives.keys():
+        #       nsga2.doubleArray_setitem(f,k,opt_problem.objectives[key].value)
         #       k += 1
     
         # Setup argument list values
@@ -315,10 +312,8 @@ class NSGA2api(Optimizer):
         t0 = time.time()
         
         Obj = NSGA2(n,m,l,xl,xu,popsize,ngen,pcross_real,
-                pmut_real,eta_c,eta_m,pcross_bin,pmut_bin)
+                pmut_real,eta_c,eta_m,pcross_bin,pmut_bin, objconfunc)
         
-        
-                 
         Obj.nsga2(f,x,g,nfeval,printout,seed,xinit)
         # nsga2.nsga22(n,m,l,f,x,g,nfeval,xl,xu,popsize,ngen,pcross_real,
                 # pmut_real,eta_c,eta_m,pcross_bin,pmut_bin,printout,seed,xinit)
@@ -356,7 +351,7 @@ class NSGA2api(Optimizer):
                 sol_vars[key].value = nsga2.doubleArray_getitem(x,i)
                 i += 1
 
-            sol_objs = copy.deepcopy(opt_problem._objectives)
+            sol_objs = copy.deepcopy(opt_problem.objectives)
             i = 0
             for key in sol_objs.keys():
                 sol_objs[key].value = nsga2.doubleArray_getitem(f,i)

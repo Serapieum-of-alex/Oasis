@@ -12,7 +12,7 @@ hso if a global optimizer which solves problems of the form:
 """
 import random, time
 from math import floor
-import numpy
+import numpy as np
 
 
 def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
@@ -100,24 +100,24 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 	if scale == 1:
 		dbw = (xmax - xmin)/bw
 		# get the center of the space of each variable
-		space_centre = numpy.zeros(dimensions,float)
-		space_halflen = numpy.zeros(dimensions,float)
+		space_centre = np.zeros(dimensions,float)
+		space_halflen = np.zeros(dimensions,float)
 		for j in range(dimensions):
 			space_centre[j] = (xmin[j] + xmax[j])/2.0
 			space_halflen[j] = ((xmax[j] - xmin[j])/2.0)
 		# make xmin -1 and xmax 2
-		xmin = -numpy.ones(dimensions,float)
-		xmax =  numpy.ones(dimensions,float)
+		xmin = -np.ones(dimensions,float)
+		xmax =  np.ones(dimensions,float)
 		bw = (xmax - xmin)/dbw
 
 	# Initialize Augmented Lagrange
-	rp_val = numpy.ones(constraints, float)*r0
+	rp_val = np.ones(constraints, float)*r0
 
-	lambda_val = numpy.zeros(constraints, float)
-	lambda_old = numpy.zeros(constraints, float)
+	lambda_val = np.zeros(constraints, float)
+	lambda_old = np.zeros(constraints, float)
 
 	# Initialize Harmony Memory
-	HM = numpy.zeros((memsize,dimensions+1), float)
+	HM = np.zeros((memsize,dimensions+1), float)
 	discrete_i = []
 	for i in range(memsize):
 		for j in range(dimensions):
@@ -132,9 +132,9 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 			HM[:,:-1] = x0[:]
 
 	# Initialize Harmony Memory Augmented Lagrange
-	x_val = numpy.zeros(dimensions, float)
-	x_tmp = numpy.zeros(dimensions, float)
-	tau_val = numpy.zeros(constraints, float)
+	x_val = np.zeros(dimensions, float)
+	x_tmp = np.zeros(dimensions, float)
+	tau_val = np.zeros(constraints, float)
 	nfevals = 0
 
     # evaluate the initial values in the HM and get the L_val in the last column
@@ -153,7 +153,7 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 		# Evaluate Ojective Function
 		[f_val,g_val] = objfunc(x_tmp)
 
-		nfevals += 1
+		nfevals = nfevals + 1
 
 		# Augmented Lagrangian Value
 		L_val = f_val
@@ -180,13 +180,13 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 
 
 	# Initialize Best
-	best_x_val = numpy.zeros(dimensions, float)
+	best_x_val = np.zeros(dimensions, float)
 	best_f_val = []
-	best_g_val = numpy.zeros(constraints, float)
+	best_g_val = np.zeros(constraints, float)
 
-# 	best_x_old = numpy.zeros(dimensions, float)
+# 	best_x_old = np.zeros(dimensions, float)
 	best_f_old = []
-	best_g_old = numpy.zeros(constraints, float)
+	best_g_old = np.zeros(constraints, float)
 
 
 	# Outer Optimization Loop
@@ -347,7 +347,7 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 		if (best_f_val == [] and k_out == 1 and x0 == []):
 
 			# Re-Initialize Harmony Memory
-			HM = numpy.zeros((memsize,dimensions+1), float)
+			HM = np.zeros((memsize,dimensions+1), float)
 			for i in range(memsize):
 				for j in range(dimensions):
 					HM[i,j] = xmin[j] + rand.random()*(xmax[j]-xmin[j])
@@ -398,7 +398,7 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 
 
 		# Print Outer
-		if (prtoutiter != 0 and numpy.mod(k_out,prtoutiter) == 0):
+		if (prtoutiter != 0 and np.mod(k_out,prtoutiter) == 0):
 
 			# Output to screen
 			print(("="*80 + "\n"))
@@ -431,7 +431,7 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 
 			for j in range(dimensions):
 				text += ("\tP(%d) = %9.3e\t" %(j,x_tmp[j]))
-				if (numpy.mod(j+1,3) == 0):
+				if (np.mod(j+1,3) == 0):
 					text +=("\n")
 			print(text)
 			print(("="*80 + "\n"))
@@ -471,7 +471,7 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 
 			for j in range(dimensions):
 				text += ("\tP(%d) = %9.3e\t" %(j,x_tmp[j]))
-				if (numpy.mod(j+1,3) == 0):
+				if (np.mod(j+1,3) == 0):
 					text +=("\n")
 
 			ofile.write(text)
@@ -615,7 +615,7 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 		text = ''
 		for j in range(dimensions):
 			text += ("\tP(%d) = %9.3e\t" %(j,x_tmp[j]))
-			if (numpy.mod(j+1,3) == 0):
+			if (np.mod(j+1,3) == 0):
 				text +=("\n")
 		print(text)
 		print(("="*80 + "\n"))
@@ -651,7 +651,7 @@ def HS(dimensions,constraints,neqcons,xtype,x0,xmin,xmax,
 		text = ''
 		for j in range(dimensions):
 			text += ("\tP(%d) = %9.3e\t" %(j,x_tmp[j]))
-			if (numpy.mod(j+1,3) == 0):
+			if (np.mod(j+1,3) == 0):
 				text +=("\n")
 		ofile.write(text)
 		ofile.write("\n" + "="*80 + "\n")
@@ -686,7 +686,7 @@ def Chso(ND,nc,nec,xtype,x0,lb,ub,bw,HMS,HMCR,PAR,maxIter,printout,rseed,objfunc
 
 
 	# Initialize
-	HM = numpy.zeros((HMS,ND+1), float)
+	HM = np.zeros((HMS,ND+1), float)
 	for i in range(HMS):
 		for j in range(ND):
 			HM[i,j] = lb[j] + rand.random()*(ub[j] - lb[j])
@@ -700,7 +700,7 @@ def Chso(ND,nc,nec,xtype,x0,lb,ub,bw,HMS,HMCR,PAR,maxIter,printout,rseed,objfunc
 
 
 	# Iterations Loop
-	x = numpy.zeros(ND,float)
+	x = np.zeros(ND,float)
 	numFunEvals = 0
 	k = 0
 	status = 0

@@ -1,38 +1,27 @@
-# /* Routines for randomized recursive quick-sort */
+# Routines for randomized recursive quick-sort
+import random
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <math.h>
-
-# include "nsga2.h"
-# include "rand.h"
-
-import Oasis.ga.rand as rand
-# /* Randomized quick sort routine to sort a population based on a particular objective chosen */
 def quicksort_front_obj(pop, objcount, obj_array, obj_array_size):
-
-    q_sort_front_obj (pop, objcount, obj_array, 0, obj_array_size-1)
+    # Randomized quick sort routine to sort a population based on a particular 
+    # objective chosen
+    
+    q_sort_front_obj(pop, objcount, obj_array, 0, obj_array_size-1)
     return
 
 
-# /* Actual implementation of the randomized quick sort used to sort a population based on a particular objective chosen */
 def q_sort_front_obj(pop, objcount, obj_array, left, right) :
-
-    # int index
-    # int temp
-    # int i, j
-    # double pivot
+    # Actual implementation of the randomized quick sort used to sort a 
+    # population based on a particular objective chosen
     if left < right:
-        index = rand.rnd(left, right)
+        index = random.uniform(left, right)
         temp = obj_array[right]
         obj_array[right] = obj_array[index]
         obj_array[index] = temp
-        pivot = pop['ind'][obj_array[right]].obj[objcount]
+        pivot = pop.Population[obj_array[right]].obj[objcount]
 
         i = left-1
         for j in range(left,right):
-            if (pop['ind'][obj_array[j]].obj[objcount] <= pivot) :
-
+            if (pop.Population[obj_array[j]].obj[objcount] <= pivot) :
                 i = i + 1
                 temp = obj_array[j]
                 obj_array[j] = obj_array[i]
@@ -42,49 +31,43 @@ def q_sort_front_obj(pop, objcount, obj_array, left, right) :
         temp = obj_array[index]
         obj_array[index] = obj_array[right]
         obj_array[right] = temp
-        q_sort_front_obj (pop, objcount, obj_array, left, index-1)
-        q_sort_front_obj (pop, objcount, obj_array, index+1, right)
+        q_sort_front_obj(pop, objcount, obj_array, left, index-1)
+        q_sort_front_obj(pop, objcount, obj_array, index+1, right)
 
     return
 
 
-# /* Randomized quick sort routine to sort a population based on crowding distance */
 def quicksort_dist(pop, dist, front_size):
+    # Randomized quick sort routine to sort a population based on crowding distance
     q_sort_dist (pop, dist, 0, front_size-1)
     return
 
 
-# /* Actual implementation of the randomized quick sort used to sort a population based on crowding distance */
+
 def q_sort_dist(pop, dist, left, right):
-
-    # int index
-    # int temp
-    # int i, j
-    # double pivot
+    # Actual implementation of the randomized quick sort used to sort a population 
+    # based on crowding distance
+    
     if left<right:
-
-        index = rand.rnd(left, right)
+        index = random.uniform(left, right)
         temp = dist[right]
         dist[right] = dist[index]
         dist[index] = temp
-        pivot = pop['ind'][dist[right]].crowd_dist
+        pivot = pop.Population[dist[right]].crowd_dist
         i = left-1
         for j in range(left,right):
-
-            if pop['ind'][dist[j]].crowd_dist <= pivot:
-
-                i+=1
+            if pop.Population[dist[j]].crowd_dist <= pivot:
+                i = i + 1
                 temp = dist[j]
                 dist[j] = dist[i]
                 dist[i] = temp
 
-
-        index=i+1
+        index = i+1
         temp = dist[index]
         dist[index] = dist[right]
         dist[right] = temp
-        q_sort_dist (pop, dist, left, index-1)
-        q_sort_dist (pop, dist, index+1, right)
+        q_sort_dist(pop, dist, left, index-1)
+        q_sort_dist(pop, dist, index+1, right)
 
     return
 
