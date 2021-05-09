@@ -25,7 +25,7 @@ install:
   - source activate oasis
   # Install various dependencies
 #  - conda install --yes $DEPS pip
-  - while read requirement; do conda install --yes --file $requirement; done < requirement.txt  
+  - while read requirement; do pip install --yes $requirement; done < requirement.txt  
   # You can add any CONDA channels you may need here. CONDA supports
   # both the commands add and append. The only difference is that 
   # the add command places the channel at the front of the priority 
