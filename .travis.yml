@@ -16,16 +16,16 @@ before_install:
   - export PATH=/home/travis/miniconda2/bin:$PATH
   - conda update --yes conda
   - conda info -a
-# command to install dependencies
+
 install:
   # for python 3.4 as it does not exist in conda channels
   # conda config --set restore_free_channel True
   # Create a new environment
-  - conda create -q -n Hapi-env python=${TRAVIS_PYTHON_VERSION} --yes
-  - source activate Hapi-env
+  - conda create -q -n oasis python=${TRAVIS_PYTHON_VERSION} --yes
+  - source activate oasis
   # Install various dependencies
 #  - conda install --yes $DEPS pip
-  - while read requirement; do conda install --yes $requirement; done < requirement.txt  
+  - while read requirement; do conda install --file --yes $requirement; done < requirement.txt  
   # You can add any CONDA channels you may need here. CONDA supports
   # both the commands add and append. The only difference is that 
   # the add command places the channel at the front of the priority 
