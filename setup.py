@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='Oasis-Optimization',
-    version='1.0.0',
+    version='1.0.1',
     description='Optimization Algorithm',
 	author='Mostafa Farrag',
 	author_email='moah.farag@gmail.come',
@@ -17,7 +17,7 @@ setup(
     zip_safe=False, 
     packages=find_packages(),
     classifiers=[	
-    'Development Status :: 4 - Beta',
+    'Development Status :: 5 - Production/Stable',
     'Environment :: Console',
     'Intended Audience :: Developers',
     'Natural Language :: English',
@@ -27,6 +27,7 @@ setup(
     'Programming Language :: Python :: 3.6',
     'Programming Language :: Python :: 3.7',
     'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
     'Topic :: Software Development',
     ]
 	 )
