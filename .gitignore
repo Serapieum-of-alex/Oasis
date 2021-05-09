@@ -33,4 +33,6 @@ osis.sublime-project
 osis.sublime-workspace
 Examples/
 
-Oasis/Oasis/ga/
+Oasis/Oasis/ga
+Oasis/ga
+Oasis/ga/datastructure.py
