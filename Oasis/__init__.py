@@ -32,7 +32,7 @@ def configuration(parent_package='',top_path=None):
         quiet=True,
     )
 
-    config.add_subpackage('NSGA')
+#    config.add_subpackage('NSGA')
     config.add_subpackage('HS')
 
     return config
@@ -50,7 +50,7 @@ import Oasis.optimizer as optimizer
 # import Oasis.hsapi as hsapi
 # from Oasis.HS import *
 import Oasis.harmonysearch as harmonysearch
-import Oasis.ga as ga
+#import Oasis.ga as ga
 # from Oasis.NSGA import *
 
 
