@@ -49,9 +49,9 @@ class History(object):
 		else:
 
 			if not os.path.isfile(bin_name):
-				raise NameError('Error: filename %s.bin does not exist'%(filename))
+				raise NameError('Error: filename %s.bin does not exist' % filename)
 			if not os.path.isfile(cue_name):
-				raise NameError('Error: filename %s.cue does not exist'%(filename))
+				raise NameError('Error: filename %s.cue does not exist' % filename)
 
 
 
@@ -60,7 +60,7 @@ class History(object):
 
 		if self.mode == 'w':
 
-			if optimizer == None:
+			if optimizer is None:
 				optname = 'None'
 			else:
 				optname = optimizer.name
@@ -120,33 +120,33 @@ class History(object):
 			bdata[id] = []
 			if id in self.cues.keys():
 				if isinstance(index,int):
-					if (index == -1):
+					if index == -1:
 						index = len(self.cues[id])-1
 
 					index = [index, index+1]
 				elif isinstance(index,list):
-					if (index == []):
+					if index == []:
 						index = [self.icount[id], self.icount[id]+1]
 						self.icount[id] += 1
-					elif (index == [0,-1]):
+					elif index == [0, -1]:
 						index = [0, len(self.cues[id])]
 				else:
 					raise ValueError('Index type not understood - must be either int or list')
 			else:
 				hist_end = True
-				return (bdata,hist_end)
+				return bdata, hist_end
 			for i in range(index[0],index[1]):
 
 				#
-				if (i >= len(self.cues[id])):
+				if i >= len(self.cues[id]):
 					hist_end = True
-					return (bdata,hist_end)
+					return bdata, hist_end
 				tvals = ARRAY.array('d')
 				self.bin_file.seek(self.cues[id][i][0]*8,0)
 				tvals.fromfile(self.bin_file,self.cues[id][i][1])
 				bdata[id].append(numpy.array(tvals))
 
-		return (bdata, hist_end)
+		return bdata, hist_end
 
 
 	def write(self,bin_data,cue_data):
