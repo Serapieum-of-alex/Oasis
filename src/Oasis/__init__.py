@@ -3,40 +3,6 @@ __version__ = '1.0.2'
 
 __docformat__ = 'restructuredtext'
 
-# import os,sys
-
-from numpy.distutils.core import setup
-from numpy.distutils.misc_util import Configuration
-
-
-# def configuration(parent_package, top_path):
-
-#     config = Configuration('Oasis', parent_package, top_path)
-
-#     # need: auto add_subpackage from source availability
-#     config.add_subpackage('NSGA')
-
-#     return config
-
-# setup(**configuration(top_path='').todict())
-
-def configuration(parent_package='',top_path=None):
-
-    from numpy.distutils.misc_util import Configuration
-
-    config = Configuration(None,parent_package,top_path)
-    config.set_options(
-        ignore_setup_xxx_py=True,
-        assume_default_configuration=True,
-        delegate_options_to_subpackages=True,
-        quiet=True,
-    )
-
-#    config.add_subpackage('NSGA')
-    config.add_subpackage('HS')
-
-    return config
-
 import Oasis.constraint as constraint
 import Oasis.objective as objective
 import Oasis.variable as variable
@@ -47,12 +13,8 @@ import Oasis.optimization as optimization
 import Oasis.optimizer as optimizer
 
 
-# import Oasis.hsapi as hsapi
-# from Oasis.HS import *
-import Oasis.harmonysearch as harmonysearch
-#import Oasis.ga as ga
-# from Oasis.NSGA import *
 
+import Oasis.harmonysearch as harmonysearch
 
 # module level doc-string
 __doc__ = """

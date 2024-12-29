@@ -1,0 +1,51 @@
+[project]
+name = "Oasis-Optimization"
+version = "1.0.3"
+description = "Oasis is a Harmony search optimization algorithm."
+readme = {file = "README.md", content-type = "text/markdown"}
+authors = [
+    {name = "Mostafa Farrag", email = "moah.farag@gmail.come"}
+]
+license = {text = "GNU General Public License v3"}
+
+keywords = ["Optimization", "Harmony Search"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development",
+]
+
+requires-python = ">=3.0"
+
+dependencies =[
+    "numpy >=2.0.0"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest >= 8.2.2",
+    "pytest-cov >= 6.0.0",
+    "nbval >= 0.11.0",
+    "coverage"
+]
+
+[tool.setuptools]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["Oasis", "Oasis.*"]
+
+[project.urls]
+homepage = "https://github.com/MAfarrag/Oasis"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

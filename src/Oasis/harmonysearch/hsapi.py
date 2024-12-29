@@ -180,7 +180,7 @@ class HSapi(Optimizer):
 			fail = 0
 			ff = []
 			gg = []
-			if (myrank == 0):
+			if myrank == 0:
 				if self.hot_start:
 					[vals,hist_end] = hos_file.read(ident=['obj', 'con', 'fail'])
 					if hist_end:
@@ -197,7 +197,7 @@ class HSapi(Optimizer):
 				[ff,gg,fail] = opt_problem.obj_fun(xn, *args, **kwargs)
 
 			# Store History
-			if (myrank == 0):
+			if myrank == 0:
 				if self.sto_hst:
 					log_file.write(x,'x')
 					log_file.write(ff,'obj')
@@ -259,7 +259,6 @@ class HSapi(Optimizer):
 		# Constraints Handling
 		m = len(opt_problem.constraints.keys())
 		me = 0
-		#i = 0
 		if m > 0:
 			for key in opt_problem.constraints.keys():
 				if opt_problem.constraints[key].type == 'e':
@@ -284,7 +283,7 @@ class HSapi(Optimizer):
 		itol = self.options['itol'][1]
 		atol = self.options['atol'][1]
 		rtol = self.options['rtol'][1]
-		if (myrank == 0):
+		if myrank == 0:
 			oout = self.options['prtoutiter'][1]
 			iout = self.options['prtinniter'][1]
 		else:
@@ -342,7 +341,7 @@ class HSapi(Optimizer):
 
 		sol_time = time.time() - t0
 
-		if (myrank == 0):
+		if myrank == 0:
 			if self.sto_hst:
 				log_file.close()
 				if tmp_file:

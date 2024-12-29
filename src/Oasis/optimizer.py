@@ -93,7 +93,7 @@ class Optimizer(object):
                     if first_ieq == -1:
                         first_ieq = int(key)
 
-            if last_eq > first_ieq and first_ieq != -1:
+            if last_eq > first_ieq != -1:
                 print('WARNING - Equality Constraints should be defined BEFORE Inequality Constraints')
 
         # Solve Optimization Problem
@@ -258,7 +258,7 @@ class Optimizer(object):
             # hot_start is string
             elif store_hst:
                 if isinstance(hot_start,str):
-                    if (hot_start == def_fname):
+                    if hot_start == def_fname:
                         hos_file = History(hot_start, 'r', self)
                         log_file = History(def_fname+'_tmp', 'w', self, probname)
                         tmp_file = True
