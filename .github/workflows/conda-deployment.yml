@@ -29,8 +29,7 @@ jobs:
 
       - name: Install dev-dependencies
         run: |
-            pip install pytest
-            pip install .
+            pip install .[test]
 
       - name: Run tests
         shell: bash -el {0}
