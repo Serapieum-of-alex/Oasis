@@ -1,1 +1,3 @@
-import Oasis
+
+def test_import():
+    import Oasis
